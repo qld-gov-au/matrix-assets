@@ -2,14 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="463552db-267f-497a-851b-698ede32810f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/css/qg-main/header.scss" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/qg-main.css" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/dist/qg-main.css.map" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/gulpfile.js" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/index.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package-lock.json" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/package.json" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="matrix-assets.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -53,10 +46,19 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_bootstrap-breakpoints.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_bootstrap-breakpoints.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/qg-main/mixins/_bootstrap-breakpoints.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="81" column="1" selection-start="1982" selection-end="1982" vertical-scroll-proportion="0.9328859" vertical-offset="798" max-vertical-offset="1305">
+            <state line="81" column="1" selection-start="1982" selection-end="1982" vertical-scroll-proportion="-8.510204" vertical-offset="798" max-vertical-offset="1305">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_guide-sub-nav.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/qg-main/navigation/_guide-sub-nav.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="22" column="1" selection-start="446" selection-end="446" vertical-scroll-proportion="0.738255" vertical-offset="0" max-vertical-offset="447">
               <folding />
             </state>
           </provider>
@@ -77,6 +79,7 @@
       <list>
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/css/qg-main/mixins/_bootstrap-breakpoints.scss" />
+        <option value="$PROJECT_DIR$/css/qg-main/navigation/_guide-sub-nav.scss" />
       </list>
     </option>
   </component>
@@ -146,6 +149,28 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="qg-main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matrix-assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="matrix-assets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="css" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="qg-main" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="navigation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -264,7 +289,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/qg-main/mixins/_bootstrap-breakpoints.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="81" column="1" selection-start="1982" selection-end="1982" vertical-scroll-proportion="0.9328859" vertical-offset="798" max-vertical-offset="1305">
+        <state line="81" column="1" selection-start="1982" selection-end="1982" vertical-scroll-proportion="-8.510204" vertical-offset="798" max-vertical-offset="1305">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/qg-main/navigation/_guide-sub-nav.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="22" column="1" selection-start="446" selection-end="446" vertical-scroll-proportion="0.738255" vertical-offset="0" max-vertical-offset="447">
           <folding />
         </state>
       </provider>
