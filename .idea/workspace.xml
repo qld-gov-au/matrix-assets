@@ -2,8 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="463552db-267f-497a-851b-698ede32810f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/js/qg-main/header.js" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/qg-main/content-types/_cards.scss" afterPath="$PROJECT_DIR$/css/qg-main/content-types/_cards.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="matrix-assets.iws" />
@@ -42,25 +41,25 @@
       <file leaf-file-name="_variables.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/qg-main/_variables.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="8" column="24" selection-start="285" selection-end="292" vertical-scroll-proportion="-1.6" vertical-offset="0" max-vertical-offset="270">
+            <state line="5" column="0" selection-start="156" selection-end="164" vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_cards.scss" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="_cards.scss" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/qg-main/content-types/_cards.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="-12.551021" vertical-offset="90" max-vertical-offset="795">
+            <state line="38" column="28" selection-start="848" selection-end="848" vertical-scroll-proportion="0.738255" vertical-offset="240" max-vertical-offset="795">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name=".gitignore" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name=".gitignore" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/.gitignore">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="1" column="5" selection-start="18" selection-end="18" vertical-scroll-proportion="0.030241935" vertical-offset="0" max-vertical-offset="496">
+            <state line="1" column="5" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
               <folding />
             </state>
           </provider>
@@ -104,8 +103,8 @@
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/css/qg-main/mixins/_bootstrap-breakpoints.scss" />
         <option value="$PROJECT_DIR$/css/qg-main/navigation/_guide-sub-nav.scss" />
-        <option value="$PROJECT_DIR$/css/qg-main/content-types/_cards.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/css/qg-main/content-types/_cards.scss" />
       </list>
     </option>
   </component>
@@ -269,12 +268,12 @@
     <frame x="0" y="23" width="1440" height="877" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32992327" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
@@ -334,23 +333,23 @@
         <state />
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="5" selection-start="18" selection-end="18" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="105">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/css/qg-main/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="8" column="24" selection-start="285" selection-end="292" vertical-scroll-proportion="-1.6" vertical-offset="0" max-vertical-offset="270">
+        <state line="5" column="0" selection-start="156" selection-end="164" vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="270">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/qg-main/content-types/_cards.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="969" selection-end="969" vertical-scroll-proportion="-12.551021" vertical-offset="90" max-vertical-offset="795">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.gitignore">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="1" column="5" selection-start="18" selection-end="18" vertical-scroll-proportion="0.030241935" vertical-offset="0" max-vertical-offset="496">
+        <state line="38" column="28" selection-start="848" selection-end="848" vertical-scroll-proportion="0.738255" vertical-offset="240" max-vertical-offset="795">
           <folding />
         </state>
       </provider>
