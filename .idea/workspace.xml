@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="463552db-267f-497a-851b-698ede32810f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/qg-main/content-types/_cards.scss" afterPath="$PROJECT_DIR$/css/qg-main/content-types/_cards.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="matrix-assets.iws" />
@@ -41,16 +40,25 @@
       <file leaf-file-name="_variables.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/qg-main/_variables.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="0" selection-start="156" selection-end="164" vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="270">
+            <state line="12" column="32" selection-start="481" selection-end="481" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="270">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_cards.scss" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="_cards.scss" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/qg-main/content-types/_cards.scss">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="47" column="0" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.90604025" vertical-offset="300" max-vertical-offset="840">
+            <state line="22" column="14" selection-start="454" selection-end="461" vertical-scroll-proportion="-0.6122449" vertical-offset="300" max-vertical-offset="840">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_site-utilities.scss" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/css/qg-main/header/_site-utilities.scss">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="46" column="4" selection-start="779" selection-end="779" vertical-scroll-proportion="0.59731543" vertical-offset="423" max-vertical-offset="870">
               <folding />
             </state>
           </provider>
@@ -105,6 +113,7 @@
         <option value="$PROJECT_DIR$/css/qg-main/navigation/_guide-sub-nav.scss" />
         <option value="$PROJECT_DIR$/.gitignore" />
         <option value="$PROJECT_DIR$/css/qg-main/content-types/_cards.scss" />
+        <option value="$PROJECT_DIR$/css/qg-main/header/_site-utilities.scss" />
       </list>
     </option>
   </component>
@@ -227,7 +236,7 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="content-types" />
+              <option name="myItemId" value="header" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -342,14 +351,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/css/qg-main/_variables.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="0" selection-start="156" selection-end="164" vertical-scroll-proportion="-1.0" vertical-offset="0" max-vertical-offset="270">
+        <state line="12" column="32" selection-start="481" selection-end="481" vertical-scroll-proportion="-2.4" vertical-offset="0" max-vertical-offset="270">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/qg-main/content-types/_cards.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="47" column="0" selection-start="1037" selection-end="1037" vertical-scroll-proportion="0.90604025" vertical-offset="300" max-vertical-offset="840">
+        <state line="22" column="14" selection-start="454" selection-end="461" vertical-scroll-proportion="-0.6122449" vertical-offset="300" max-vertical-offset="840">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/qg-main/header/_site-utilities.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="46" column="4" selection-start="779" selection-end="779" vertical-scroll-proportion="0.59731543" vertical-offset="423" max-vertical-offset="870">
           <folding />
         </state>
       </provider>
