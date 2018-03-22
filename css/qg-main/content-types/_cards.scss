@@ -13,6 +13,13 @@
       .details{
         padding: 1em;
       }
+      .btn {
+        background: $qg-blue;
+        display: inline-block;
+        width: 100%;
+        color: $qg-white;
+        border: none;
+      }
       @include breakpoint(sm) {
         .qg-pin-bottom {
           position: absolute;
@@ -37,13 +44,6 @@
         margin-left: auto;
         margin-right: auto;
         display: block;
-      }
-      .btn {
-        background: $qg-blue;
-        display: inline-block;
-        width: 100%;
-        color: $qg-white;
-        border: none;
       }
     }
   }
