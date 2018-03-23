@@ -1,0 +1,9 @@
+.qg-index-links .qg-index-item {
+  ul:not(.qg-unstyled) {
+    list-style: disc;
+    margin-left: 2rem;
+    a {
+      text-decoration: underline;
+    }
+  }
+}
