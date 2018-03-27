@@ -1,6 +1,37 @@
 .aggregation-index {
      #qg-one-col.wide #qg-primary-content {
-         padding: 0;
+         width: 70%
+         margin: 0 auto;
+         margin-top: 5.6rem;
+     }
+     .qg-item {
+     	.details {
+     		ul {
+     			padding: 0;
+     			li {
+     				position: relative;
+				    padding-left: 1.6rem;
+				    list-style: none;
+				    margin: 0;
+				    &:before {
+				    	font-family: FontAwesome;
+					    font-style: normal;
+					    font-weight: 400;
+					    line-height: 1;
+					    content: "\f054";
+					    margin-right: .6rem;
+					    font-size: 1.2rem;
+					    position: absolute;
+					    padding-right: .8rem;
+					    left: 0;
+					    top: .8em;
+				    }
+				    a {
+				    	color: #fff;
+				    }
+     			}
+     		}
+     	}
      }
      .additional-information {
          background: $qg-grey-light;
