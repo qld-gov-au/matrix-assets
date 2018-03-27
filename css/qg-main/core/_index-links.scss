@@ -1,4 +1,8 @@
 .qg-index-links .qg-index-item {
+	img {
+		position: absolute;
+		left: 25px;
+	}
   ul:not(.qg-unstyled) {
       li {
             position: relative;
