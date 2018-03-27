@@ -1,5 +1,9 @@
-.additional-information {
-  background-color: $qg-grey-light;
-  padding: 1em;
-  clear: both;
-}
+.aggregation-index {
+     #qg-one-col.wide #qg-primary-content {
+         padding: 0;
+     }
+     .additional-information {
+         background: $qg-grey-light;
+         padding-bottom: 3rem;
+     }
+ }
