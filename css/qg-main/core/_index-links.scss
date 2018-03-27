@@ -1,9 +1,24 @@
 .qg-index-links .qg-index-item {
   ul:not(.qg-unstyled) {
-    list-style: disc;
-    margin-left: 2rem;
-    a {
-      text-decoration: underline;
-    }
+      li {
+            position: relative;
+            padding-left: 1em;
+            list-style: none;
+            line-height: 2.4rem;
+            a {
+                &:before {
+                    position: absolute;
+                    left: 0;
+                    top: .66rem;
+                    font-family: FontAwesome;
+                    font-size: 1.1rem;
+                    line-height: 1;
+                    padding-right: .8rem;
+                    content: "\f054";
+                }
+            }
+            
+      }
+      
   }
 }
