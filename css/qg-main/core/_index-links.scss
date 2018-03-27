@@ -1,4 +1,11 @@
 .qg-index-links .qg-index-item {
+	a {
+		&:hover {
+			img {
+				border: 1px solid #06c;
+			}
+		}
+	}
 	img {
 		position: absolute;
 		left: 25px;
