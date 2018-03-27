@@ -1,8 +1,13 @@
 .promotions {
 	h2 {
-		font-weight: 700;
+	    font-weight: 700;
+	    font-size: 2.2 rem;
 	}
 	img {
-		margin-top: 2rem;
+	    margin-top: 2rem;
+	}
+	p {
+	    color: $qg-grey-dark;
+	    font-size: 1.4rem;
 	}
 }
