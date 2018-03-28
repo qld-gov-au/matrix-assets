@@ -5,6 +5,14 @@
          margin-top: 5.6rem;
          float: none;
      }
+     .qg-banner-blurb {
+     	position: relative;
+     	.bottom-right: {
+     		position: absolute;
+     		right: 0;
+     		bottom: 0;
+     	}
+     }
      .additional-information {
          background: $qg-grey-light;
          padding-bottom: 3rem;
