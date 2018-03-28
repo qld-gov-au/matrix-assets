@@ -20,6 +20,10 @@
             list-style: none;
             line-height: 2.4rem;
             a {
+            	color: $qg-blue-dark;
+            	&:active, &:hover, &:focus {
+            		color: $qg-blue-dark;
+            	}
                 &:before {
                     position: absolute;
                     left: 0;
