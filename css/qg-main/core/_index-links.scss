@@ -5,6 +5,9 @@
 				border: 1px solid #06c;
 			}
 		}
+		&:active, &:hover, &:focus {
+    		color: $qg-blue-dark;
+    	}
 	}
 	img {
 		position: absolute;
