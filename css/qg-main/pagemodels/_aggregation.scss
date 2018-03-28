@@ -8,5 +8,9 @@
      .additional-information {
          background: $qg-grey-light;
          padding-bottom: 3rem;
+         >.row {
+         	width: 70%;
+         	margin: 0 auto;
+         }
      }
  }
