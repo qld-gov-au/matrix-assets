@@ -8,10 +8,12 @@
      #qg-banner-blurb {
      	position: relative;
      	.bottom-right {
-     		position: absolute;
-     		right: 0;
+            right: 0;
      		bottom: 0;
      	}
+       .blurb{
+         position: inherit;
+       }
      }
      .additional-information {
          background: $qg-grey-light;
@@ -19,6 +21,11 @@
          >.row {
          	width: 70%;
          	margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            div.[class~=col] {
+                flex-grow: 1;
+            }
          }
      }
  }
