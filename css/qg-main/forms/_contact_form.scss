@@ -5,6 +5,9 @@
   .abbr.required, abbr[title*="required"]{
     left: 0;
   }
+  textarea, input {
+    border: 1px solid #ccc;
+  }
   .sq-form-error{
     color: #F85C50;
     font-style: italic;
