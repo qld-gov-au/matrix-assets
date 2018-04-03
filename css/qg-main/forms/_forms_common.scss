@@ -1,0 +1,30 @@
+.status {
+  margin: .5em 0 .5em 4em;
+  padding: 1em 2em;
+  background: #eef4f6;
+  position: relative;
+  word-wrap: break-word;
+  &.warn{
+    background-color: #ffedde;
+    color: #000;
+    h2{
+      margin-top: 0.5em;
+    }
+    &:before, &:hover:before {
+      font-family: FontAwesome;
+      font-size: 4.3rem;
+      display: inline-block;
+      background: #ffedde;
+      color: #f8ae70;
+      content: "\f071";
+      position: absolute;
+      top: 0;
+      padding: 0.2em;
+      margin-left: -2.1em;
+    }
+  }
+
+}
+
+
+
