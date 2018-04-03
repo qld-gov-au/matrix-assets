@@ -1,0 +1,17 @@
+#form_email_596.contact-form {
+  .sq-form-required-field-note{
+    margin-bottom: 1em;
+  }
+  .abbr.required, abbr[title*="required"]{
+    left: 0;
+  }
+  .sq-form-question{
+    margin-bottom: 1em;
+    input {
+      padding: 0.3em;
+    }
+    label{
+      margin-bottom: 0;
+    }
+  }
+}
