@@ -1,0 +1,44 @@
+#aside-carousel.carousel{
+  position: relative;
+  .carousel-caption{
+    position: static;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom:0;
+    background: none;
+    h3 {
+      text-align: left;
+      color: #000;
+    }
+    p {
+      text-align: left;
+      color: #000;
+    }
+  }
+
+  .carousel-indicators{
+    bottom: -34px;
+    margin-left: 0;
+    left: 0;
+    width: 5em;
+    li {
+      border: 1px solid #000;
+      margin-right: 10px;
+      &.active{
+        background-color: #000;
+      }
+    }
+  }
+  .carousel-control{
+    left: inherit;
+    top: inherit;
+    width: inherit;
+    right: 0;
+    background-image: none;
+    color: #000;
+    text-shadow: none;
+    &.left {
+      right: 42px;
+    }
+  }
+}
