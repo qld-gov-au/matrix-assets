@@ -5,6 +5,11 @@
   .abbr.required, abbr[title*="required"]{
     left: 0;
   }
+  .sq-form-error{
+    color: #F85C50;
+    font-style: italic;
+    font-size: 1em;
+  }
   .sq-form-question{
     margin-bottom: 1em;
     input {
