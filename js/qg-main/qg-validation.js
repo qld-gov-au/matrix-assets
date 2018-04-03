@@ -9,8 +9,7 @@ $(document).ready(function () {
   $('#form_email_596').validate({
     rules: {
       'q596:q4': {
-        required: true,
-        email: true,
+        required: true
       },
     },
     messages: {},
