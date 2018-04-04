@@ -5,5 +5,7 @@
 @media (max-width: 576px) {
   .qg-cut-in, .qg-cut-in-alt{
     width: 100%;
+    max-width: inherit !important;
+    margin-right: 0;
   }
 }
