@@ -32,7 +32,7 @@ $(document).ready(function () {
               "                    </div>\n" +
               "                </div>";
 
-          if(!$('.status').length){
+          if(!$('.status.warn').length){
               $("#form_email_596").prepend(msg);
               var getList = $('.status ol');
               $.each(errorMap, function(key, value) {
