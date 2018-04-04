@@ -1,71 +1,66 @@
 
-$.validator.setDefaults({
-  /*submitHandler: function () {
+/*$.validator.setDefaults({
+  /!*submitHandler: function () {
     alert('submitted!');
-  },*/
+  },*!/
+});*/
+
+jQuery.extend(jQuery.validator.messages, {
+    required: "Must be completed",
 });
 
 $(document).ready(function () {
-  $('#form_email_596').validate({
-    rules: {
-      'q596:q4': {
-        required: true
-      },
-    },
-    messages: {},
-    errorPlacement: function (error, element) {
-      var placement = $(element).data('error');
-      if (placement) {
-        $(placement).append(error);
-      } else {
-        error.insertBefore(element);
-        $(element).addClass('error-container');
-      }
-    },
-      showErrors: function (errorMap, errorList) {
+    $('.qg-validate-form').each(function () {
+        var self = this;
+        $(this).validate({
+            errorClass: "qg-error",
+            errorElement: "span",
+            messages: {},
+            errorPlacement: function (error, element) {
+                var placement = $(element).data('error');
+                if (placement) {
+                    $(placement).append(error);
+                } else {
+                    error.insertBefore(element);
+                }
+            },
+            showErrors: function (errorMap, errorList) {
 
-          // summary of number of errors on form
-          var msg = "<div class=\"status warn\">\n" +
-              "                    <div class=\"inner\">\n" +
-              "                        <h2>Please check your answers</h2>\n" +
-              "                        <ol></ol>\n" +
-              "                    </div>\n" +
-              "                </div>";
+                // summary of number of errors on form
+                var msg = "<div class=\"qg-status qg-warn\">\n" +
+                    "                    <div class=\"inner\">\n" +
+                    "                        <h2>Please check your answers</h2>\n" +
+                    "                        <ol></ol>\n" +
+                    "                    </div>\n" +
+                    "                </div>";
 
-          if(!$('.status.warn').length){
-              $("#form_email_596").prepend(msg);
-              var getList = $('.status ol');
-              $.each(errorMap, function(key, value) {
-                  console.log(errorMap);
-                  console.log(value);
-                  var escapeKey = key.replace(':', '\\:');
-                  var getId = $('[name='+escapeKey+']').attr('id');
-                  var getLabel = $("label[for='"+getId+"']").text();
-                  getList.append("<li><a href='#"+getId+"'>"+getLabel + value+"</a></li>");
+                if(!($(self).find('.qg-status').length)){
+                    $(self).prepend(msg);
+                    var getList = $('.qg-status ol');
+                    $.each(errorMap, function(key, value) {
+                        var escapeKey = key.replace(':', '\\:');
+                        var getId = $('[name='+escapeKey+']').attr('id');
+                        var getLabel = $("label[for='"+getId+"']").clone().children().remove().end().text().trim();    //get the text of element;
+                        getList.append("<li><a href='#"+getId+"'>"+getLabel+": "+ value+"</a></li>");
 
-              });
-          }
+                    });
+                }
+
+                this.defaultShowErrors();
+
+                // toggle the error summary box
+                if (this.numberOfInvalids() > 0) {
+                    $(self).find('.qg-status').show();
+                } else {
+                    $(self).find('.qg-status').hide();
+                }
+
+            } // end showErrors callback
+        });
+    });
 
 
 
 
-
-
-
-          // place error text inside box
-
-
-          // also show default labels from errorPlacement callback
-          this.defaultShowErrors();
-
-          // toggle the error summary box
-          if (this.numberOfInvalids() > 0) {
-              $(".status").show();
-          } else {
-              $(".status").hide();
-          }
-
-      } // end showErrors callback
-  });
 });
 
