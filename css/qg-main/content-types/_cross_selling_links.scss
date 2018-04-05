@@ -1,0 +1,39 @@
+#what-next {
+    margin-bottom: 1em;
+    margin-top: 1em;
+
+    h2 {
+      background: #0b2e4c;
+      color: #fff;
+      padding: .357em .714em;
+      margin: 0;
+  }
+  ul {
+      margin:0;
+      list-style-position: outside;
+      display: block;
+      list-style-type: disc;
+      padding: 0;
+      li{
+           padding: 0.8em;
+           list-style: none;
+           display: list-item;
+           &:nth-child(odd){
+              background: #f6f6f6;
+           }
+           a:before {
+               display: inline-block;
+              font-family: FontAwesome;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 1.2rem;
+              line-height: #007eb1;
+              content: "\f054";
+              background: inherit;
+              color: inherit;
+              padding-right: 1.4em;
+                  
+           }
+      }
+  }
+}

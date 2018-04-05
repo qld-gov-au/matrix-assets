@@ -1,0 +1,60 @@
+
+.qg-validate-form {
+  .sq-form-required-field-note{
+    margin-bottom: 1em;
+  }
+  textarea, input {
+    border: 1px solid #ccc;
+  }
+  .sq-form-error, span.qg-error{
+    color: #d93d31;
+    font-style: italic;
+    font-size: 1em;
+    border: none;
+    display: block;
+    font-weight: 700;
+  }
+  .qg-error{
+    border: 1px solid #d93d31;
+  }
+  .sq-form-question{
+    margin-bottom: 1em;
+    input {
+      padding: 0.3em;
+    }
+    label{
+      margin-bottom: 0;
+      position: relative;
+    }
+  }
+}
+.qg-status {
+  margin: .5em 0 .5em 4em;
+  padding: 1em 2em;
+  background: #eef4f6;
+  position: relative;
+  word-wrap: break-word;
+  &.qg-warn{
+    background-color: #ffedde;
+    color: #000;
+    h2{
+      margin-top: 0.5em;
+    }
+    &:before, &:hover:before {
+      font-family: FontAwesome;
+      font-size: 4.3rem;
+      display: inline-block;
+      background: #ffedde;
+      color: #f8ae70;
+      content: "\f071";
+      position: absolute;
+      top: 0;
+      padding: 0.2em;
+      margin-left: -2.1em;
+    }
+  }
+
+}
+
+
+

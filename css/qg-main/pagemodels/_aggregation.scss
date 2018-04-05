@@ -1,0 +1,31 @@
+.aggregation-index {
+     #qg-one-col.wide #qg-primary-content {
+         width: 70%;
+         margin: 0 auto;
+         margin-top: 5.6rem;
+         float: none;
+     }
+     #qg-banner-blurb {
+     	position: relative;
+     	.bottom-right {
+            right: 0;
+     		bottom: 0;
+     	}
+       .blurb{
+         position: inherit;
+       }
+     }
+     .additional-information {
+         background: $qg-grey-light;
+         padding-bottom: 3rem;
+         >.row {
+         	width: 70%;
+         	margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            div[class~=col] {
+                flex-grow: 1;
+            }
+         }
+     }
+ }
