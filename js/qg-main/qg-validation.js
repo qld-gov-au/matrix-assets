@@ -19,8 +19,7 @@ $(document).ready(function () {
             },
             showErrors: function showErrors (errorMap, errorList) {
                 // summary of number of errors on form
-                var msg = '<div class="qg-status qg-warn">\n' + '                    <div class="inner">\n' + '                        <h2>Please check your answers</h2>\n' + '                        <ol></ol>\n' + '                    </div>\n' + '                </div>';
-
+                var msg = '<div class="qg-status qg-warn">\n' + '<div class="inner">\n' + '<h2>Please check your answers</h2>\n' + '<ol></ol>\n' + '</div>\n' + '</div>';
                 if (!$(self).find('.qg-status').length) {
                     $(self).prepend(msg);
                     $.each(errorMap, function (key, value) {
@@ -28,7 +27,7 @@ $(document).ready(function () {
                         var escapeKey = key.replace(':', '\\:');
                         var getId = $('[name=' + escapeKey + ']').attr('id');
                         if ( $("#"+getId).is(":radio") ){
-                            getLabel = $("input[id="+getId+"]").parents('fieldset').find('> label').clone().children().remove().end().text().trim();
+                            getLabel = $("input[id="+getId+"]").parents('fieldset').find('> label').clone().children().remove().end().text().trim().replace('?' , '');
                         } else {
                             getLabel = $("label[for='" + getId + "']").clone().children().remove().end().text().trim(); //get the text of element;
                         }
