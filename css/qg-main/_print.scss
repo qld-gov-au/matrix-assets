@@ -1,3 +1,10 @@
+.print-content-link{
+  cursor: pointer;
+  float: right;
+  margin: 0;
+  padding: 0;
+}
+
 @media print {
   body {
     background: #ffffff;
@@ -163,3 +170,5 @@
     display: none;
   }
 }
+
+
