@@ -13,11 +13,11 @@
     color: #000000;
   }
 
-  #qg-site-header, #box-sizing, #header-bg .max-width, #qg-coa, #qg-coa a, #breadcrumbs {
-    display: block !important;
+  #qg-primary-content a[href]:after , #qg-secondary-content a[href]:after {
+    content: " (" attr(href) ")";
+    color: #06c !important;
+    font-size: 16px !important;
   }
-
-  a:after{content:" (" attr(href) ") ";}
 
   /* Some landmark headings should be visible */
   #qg-breadcrumb h2 {
@@ -38,29 +38,18 @@
   .print-content-link,
   #qg-site-header form,
   .qg-utilities,
-  #qg-legal li {
+  .qg-legal li {
     display: none;
   }
 
-  /* Swap in print logo and site name */
-  #qg-logo img,
-  .qg-coat-of-arms img {
-    display: none;
+  .qg-legal{
+    text-align: left !important;
   }
-  #qg-logo,
-  #qg-coa {
-    display: block;
-    text-align: right;
-    padding-bottom: 11mm;
+  .qg-legal a:after {
+    color: #06c !important;
+    font-size: 12px !important;
   }
-  #site-name img.qg-print-version,
-  #qg-logo img.qg-print-version,
-  .qg-coat-of-arms img.qg-print-version {
-    display: block !important;
-    height: 27mm;
-    width: 20mm;
-    margin-left: 155mm !important;
-  }
+
 
   /* Show legal information */
   #footer li.legal {
@@ -90,6 +79,9 @@
   }
 
   /* Style breadcrumbs */
+  #qg-breadcrumb{
+    display: block;
+  }
   #qg-breadcrumb h2 {
     font-size: 100%;
     display: block;
