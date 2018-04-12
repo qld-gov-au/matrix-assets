@@ -1,0 +1,14 @@
+#qg-primary-content {
+	table {
+		tr {
+			background: #f3f3f3;
+			&:nth-child(even) {
+				background: #fff;
+			}
+			td {
+				padding: 1em;
+			}
+		}
+
+	}
+}
