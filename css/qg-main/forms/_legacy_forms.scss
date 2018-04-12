@@ -1235,6 +1235,16 @@ form {
     margin: 0;
     font-weight: bold;
   }
+  .invalid .alert {
+    color: #d93d31;
+    font-weight: 700;
+  }
+  .choices li input {
+    position: absolute;
+    margin-left: -20px;
+    padding: 0;
+    top: inherit;
+  }
   .questions abbr[title*="required"] {
     position: absolute;
     width: 0;
