@@ -8,4 +8,13 @@ a {
 	a, a:focus, a:hover, a:link, a:visited {
 		text-decoration: underline;
 	}
+	a:active, a:focus {
+		color: #c00;
+	}
+	a:visited {
+		color: #80b;
+	}
+	a:hover {
+		color: #06c;
+	}
 }
