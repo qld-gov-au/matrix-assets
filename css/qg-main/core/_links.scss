@@ -5,6 +5,15 @@ a {
 	}
 }
 #qg-primary-content, #qg-secondary-content {
+	.download{
+		text-decoration: none;
+		&:hover{
+			text-decoration: none;
+		}
+		.title {
+			text-decoration: underline;
+		}
+	}
 	a, a:focus, a:hover, a:link, a:visited {
 		text-decoration: underline;
 	}
