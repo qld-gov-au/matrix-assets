@@ -4,7 +4,8 @@ a {
 		color: $qg-blue-dark;
 	}
 }
-
-a, a:focus, a:hover, a:link, a:visited {
-	text-decoration: underline;
+#qg-primary-content, #qg-secondary-content {
+	a, a:focus, a:hover, a:link, a:visited {
+		text-decoration: underline;
+	}
 }
