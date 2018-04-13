@@ -6,9 +6,9 @@ a {
 }
 #qg-primary-content, #qg-secondary-content {
 	.download{
-		text-decoration: none;
+		text-decoration: none !important;
 		&:hover{
-			text-decoration: none;
+			text-decoration: none !important;
 		}
 		.title {
 			text-decoration: underline;
