@@ -1264,5 +1264,10 @@ form {
     background-color: #FFEDDE;
     width: 94.5%;
     margin-left: 74px;
+
+    /* Small Devices, Tablets */
+    @media only screen and (max-width : 768px) {
+      width: inherit;
+    }
   }
 }
