@@ -1,47 +1,47 @@
-.qg-index-links .qg-index-item {
-	a {
-		text-decoration: none !important;
-		&:hover {
-			text-decoration: underline !important;
-			img {
-				border: 1px solid #06c;
-			}
-		}
-		&:active, &:hover, &:focus {
-    		color: $qg-blue-dark;
-    	}
-	}
-	img {
-		position: absolute;
-		left: 25px;
-		background: #f9f9f9;
-	    border: 1px solid #fffefc;
-	    box-shadow: 0 0 2px 1px rgba(0,0,0,.1);
-	}
-  ul:not(.qg-unstyled) {
-      li {
-            position: relative;
-            padding-left: 1em;
-            list-style: none;
-            line-height: 2.4rem;
-            a {
-            	color: $qg-blue-dark;
-            	&:active, &:hover, &:focus {
-            		color: $qg-blue-dark;
-            	}
-                &:before {
-                    position: absolute;
-                    left: 0;
-                    top: .66rem;
-                    font-family: FontAwesome;
-                    font-size: 1.1rem;
-                    line-height: 1;
-                    padding-right: .8rem;
-                    content: "\f054";
-                }
-            }
-            
+.qg-index-links {
+  a {
+    text-decoration: none !important;
+    &:hover {
+      text-decoration: underline !important;
+      img {
+        border: 1px solid #06c;
       }
-      
+    }
+    &:active, &:hover, &:focus {
+      color: $qg-blue-dark;
+    }
+  }
+  img {
+    position: absolute;
+    left: 25px;
+    background: #f9f9f9;
+    border: 1px solid #fffefc;
+    box-shadow: 0 0 2px 1px rgba(0,0,0,.1);
+  }
+  ul:not(.qg-unstyled) {
+    li {
+      position: relative;
+      padding-left: 1em;
+      list-style: none;
+      line-height: 2.4rem;
+      a {
+        color: $qg-blue-dark;
+        &:active, &:hover, &:focus {
+          color: $qg-blue-dark;
+        }
+        &:before {
+          position: absolute;
+          left: 0;
+          top: .66rem;
+          font-family: FontAwesome;
+          font-size: 1.1rem;
+          line-height: 1;
+          padding-right: .8rem;
+          content: "\f054";
+        }
+      }
+
+    }
+
   }
 }

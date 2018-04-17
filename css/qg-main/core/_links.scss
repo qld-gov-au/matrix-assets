@@ -14,16 +14,19 @@ a {
 			text-decoration: underline;
 		}
 	}
-	a, a:focus, a:hover, a:link, a:visited {
-		text-decoration: underline;
-	}
-	a:active, a:focus {
-		color: #c00 !important;
-	}
-	a:visited {
-		color: #80b;
-	}
-	a:hover {
-		color: #06c;
+
+	a:not(.print-content-link) {
+		&:focus, &:hover, &:link, &:visited {
+			text-decoration: underline;
+		}
+		&:active, &:focus {
+			color: #c00 !important;
+		}
+		&:visited {
+			color: #80b;
+		}
+		&:hover {
+			color: #06c;
+		}
 	}
 }
