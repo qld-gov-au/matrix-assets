@@ -51,6 +51,12 @@
     li {
       display: inline-block;
       margin-right: 2px;
+      a:active, a:focus {
+        color: #c00;
+        i {
+          color: #c00;
+        }
+      }
       .fa {
         color: #000;
         &.fa-sync {
