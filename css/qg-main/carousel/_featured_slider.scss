@@ -1,41 +1,53 @@
 #aside-carousel.carousel{
+  margin-bottom: 0;
+  margin-top: 2em;
   position: relative;
   .carousel-caption{
     position: static;
     padding-left: 0;
     padding-right: 0;
     margin-bottom:0;
+    margin-top: 1em;
     background: none;
     h3 {
       text-align: left;
-      color: #000;
+      font-size: 1em;
+      font-weight: 700;
+      color: #000 !important;
     }
     p {
       text-align: left;
       color: #000;
+      &.more{
+        text-align: right;
+      }
     }
   }
-
   .carousel-indicators{
-    bottom: -55px;
+    position: inherit;
     margin-left: 0;
-    left: 0;
-    width: 100%;
+    width: 70%;
+    float: left;
     text-align: left;
+    margin-bottom: 0;
     li {
       border: 1px solid #000;
       margin-right: 10px;
+      width: 12px;
+      height: 12px;
       &.active{
+        width: 12px;
+        height: 12px;
         background-color: #000;
       }
     }
   }
   .controls-grp {
-    position: absolute;
-    right: 0;
-    bottom: -44px;
+    position: relative;
     margin-bottom: 0;
     padding-left: 0;
+    float: right;
+    width: 30%;
     li {
       display: inline-block;
       margin-right: 2px;
@@ -48,10 +60,15 @@
           }
         }
       }
+      .toggleCarousel{
+        position: absolute;
+        top: 0;
+        right: 26px;
+      }
       .carousel-control{
-        position: inherit;
+        position: absolute;
         left: inherit;
-        top: inherit;
+        top: 0;
         width: inherit;
         right: 0;
         background-image: none;
@@ -60,24 +77,26 @@
         .icon-prev,.icon-next{
           position: inherit;
         }
-        .icon-prev:before{
-          content: "\f0d9";
-          font-family: FontAwesome;
-          position: absolute;
-          top: 2px;
-          left: 0;
-          font-size: 27px;
+        &.right{
+          top: -8px;
+          .icon-next:before{
+            content: "\f0da";
+            position: inherit;
+            font-family: FontAwesome;
+            font-size: 27px;
+          }
         }
-        .icon-next:before{
-          content: "\f0da";
-          position: absolute;
-          font-family: FontAwesome;
-          top: 2px;
-          right: 0;
-          font-size: 27px;
+        &.left{
+          top: -8px;
+          right: 74px;
+          .icon-prev:before{
+            content: "\f0d9";
+            font-family: FontAwesome;
+            position: inherit;
+            font-size: 27px;
+          }
         }
       }
     }
   }
 }
-
