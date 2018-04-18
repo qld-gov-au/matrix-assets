@@ -17,10 +17,11 @@
   }
 
   .carousel-indicators{
-    bottom: -34px;
+    bottom: -55px;
     margin-left: 0;
     left: 0;
-    width: 5em;
+    width: 100%;
+    text-align: left;
     li {
       border: 1px solid #000;
       margin-right: 10px;
@@ -32,7 +33,7 @@
   .controls-grp {
     position: absolute;
     right: 0;
-    bottom: -22px;
+    bottom: -44px;
     margin-bottom: 0;
     padding-left: 0;
     li {
@@ -78,5 +79,5 @@
       }
     }
   }
-  }
+}
 
