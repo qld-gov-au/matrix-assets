@@ -62,8 +62,8 @@
       }
       .toggleCarousel{
         position: absolute;
-        top: -1px;
-        right: 25px;
+        top: 0;
+        right: 26px;
       }
       .carousel-control{
         position: absolute;
@@ -100,3 +100,26 @@
     }
   }
 }
+
+
+.carousel-fade .carousel-inner .item {
+  opacity: 0;
+  transition: opacity 2s ease;
+}
+.carousel-fade .carousel-inner .active {
+  opacity: 1;
+}
+.carousel-fade .carousel-inner .active.left,
+.carousel-fade .carousel-inner .active.right {
+  left: 0;
+  opacity: 0;
+  z-index: 1;
+}
+.carousel-fade .carousel-inner .next.left,
+.carousel-fade .carousel-inner .prev.right {
+  opacity: 1;
+}
+.carousel-fade .carousel-control {
+  z-index: 2;
+}
+
