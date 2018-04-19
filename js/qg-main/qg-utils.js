@@ -34,9 +34,12 @@
     }
 
     function tablesFix() {
-        $("#qg-primary-content table").wrap(
-            '<div class="scrollable"><div class="inner"></div></div>'
-        );
+        var $contentTable = $("#qg-primary-content table");
+        if ($contentTable.width() >= $("#qg-primary-content").width()) {
+            $contentTable.wrap(
+                '<div class="scrollable"><div class="inner"></div></div>'
+            );
+        }
     }
 
     equalHeightCol([$("#aside-carousel .item"), $(".qg-index-item")]);
