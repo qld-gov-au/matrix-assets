@@ -7,8 +7,8 @@
         border: 1px solid #06c;
       }
     }
-    &:active, &:hover, &:focus {
-      color: $qg-blue-dark;
+    &:active, &:hover, &:focus,&:visited {
+      color: $qg-blue-dark !important;
     }
   }
   img {
@@ -40,6 +40,8 @@
           content: "\f054";
         }
       }
+
     }
+
   }
 }
