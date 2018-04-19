@@ -3,7 +3,8 @@
 
 (function($){
     var paused = 0;
-    $('.toggleCarousel').click(function () {
+    $('.toggleCarousel').click(function (e) {
+        e.preventDefault();
         var state = (paused) ? 'cycle' : 'pause';
         paused = (paused) ? 0 : 1;
 
