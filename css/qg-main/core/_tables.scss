@@ -21,10 +21,16 @@
 		font-weight: bold;
 	}
 	table {
+		thead {
+			tr {
+				background-color: $qg-blue-dark-1;
+				color: #ffffff;
+			}
+		}
 		tr {
-			background: #f3f3f3;
+			background: $qg-grey-light;
 			&:nth-child(even) {
-				background: #fff;
+				background: #ffffff;
 			}
 			td {
 				padding: 1em;
