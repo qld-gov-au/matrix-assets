@@ -1,12 +1,11 @@
 .print-content-link{
-  cursor: pointer;
-  float: right;
-  margin: 0;
-  padding: 0;
+  position: absolute;
+  right: 35px;
 }
 .qg-print-version{
   display: none;
 }
+
 @media print {
   body {
     background: #ffffff;
