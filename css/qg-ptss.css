@@ -1,0 +1,225 @@
+/* Accordian styles */
+
+.qg-accordion article {
+    position: relative;
+    margin-bottom: 1px;
+    width: 100%;
+    color: #000;
+    overflow: hidden;
+    border-top: 1px solid #F6F6F6;
+}
+
+.qg-accordion:last-child {
+    border-bottom: 1px solid #F6F6F6;
+}
+
+.qg-accordion .collapsing-section p {
+    margin-top: 0 !important;
+    padding-left: 1em;
+}
+
+.qg-accordion .collapsing-section li {
+    padding-left: 0.8em;
+}
+
+.qg-accordion h2 {
+    margin: 0;
+}
+
+.qg-accordion input {
+    position: absolute;
+    opacity: 0;
+    z-index: -1;
+}
+
+.qg-accordion label {
+    position: relative;
+    display: block;
+    font-weight: bold;
+    line-height: 5;
+    cursor: pointer;
+    background-repeat: no-repeat;
+    background-size: 50px auto;
+    background-position: 0 50%;
+    padding-left: 76px;
+}
+
+.qg-accordion label[for=process-eligibility],
+.qg-accordion label[for=more-guide] {
+    background-image: url("/__data/assets/image/0019/4816/eligibility_icon.png");
+}
+
+.qg-accordion label[for=process-forms] {
+    background-image: url("/__data/assets/image/0021/4818/forms_icon.png");
+}
+
+.qg-accordion label[for=process-travel] {
+    background-image: url("/__data/assets/image/0017/4823/travel_icon.png");
+}
+
+.qg-accordion label[for=process-attend] {
+    background-image: url("/__data/assets/image/0018/4815/attend_icon.png");
+}
+
+.qg-accordion label[for=process-submit] {
+    background-image: url("/__data/assets/image/0015/4821/submit_icon.png");
+}
+
+.qg-accordion label[for=more-specialist] {
+    background-image: url("/__data/assets/image/0022/4819/specialist_icon.png");
+}
+
+.qg-accordion label[for=more-appeal] {
+    background-image: url("/__data/assets/image/0016/4813/appeal_icon.png");
+}
+
+.qg-accordion label[for=more-retro] {
+    background-image: url("/__data/assets/image/0021/4854/retro_icon.png");
+}
+
+.qg-accordion label[for=more-feedback] {
+    background-image: url("/__data/assets/image/0020/4817/feedback_icon.png");
+}
+
+.qg-accordion label[for=about-apply] {
+    background-image: url("/__data/assets/image/0015/4821/submit_icon.pn");
+}
+
+.qg-accordion label[for=about-support-person], .qg-accordion label[for=about-escort] {
+    background-image: url("/__data/assets/image/0016/4822/support_icon.png");
+}
+
+.qg-accordion label[for=about-travel-subsidy] {
+    background-image: url("/__data/assets/image/0018/4824/travel_tab_icon.png");
+}
+
+.qg-accordion label[for=about-accommodation] {
+    background-image: url("/__data/assets/image/0015/4812/accommodation_icon.png");
+}
+
+.qg-accordion .collapsing-section {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.55s;
+    padding-left: 4px;
+    border-left: 15px solid #F6F6F6;
+    margin-left: 20px;
+}
+
+.qg-accordion .collapsing-section * {
+    padding-left: 1em;
+    /* 36px;*/
+}
+
+.qg-accordion .collapsing-section span {
+    padding-left: 0;
+}
+
+.qg-accordion .collapsing-section ul {
+    padding-left: 36px;
+}
+
+.qg-accordion .collapsing-section table {
+    margin-left: 1em;
+}
+
+.qg-accordion .collapsing-section p a,
+.qg-accordion .collapsing-section a {
+    padding-left: 0;
+}
+
+.qg-accordion input:checked~.collapsing-section {
+    max-height: 200em;
+}
+
+.qg-accordion .arrow {
+    background: #F6F6F6;
+    right: 0;
+    position: absolute;
+    top: 34%;
+    line-height: 0;
+    padding: 0.5em;
+    border-radius: 50%;
+}
+
+.qg-accordion i {
+    border: solid #007EB1;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 3px;
+    transform: rotate(45deg);
+    transition: all .35s;
+}
+
+.qg-accordion input[type=checkbox]:checked+h2 label i {
+    transform: rotate(-135deg);
+    -webkit-transform: rotate(-135deg);
+}
+
+
+/*Preamble styles*/
+
+.qg-preamble {
+    height: 215px;
+    margin: -50px -50px 1em -50px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 1px;
+    color: #fff;
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/__data/assets/image/0017/4805/header-background.jpg') no-repeat center/cover;
+}
+
+
+.qg-preamble article {
+    margin: 2.5em 3.125em;
+    position: absolute;
+    bottom: 0;
+}
+
+.qg-preamble h1 {
+    margin-bottom: 0 !important;
+}
+
+.more-info {
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/__data/assets/image/0019/4807/header-background-more-info.jpg') no-repeat center/cover;
+}
+
+.about-ptss {
+    background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/__data/assets/image/0018/4806/header-background-about-ptss.jpg') no-repeat center/cover;
+}
+
+.print-content-link {
+    color: #fff;
+}
+
+.qg-preamble h1 {
+    font-size: 2.2em;
+    color: #fff;
+    padding: 0;
+    margin: 0;
+}
+
+.qg-preamble p {
+    font-size: 1.4em;
+    margin-bottom: 0;
+    font-weight: 700;
+}
+
+.qg-accordion .collapsing-section em, .qg-accordion .collapsing-section up {
+    padding-left: 0;
+}
+
+@media screen and (max-width: 980px) {
+    .qg-preamble {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 640px) {
+    .qg-preamble h1 {
+        font-size: 1.6em;
+    }
+    .qg-preamble p {
+        font-size: 1em;
+    }
+}
