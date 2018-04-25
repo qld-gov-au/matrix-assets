@@ -181,18 +181,23 @@
 
 .qg-preamble {
   height: 215px;
-  /*auto;*/
+  margin: -50px -50px 1em -50px;
   position: relative;
   box-sizing: border-box;
   padding: 1px;
-  margin: -1.3em -3.125em 0 -3.125em;
   color: #fff;
   background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/__data/assets/image/0017/4805/header-background.jpg') no-repeat center/cover;
 }
 
-.qg-preamble h1 {
+
+.qg-preamble article {
+  margin: 2.5em 3.125em;
   position: absolute;
-  bottom: 1em;
+  bottom: 0;
+}
+
+.qg-preamble h1 {
+  margin-bottom: 0 !important;
 }
 
 .more-info {
@@ -205,10 +210,6 @@
 
 .qg-preamble .print-content-link {
   color: #fff !important;
-}
-
-.qg-preamble article {
-  margin: 2.5em 3.125em;
 }
 
 .qg-preamble h1 {

@@ -1,0 +1,58 @@
+.row-eq-height {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display:         flex;
+  flex-wrap: wrap;
+}
+
+
+
+#qg-tabbed-area{
+  .qg-tabs {
+    display: none;
+  }
+
+  input {
+    display: none;
+  }
+
+  label {
+    margin-right: 1.2em;
+    font-weight: bold;
+    text-decoration: underline;
+    display: inline-block;
+    text-align: center;
+
+  }
+  label:hover {
+    color: #888;
+    cursor: pointer;
+  }
+
+  #tab1:checked ~ #tab-1,
+  #tab2:checked ~ #tab-2{
+    display: block;
+  }
+
+
+  &.alerts-theme{
+    #tab1:checked + label,
+    #tab2:checked + label{
+      color: #fff;
+      background: #000000;
+    }
+    label{
+      background: #efedee;
+      color: #283966;
+      padding: 0.7em 1.3em;
+      text-decoration: none;
+      margin-right: 0;
+      &:hover {
+        color: #fff;
+        background: #000000;
+      }
+    }
+  }
+
+}
