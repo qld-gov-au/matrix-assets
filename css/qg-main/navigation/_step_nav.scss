@@ -52,6 +52,9 @@
                 background: #fff;
               }
             }
+            &:visited{
+              color: initial !important;
+            }
           }
         }
       }
