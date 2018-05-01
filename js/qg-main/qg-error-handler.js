@@ -18,7 +18,7 @@
                     $('<input/>', {type: 'hidden', name: 'agent', value: navigator.userAgent}),
                     $('<input/>', {type: 'hidden', name: 'page-url', value: window.location.href}),
                     $('<input/>', {type: 'hidden', name: 'error-info', value: errorInfo}),
-                    $('<p/>', {'class': 'actions'}).append($('<strong/>').append($('<input/>', {type: 'submit', value: 'Submit'})))
+                    $('<p/>', {'class': 'actions'}).append($('<strong/>').append($('<button type="submit" value="Submit" class="btn btn-primary">Submit</button>')))
                 );
                 errorInfoContainer.last().after(form);
             };
