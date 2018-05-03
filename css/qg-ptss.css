@@ -6,12 +6,13 @@
     width: 100%;
     color: #000;
     overflow: hidden;
-    border-top: 1px solid #F6F6F6;
+
 }
 
-.qg-accordion:last-child {
-    border-bottom: 1px solid #F6F6F6;
+.qg-accordion article {
+    border-bottom: 2px solid #F6F6F6;
 }
+
 
 .qg-accordion .collapsing-section p {
     margin-top: 0 !important;
@@ -24,8 +25,8 @@
 
 .qg-accordion h2 {
     margin: 0;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    padding-top: 1.2em;
+    padding-bottom: 1.2em;
 }
 
 .qg-accordion input {
@@ -222,7 +223,7 @@
     .qg-preamble h1 {
         font-size: 1.6em;
     }
-    .qg-accordion h2, .qg-preamble p {
+    .qg-accordion h2,.qg-preamble p {
         font-size: 1em;
     }
 }
