@@ -7,7 +7,7 @@ test('Accordion is working as expected', async t => {
     const arrowel = Selector('.arrow').nth(0);
 
     await t
-        .expect(el.getStyleProperty('max-height')).eql('0px')
+        .expect(el.getStyleProperty('max-height')).eql('120x')
         .click(arrowel)
         .expect(el.getStyleProperty('max-height')).notEql('0px')
 });
