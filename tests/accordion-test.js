@@ -6,9 +6,8 @@ test('Accordion is working as expected', async t => {
     const el = Selector('.collapsing-section').nth(0);
     const arrowel = Selector('.arrow').nth(0);
 
-
     await t
-        .expect(el.getStyleProperty('max-height')).eql('120x')
+        .expect(el.getStyleProperty('max-height')).eql('0x')
         .click(arrowel)
         .expect(el.getStyleProperty('max-height')).notEql('0px')
 });
