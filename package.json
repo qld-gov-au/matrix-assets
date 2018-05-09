@@ -7,6 +7,6 @@
   },
   "dependencies": {
     "testcafe": "^0.19.2",
-    "testcafe-browser-provider-browserstack": "^1.4.0",
+    "testcafe-browser-provider-browserstack": "^1.4.0"
   }
 }
