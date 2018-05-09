@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "testcafe chrome:headless tests"
+    "test": "/node_modules/.bin/testcafe chrome:headless tests"
   },
   "dependencies": {
     "testcafe": "^0.19.2",
