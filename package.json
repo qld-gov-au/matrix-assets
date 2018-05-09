@@ -1,0 +1,12 @@
+{
+  "name": "matrix-assets",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "testcafe chrome:headless tests"
+  },
+  "dependencies": {
+    "testcafe": "^0.19.2",
+    "testcafe-browser-provider-browserstack": "^1.4.0"
+  }
+}
