@@ -16,8 +16,5 @@ test('Slider is working as expected', async t => {
             .debug()
             .click($nextButton)
             .expect( Selector('#aside-carousel .item').nth(1).hasClass('active')).eql(true)
-
-
     }
-
 });
