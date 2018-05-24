@@ -1,0 +1,62 @@
+// -------------------------------------
+//    mixins
+// -------------------------------------
+@import "./?a=139:css/qg-main/mixins/_bootstrap-breakpoints.scss";
+
+// -------------------------------------
+//   base partials
+// -------------------------------------
+@import "./?a=139:css/qg-main/_variables.scss";
+@import "./?a=139:css/qg-main/core/_typography.scss";
+
+// -------------------------------------
+//   template components
+// -------------------------------------
+@import "./?a=139:css/qg-main/header/_site-utilities.scss";
+@import "./?a=139:css/qg-main/header/_global_alert.scss";
+@import "./?a=139:css/qg-main/navigation/_guide-sub-nav.scss";
+@import "./?a=139:css/qg-main/navigation/_step_nav.scss";
+@import "./?a=139:css/qg-main/asides/_content_aside.scss";
+@import "./?a=139:css/qg-main/carousel/_featured_slider.scss";
+@import "./?a=139:css/qg-main/navigation/_guide-sub-nav.scss";
+@import "./?a=139:css/qg-main/datatables/_tables.scss";
+@import "./?a=139:css/qg-main/forms/_feedback_form.scss";
+@import "./?a=139:css/qg-main/forms/_autocomplete.scss";
+@import "./?a=139:css/qg-main/forms/_legacy_forms.scss";
+
+@import "./?a=139:css/qg-main/core/_images.scss";
+@import "./?a=139:css/qg-main/core/_index-links.scss";
+@import "./?a=139:css/qg-main/core/_links.scss";
+@import "./?a=139:css/qg-main/core/_tables.scss";
+
+
+// -------------------------------------
+//   page models
+// -------------------------------------
+@import "./?a=139:css/qg-main/pagemodels/_aggregation.scss";
+@import "./?a=139:css/qg-main/pagemodels/_guide.scss";
+
+// -------------------------------------
+//   content templates
+// -------------------------------------
+@import "./?a=139:css/qg-main/content-types/_cards.scss";
+@import "./?a=139:css/qg-main/content-types/_promotions.scss";
+@import "./?a=139:css/qg-main/content-types/_cross_selling_links.scss";
+@import "./?a=139:css/qg-main/content-types/_cut-in-images.scss";
+@import "./?a=139:css/qg-main/content-types/_tabs.scss";
+
+// -------------------------------------
+//   Franchise specific (TODO to be loaded using loader)
+// -------------------------------------
+//@import "./?a=139:css/qg-main/_qg-ptss.scss";
+// -------------------------------------
+//   print
+// -------------------------------------
+@import "./?a=139:css/qg-main/_print.scss";
+
+
+
+
+/*@@ Additional adhoc scss can be added here.
+ Later create a ticket with developers to add it in the repo @@*/
+
