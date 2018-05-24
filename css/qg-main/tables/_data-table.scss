@@ -98,16 +98,16 @@ table.dataTable {
 
   tr.odd {
     td { background-color: $tables-odd-background-color; }
-    td.sorting_1 { background-color: $tables-odd-sorting-1-background-color; }
-    td.sorting_2 { background-color: $tables-odd-sorting-2-background-color; }
-    td.sorting_3 { background-color: $tables-odd-sorting-3-background-color; }
+    td.sorting_1 { background-color: #c6d4de; }
+    td.sorting_2 { background-color: #dde3e9; }
+    td.sorting_3 { background-color: #e8ebee; }
   }
 
   tr.even {
     td { background-color: $tables-even-background-color; }
-    td.sorting_1 { background-color: $tables-even-sorting-1-background-color; }
-    td.sorting_2 { background-color: $tables-even-sorting-2-background-color; }
-    td.sorting_3 { background-color: $tables-even-sorting-3-background-color; }
+    td.sorting_1 { background-color: #d0dde8;}
+    td.sorting_2 { background-color: #e7eef3; }
+    td.sorting_3 { background-color: #f3f7f9; }
   }
 
   /*
