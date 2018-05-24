@@ -1,10 +1,10 @@
-ol.checklist,
-ul.checklist {
+ol.checklist, ol.qg-checklist,
+ul.checklist,ul.qg-checklist {
 	padding: .5em 0 1.5em;
 	margin-top: .5em;
 	overflow: hidden;
 }
-.checklist li {
+.checklist li , .qg-checklist li {
 	background-image: url(/_qgdesigns/images/checklist-tick.png);
 	background-repeat: no-repeat;
 	padding-bottom: 10px;
@@ -13,7 +13,7 @@ ul.checklist {
 } 
 
 @media print {
-	.checklist li:before {
+	.checklist li:before, .qg-checklist li:before {
 		border: 2px solid $qg-grey-light;
 		border-radius: 2px;
 		content: " ";
