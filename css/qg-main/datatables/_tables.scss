@@ -13,14 +13,14 @@ table {
 th {
   padding: .8em 1em;
   border: none;
-  @include font-rem(1.05);
+  //@include font-rem(1.05);
   font-weight: 700;
 }
 
 td {
   padding: 1em;
   border: none;
-  @include font-rem(.9);
+  //@include font-rem(.9);
   font-weight: 400;
 }
 
