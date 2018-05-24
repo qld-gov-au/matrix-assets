@@ -124,13 +124,13 @@ table.dataTable {
   }
 
   .sorting {
-    background: $tables-thead-background-color url('__data/assets/git_bridge/0013/139/images/datatable/sort_both.png') no-repeat center right;
+    background: $tables-thead-background-color url('/_qgdesigns/images/datatables/sort_both.png') no-repeat center right;
   }
   .sorting_asc {
-    background: $tables-thead-background-color url('__data/assets/git_bridge/0013/139/images/datatable/sort_asc.png') no-repeat center right;
+    background: $tables-thead-background-color url('/_qgdesigns/images/datatables/sort_asc.png') no-repeat center right;
   }
   .sorting_desc {
-    background: $tables-thead-background-color url('__data/assets/git_bridge/0013/139/images/datatable/sort_desc.png') no-repeat center right;
+    background: $tables-thead-background-color url('/_qgdesigns/images/datatables/sort_desc.png') no-repeat center right;
   }
 
   thead th:active,
@@ -236,23 +236,23 @@ table.dataTable {
 }
 
 .paginate_enabled_previous {
-  background: url('__data/assets/git_bridge/0013/139/images/datatable/back_enabled.png') no-repeat top left;
+  background: url('/_qgdesigns/images/datatables/back_enabled.png') no-repeat top left;
 }
 .paginate_enabled_previous:hover {
-  background: url('__data/assets/git_bridge/0013/139/images/datatable/back_enabled_hover.png') no-repeat top left;
+  background: url('/_qgdesigns/images/datatables/back_enabled_hover.png') no-repeat top left;
 }
 .paginate_disabled_previous {
-  background: url('__data/assets/git_bridge/0013/139/images/datatable/back_disabled.png') no-repeat top left;
+  background: url('/_qgdesigns/images/datatables/back_disabled.png') no-repeat top left;
 }
 
 .paginate_enabled_next {
-  background: url('__data/assets/git_bridge/0013/139/images/datatable/forward_enabled.png') no-repeat top right;
+  background: url('/_qgdesigns/images/datatables/forward_enabled.png') no-repeat top right;
 }
 .paginate_enabled_next:hover {
-  background: url('__data/assets/git_bridge/0013/139/images/datatable/forward_enabled_hover.png') no-repeat top right;
+  background: url('/_qgdesigns/images/datatables/forward_enabled_hover.png') no-repeat top right;
 }
 .paginate_disabled_next {
-  background: url('__data/assets/git_bridge/0013/139/images/datatable/forward_disabled.png') no-repeat top right;
+  background: url('/_qgdesigns/images/datatables/forward_disabled.png') no-repeat top right;
 }
 
 /* Full number pagination */
