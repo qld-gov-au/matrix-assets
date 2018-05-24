@@ -4,10 +4,35 @@ $qg-grey-light: #f6f6f6; //Header light grey
 $qg-grey: #939393;  //Search input grey
 $qg-grey-dark: #444444; //Aggregation card background
 $qg-blue: #017eb1; //Header blue
+$qg-mid-gray: #666666;
 $qg-blue-light: #e7f5fe; //Aside pale blue
+$qg-silver: #cccccc;
 $qg-blue-dark: #13578b; //Text blue
 $qg-blue-dark-1: #005375; //Feedback button dark blue
 $qg-blue-dark-2: #0b2e4c; //Fat footer dark blue
 $qg-green: #79ba00; //Icon and button green
 $qg-white: #FFFFFF; //Background;
+$qg-mid-gray: #666666;
 $qg-black: #000000; //Font color
+$tables-tbody-background-color: #f3f3f3;
+$tables-thead-background-color: #13578b;
+$tables-odd-background-color: #f3f3f3;
+$tables-thead-background-color: #13578b;
+$tables-thead-color: $qg-white;
+$tables-odd-background-color: #f3f3f3;
+$tables-odd-sorting-1-background-color: mix($tables-thead-background-color, $tables-odd-background-color, 20%);
+$tables-odd-sorting-2-background-color: mix($tables-thead-background-color, $tables-odd-background-color, 10%);
+$tables-odd-sorting-3-background-color: mix($tables-thead-background-color, $tables-odd-background-color, 5%);
+$tables-even-background-color: #ffffff;
+$tables-even-sorting-1-background-color: mix($tables-thead-background-color, $tables-even-background-color, 20%);
+$tables-even-sorting-2-background-color: mix($tables-thead-background-color, $tables-even-background-color, 10%);
+$tables-even-sorting-3-background-color: mix($tables-thead-background-color, $tables-even-background-color, 5%);
+$tables-paging-full-numbers-link-paginate-button-border-color: #aaaaaa;
+$tables-paging-full-numbers-link-paginate-button-color: $qg-mid-gray;
+$tables-paging-full-numbers-link-paginate-button-background-color: #dddddd;
+$tables-paging-full-numbers-link-paginate-button-hover-background-color: $qg-silver;
+$tables-paging-full-numbers-link-paginate-active-background-color: #99B3FF;
+$tables-processing-border-color: #dddddd;
+$tables-processing-color: #999999;
+$tables-paginate-disabled-previous-color: $qg-grey;
+$tables-paginate-enabled-previous-next-color: #111111;
