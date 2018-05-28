@@ -1,0 +1,39 @@
+/* Cut-ins */
+div.cut-in {
+  float: right;
+  margin-left: 1em;
+}
+div.cut-in {
+  position: relative;
+  max-width: 374px!important;
+  text-align: center;
+  font-size: .9rem;
+  font-style: italic;
+  border: 1px solid #eee;
+  padding: .5em;
+}
+div.cut-in img {
+  max-width: 100%!important;
+  height: auto!important;
+  margin: 0 auto;
+  display: block;
+}
+div.cut-in {
+  position: relative;
+  max-width: 374px!important;
+  text-align: center;
+  font-size: .9em;
+  font-style: italic;
+  border: 1px solid #eee;
+  padding: .5em;
+}
+div.cut-in .caption {
+              margin: .5em auto 0 auto;
+  text-align: left;
+  font-size: .9em;
+  font-style: italic;
+  max-width: 284px;
+}
+div.cut-in .caption p:last-child {
+              margin: 0;
+}
