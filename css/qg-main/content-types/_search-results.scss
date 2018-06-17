@@ -1,0 +1,14 @@
+@include breakpoint(sm) {
+    .qg-search-results {
+        dd, dt {
+            display: inline-block;
+        }
+        dt {
+            width: 25%;
+            vertical-align: top;
+        }
+        dd {
+            width: 70%;
+        }
+    }
+}
