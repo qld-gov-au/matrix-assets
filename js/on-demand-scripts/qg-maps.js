@@ -28,7 +28,7 @@ function initMap() {
         });
         
         var markerClusterer = new MarkerClusterer( map, null, {
-                imagePath: '/_qgdesigns/js/m',
+                imagePath: '../../images/maps/m',
                 imageSizes: [ 53, 56, 66, 78, 90 ],
                 imageExtension: 'png',
                 gridSize: gridSize
