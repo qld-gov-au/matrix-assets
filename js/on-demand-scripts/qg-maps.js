@@ -8,7 +8,7 @@ In Matrix the data and container are generated in CKAN Querying REST asset.
 var info;
 
 function initMap() {
-    $.getScript('./?a=25653', function(){ //calling markerclusterer.js from Matrix plugins
+    $.getScript('./?a=13345', function(){ //calling markerclusterer.js from Matrix plugins
         var mapEle = document.getElementById('qg-search-results-map-container'),
         center = mapEle.getAttribute('data-center').split(','),
         controlsPosition = mapEle.getAttribute('data-controlsPosition'),
@@ -28,7 +28,7 @@ function initMap() {
         });
         
         var markerClusterer = new MarkerClusterer( map, null, {
-                imagePath: './?a=228:images/maps/m',
+                imagePath: './?a=139:images/maps/m',
                 imageSizes: [ 53, 56, 66, 78, 90 ],
                 imageExtension: 'png',
                 gridSize: gridSize
