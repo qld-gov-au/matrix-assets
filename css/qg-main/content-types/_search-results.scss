@@ -1,5 +1,5 @@
 @include breakpoint(sm) {
-    .qg-search-results {
+    #qg-search-results {
         dd, dt {
             display: inline-block;
         }
