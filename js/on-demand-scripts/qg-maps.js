@@ -37,7 +37,7 @@ function initMap() {
         //marker html generator    
         var addMarkerLink = function( item ) {
                 var template = '',wrapper = '';
-                template = '<li><a href="'+ window.location.href +'/view/?title=' + encodeURI(item['Title']) + '">' + item['Title'] + '</a></li>';
+                template = '<li><a href="'+ window.location.href.replace(/(_nocache|_recache|_admin)/,'') +'/view/?id=' + item['_id'] + '&title=' + encodeURI(item['Title']) + '">' + item['Title'] + '</a></li>';
                 wrapper = $( '<ul class="map-popup"></ul>' );
                 return wrapper.append(template);
             }    
@@ -82,6 +82,13 @@ function initMap() {
             markerClusterer.addMarker( marker );
         });
     });
+    
+    //trigger View full screen
+    $( '.butterfly' ).butterfly({
+            contentDefaultWidth: '90%',
+            contentDefaultHeight: '90%',
+            reuseFragment: true,
+        });
     
 }
 initMap();
