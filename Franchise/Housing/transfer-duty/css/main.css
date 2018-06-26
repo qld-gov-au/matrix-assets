@@ -22,14 +22,3 @@ input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
     -webkit-appearance: none;
 }
-
-
-form .questions abbr[title*=required] {
-    position: absolute;
-    width: 0;
-    text-align: center;
-    top: .2em;
-    padding: 0;
-    margin: 0;
-    left: -0.6em;
-}
