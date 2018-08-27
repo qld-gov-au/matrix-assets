@@ -17,10 +17,10 @@ var ptssWidget = {
         var initialPer = 0;
         var progressPer = 100/steps;
         var checkTrigger = false;
-        var makeHeading = function () {
+        var makeHeading = () => {
             return `<h3>${self.data()[counter-1].Ques} ${self.data()[counter-1].linkText ? `<a class="acc-modal-box" href="${self.data()[counter-1].link}">${self.data()[counter-1].linkText}</a>` : ``} ?</h3>`;
         };
-        var makeQuesSection = function(){
+        var makeQuesSection = () => {
             var prepareQuesBlk = makeHeading();
             prepareQuesBlk+= self.markup().choices();
             prepareQuesBlk += `<p class="step-indicator">Question ${counter} of ${self.data().length}</p>${self.markup().progressBar(initialPer+=progressPer)}${self.markup().cancel()}`;
@@ -32,7 +32,7 @@ var ptssWidget = {
             self.config.$questionsSec.html(makeQuesSection());
             counter++;
         });
-        self.config.$body.on('click', '#yes', function (evt) {
+        self.config.$body.on('click', '#yes', (evt) => {
             evt.preventDefault();
             if(checkTrigger === true) counter++;
             if(counter <= self.data().length){
@@ -48,14 +48,14 @@ var ptssWidget = {
             counter--;
             initialPer-=progressPer;
         });
-        self.config.$body.on('click', '#back', function () {
+        self.config.$body.on('click', '#back',  () => {
             self.config.$questionsSec.html(makeQuesSection());
         });
-        self.config.$body.on('click', '#cancel-choices', function (event) {
+        self.config.$body.on('click', '#cancel-choices', (event) => {
             event.preventDefault();
             location.reload();
         });
-        self.config.$body.on('click', '.acc-modal-box', function (event) {
+        self.config.$body.on('click', '.acc-modal-box',  (event) => {
             event.preventDefault();
             $.fancybox.open(`<div class="modal-box"><i class="fa fa-spinner fa-spin" style="font-size: 3em;"></i></div>`);
             $.ajax({
@@ -70,23 +70,23 @@ var ptssWidget = {
         });
     },
     markup () {
-        var progressBar = function (percent) {
+        var progressBar = (percent) => {
             return  `<div class="progress">
                     <div class="progress-bar" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:${percent}%">
                       <span class="sr-only">${percent}% Complete</span>
                     </div>
                 </div>`
         };
-        var cancel = function () {
+        var cancel =  () => {
             return  `<p class="text-right"><small><a href= '#' id="cancel-choices">Cancel</a></small></p>`
         };
-        var choices = function () {
+        var choices = () => {
             return `<div class="choices">
                             <button class="btn btn-default btn-block" id="yes">Yes</button>
                             <button class="btn btn-default btn-block" id="no">No</button>
                       </div>`;
         };
-        var approval = function () {
+        var approval = () => {
             return `<div class="approval">
                         <h3>Based on your response you may be eligible for PTSS</h3>
                         <ul>
@@ -96,7 +96,7 @@ var ptssWidget = {
                         <a class="btn btn-block btn-primary" href="https://www.qld.gov.au/health/services/travel/subsidies/process">Apply for PTSS</a>
                     </div>`
         };
-        var notEligible = function () {
+        var notEligible = () => {
             return `<div class="not-eligible">
                         <h3>Based on you responses you may not be eligible for PTSS</h3>
                         <p>You can:</p>
