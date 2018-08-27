@@ -26,7 +26,7 @@ var ptssWidget = {
             prepareQuesBlk += `<p class="step-indicator">Question ${counter} of ${self.data().length}</p>${self.markup().progressBar(initialPer+=progressPer)}${self.markup().cancel()}`;
             return prepareQuesBlk;
         };
-        self.config.$ptssWidget.find(self.config.$continueBtn).click(function (evt) {
+        self.config.$ptssWidget.find(self.config.$continueBtn).click((evt) => {
             evt.preventDefault();
             $(this).remove();
             self.config.$questionsSec.html(makeQuesSection());
@@ -42,7 +42,7 @@ var ptssWidget = {
                 self.config.$questionsSec.html(self.markup().approval());
             }
         });
-        self.config.$body.on('click', '#no', function () {
+        self.config.$body.on('click', '#no',  () => {
             checkTrigger = true;
             self.config.$questionsSec.html(self.markup().notEligible());
             counter--;
@@ -61,7 +61,7 @@ var ptssWidget = {
             $.ajax({
                 url: $(this).attr('href'),
                 dataType: 'html',
-                success: function(html) {
+                success: (html) => {
                     var $heading = $(html).find('.qg-accordion').find('article:nth-child(2) h2');
                     var $description = $(html).find('.qg-accordion').find('article:nth-child(2) .collapsing-section');
                     $('.modal-box').find('.fa').remove().end().append(`${$heading.html()} <br /><br /> ${$description.html()}`);
