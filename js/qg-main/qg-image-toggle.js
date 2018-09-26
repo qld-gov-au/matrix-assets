@@ -14,7 +14,7 @@ $(function() {
 
 		$( this )
 			// add a toggle before the credits
-			.before( '<button class="figure-credits-toggle" title="View credits"><img src="https://static.qgov.net.au/assets/v2/images/skin/icon-image-credit.png" alt"View credits" /></button>' )
+			.before( '<button class="figure-credits-toggle" title="View credits"><img src="/__data/assets/git_bridge/0013/139/images/content-types/icon-image-credit.png" alt"View credits" /></button>' )
 			// hide the credits
 			.hide()
 		;
