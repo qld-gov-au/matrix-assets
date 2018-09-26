@@ -37,7 +37,8 @@ function initMap() {
         //marker html generator    
         var addMarkerLink = function( item ) {
                 var template = '',wrapper = '';
-                template = '<li><a href="'+ window.location.href.replace(/(_nocache|_recache|_admin)/,'') +'/view/?id=' + item['_id'] + '&title=' + encodeURI(item['Title']) + '">' + item['Title'] + '</a></li>';
+                var viewUrl = (window.location.origin + window.location.pathname.replace(/(_nocache|_recache|_admin)/,'')).replace(/\/$/,'') + '/view/?title=' + encodeURI(item['Title']);
+                template = '<li><a href="'+ viewUrl + '">' + item['Title'] + '</a></li>';
                 wrapper = $( '<ul class="map-popup"></ul>' );
                 return wrapper.append(template);
             }    
