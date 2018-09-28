@@ -1,6 +1,14 @@
-
 .image-caption {
   padding: 0.5rem 2rem;
   font-size: 1.4rem;
   font-style: italic;
+}
+
+// aside social media images
+#qg-secondary-content {
+  .qg-aside{
+    & a[href*="facebook.com"] > img, & a[href*="twitter.com"] > img , & a[href*="instagram.com"] > img {
+      margin-right: 14px;
+    }
+  }
 }
