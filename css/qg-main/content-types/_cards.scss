@@ -1,4 +1,4 @@
-.qg-cards {
+#qg-primary-content .qg-cards {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -44,6 +44,16 @@
         a {
           color: #FFF;
           white-space: inherit;
+          &:focus, &:hover, &:link, &:visited {
+            color: #FFF;
+          }
+          &:hover {
+            text-decoration: none;
+            * {
+              text-decoration: none;
+              color: #fff;
+            }
+          }
         }
       }
       .btn {
