@@ -26,6 +26,9 @@
     }
   }
   .additional-information {
+    h2 {
+      font-size: 2.5rem;
+    }
     background: $qg-grey-light;
     padding-bottom: 3rem;
     >.row {
