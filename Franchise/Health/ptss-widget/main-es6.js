@@ -1,4 +1,4 @@
-// This file is written according to the ES6 specifications
+// This file is written according to the ES6 specifications. Use https://babeljs.io/en/repl to convert
 
 'use strict';
 
@@ -90,10 +90,10 @@ var ptssWidget = {
             return `<div class="approval">
                         <h3>Based on your response you may be eligible for PTSS</h3>
                         <ul>
-                            <li><a href="https://www.qld.gov.au/health/services/travel/subsidies/ptss-subsidies">Learn more PTSS subsidies</a></li>
-                            <li><a href="https://www.qld.gov.au/health/services/travel/subsidies/process">Find out about the PTSS process</a></li>
+                            <li><a href="./?a=3512">Learn more PTSS subsidies</a></li>
+                            <li><a href="./?a=34365">Find out about the PTSS process</a></li>
                         </ul><br>
-                        <a class="btn btn-block btn-primary" href="https://www.qld.gov.au/health/services/travel/subsidies/process">Apply for PTSS</a>
+                        <a class="btn btn-block btn-primary" href="./?a=34365?#ptss-submit-application">Complete PTSS application</a>
                     </div>`
         };
         var notEligible = () => {
@@ -101,10 +101,9 @@ var ptssWidget = {
                         <h3>Based on you responses you may not be eligible for PTSS</h3>
                         <p>You can:</p>
                         <ul>
-                            <li><a href="https://www.qld.gov.au/health/services/travel/subsidies/process">Read the PTSS eligibility criteria</a></li>
-                            <li><a href="https://www.qld.gov.au/health/services/travel/subsidies/ptss-subsidies">Learn about PTSS subsidies</a></li>
-                            <li><a href="">Find other support services</a></li>
-                            <li><a href="">Contact your local health facility for more information</a></li>
+                            <li><a href="./?a=34365?#ptss-check-eligibility">Read the PTSS eligibility criteria</a></li>
+                            <li><a href="./?a=3512">Learn about PTSS subsidies</a></li>
+                            <li><a href="./?a=40208">Contact your local health facility for more information</a></li>
                         </ul><br>
                         <button class="btn btn-block btn-default" id="back">Back</button>
                     </div>`
