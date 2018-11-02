@@ -27,8 +27,9 @@ var ptssWidget = {
             return prepareQuesBlk;
         };
         self.config.$ptssWidget.find(self.config.$continueBtn).click((evt) => {
+            var $this = $(evt.currentTarget);
             evt.preventDefault();
-            $(this).remove();
+            $this.remove();
             self.config.$questionsSec.html(makeQuesSection());
             counter++;
         });
