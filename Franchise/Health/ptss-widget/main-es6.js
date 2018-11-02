@@ -93,7 +93,10 @@ var ptssWidget = {
                             <li><a href="./?a=3512">Learn more PTSS subsidies</a></li>
                             <li><a href="./?a=34365">Find out about the PTSS process</a></li>
                         </ul><br>
-                        <a class="btn btn-block btn-primary" href="./?a=34365?#ptss-submit-application">Complete PTSS application</a>
+                        <a class="qg-btn btn-primary download btn-block" href="./?a=3882">
+                            <span class="title btn-block">Complete PTSS application</span>
+                            <span class="meta">(PDF, 115KB)</span>
+                        </a>
                     </div>`
         };
         var notEligible = () => {
