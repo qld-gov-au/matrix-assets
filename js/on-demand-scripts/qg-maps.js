@@ -14,6 +14,8 @@ function initMap() {
         controlsPosition = mapEle.getAttribute('data-controlsPosition'),
         gridSize = mapEle.getAttribute('data-dataClusterGridSize'),
         markers = {};
+
+        var reg = /latitude=([\d,-]*?)\./; //detect location search
         
         var map = new google.maps.Map(mapEle, {
           center: new google.maps.LatLng( parseFloat(center[0]),parseFloat(center[1]) ),
@@ -24,7 +26,7 @@ function initMap() {
           streetViewControlOptions: {
               position: google.maps.ControlPosition[controlsPosition]
           },
-          zoom: 5
+          zoom: reg.test(window.location.search) ? 10 : 5
         });
         
         var markerClusterer = new MarkerClusterer( map, null, {
