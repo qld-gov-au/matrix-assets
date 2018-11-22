@@ -9,14 +9,22 @@ var info;
 
 function initMap() {
     $.getScript('./?a=13345', function(){ //calling markerclusterer.js from Matrix plugins
+        var reg = /latitude=([\d.-]*?)(&|$)/; //detect location search
+        
+        
         var mapEle = document.getElementById('qg-search-results-map-container'),
-        center = mapEle.getAttribute('data-center').split(','),
         controlsPosition = mapEle.getAttribute('data-controlsPosition'),
         gridSize = mapEle.getAttribute('data-dataClusterGridSize'),
-        markers = {};
+        markers = {}, center, zoom;
 
-        var reg = /latitude=([\d,-]*?)\./; //detect location search
-        
+        if(reg.test(window.location.search)) {
+            center = [window.location.search.match(/latitude=([\d.-]*?)(&|$)/)[1], window.location.search.match(/longitude=([\d.-]*?)(&|$)/)[1]];
+            zoom = 10;
+        } else {
+            center = mapEle.getAttribute('data-center') && mapEle.getAttribute('data-center').split(',') || '-23,143'.split(',');
+            zoom = 5;
+        }
+
         var map = new google.maps.Map(mapEle, {
           center: new google.maps.LatLng( parseFloat(center[0]),parseFloat(center[1]) ),
           mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -26,7 +34,7 @@ function initMap() {
           streetViewControlOptions: {
               position: google.maps.ControlPosition[controlsPosition]
           },
-          zoom: reg.test(window.location.search) ? 10 : 5
+          zoom: zoom
         });
         
         var markerClusterer = new MarkerClusterer( map, null, {
