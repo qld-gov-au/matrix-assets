@@ -9,7 +9,8 @@ var info;
 
 function initMap() {
     $.getScript('./?a=13345', function(){ //calling markerclusterer.js from Matrix plugins
-        var reg = /latitude=([\d.-]*?)(&|$)/; //detect location search
+        var searchLat = window.location.search.match(/latitude=([\d.-]*?)(&|$)/),
+            searchLong = window.location.search.match(/longitude=([\d.-]*?)(&|$)/); //detect location search
         
         
         var mapEle = document.getElementById('qg-search-results-map-container'),
@@ -17,8 +18,8 @@ function initMap() {
         gridSize = mapEle.getAttribute('data-dataClusterGridSize'),
         markers = {}, center, zoom;
 
-        if(reg.test(window.location.search)) {
-            center = [window.location.search.match(/latitude=([\d.-]*?)(&|$)/)[1], window.location.search.match(/longitude=([\d.-]*?)(&|$)/)[1]];
+        if(searchLat.length > 0) {
+            center = [searchLat[1], searchLong[1]];
             zoom = 10;
         } else {
             center = mapEle.getAttribute('data-center') && mapEle.getAttribute('data-center').split(',') || '-23,143'.split(',');
