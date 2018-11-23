@@ -9,12 +9,23 @@ var info;
 
 function initMap() {
     $.getScript('./?a=13345', function(){ //calling markerclusterer.js from Matrix plugins
+        var searchLat = window.location.search.match(/latitude=([\d.-]*?)(&|$)/),
+            searchLong = window.location.search.match(/longitude=([\d.-]*?)(&|$)/); //detect location search
+        
+        
         var mapEle = document.getElementById('qg-search-results-map-container'),
-        center = mapEle.getAttribute('data-center').split(','),
         controlsPosition = mapEle.getAttribute('data-controlsPosition'),
         gridSize = mapEle.getAttribute('data-dataClusterGridSize'),
-        markers = {};
-        
+        markers = {}, center, zoom;
+
+        if(searchLat && searchLat.length > 0) {
+            center = [searchLat[1], searchLong[1]];
+            zoom = 10;
+        } else {
+            center = mapEle.getAttribute('data-center') && mapEle.getAttribute('data-center').split(',') || '-23,143'.split(',');
+            zoom = 5;
+        }
+
         var map = new google.maps.Map(mapEle, {
           center: new google.maps.LatLng( parseFloat(center[0]),parseFloat(center[1]) ),
           mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -24,7 +35,7 @@ function initMap() {
           streetViewControlOptions: {
               position: google.maps.ControlPosition[controlsPosition]
           },
-          zoom: 5
+          zoom: zoom
         });
         
         var markerClusterer = new MarkerClusterer( map, null, {
