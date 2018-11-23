@@ -18,7 +18,7 @@ function initMap() {
         gridSize = mapEle.getAttribute('data-dataClusterGridSize'),
         markers = {}, center, zoom;
 
-        if(searchLat && searchLat.length > 0) {
+        if(searchLat && searchLat[1].length > 0) {
             center = [searchLat[1], searchLong[1]];
             zoom = 10;
         } else {
