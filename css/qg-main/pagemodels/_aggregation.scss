@@ -1,20 +1,4 @@
 .aggregation-index {
-  outline:10px solid purple;
-  .details{
-    a.btn, a.btn:visited, a.btn:focus{
-      color: inherit !important;
-      text-decoration: none !important;
-      &:hover {
-        background: rgba(0,126,177,.6) !important;
-      }
-    }
-  }
-  #qg-one-col.wide #qg-primary-content {
-    width: 90%;
-    margin: 0 auto;
-    margin-top: 5.6rem;
-    float: none;
-  }
   #qg-banner-blurb {
     position: relative;
     .bottom-right {
