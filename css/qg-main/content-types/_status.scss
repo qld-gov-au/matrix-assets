@@ -19,7 +19,7 @@
       border-left: 5px solid;
       padding: 1em;
       &:before, &:hover:before {
-        @include rem(font-size, 24px);
+        font-size: 24px;
         margin-left: -14px;
         top: 6px;
         color: #000;
