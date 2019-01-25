@@ -1,6 +1,7 @@
 //This should me decomissioned by CMS-164 Replace SWE2 status classes with SWE3 alert classes
 .status{
     margin: 24px 0 24px 0 !important;
+    background-color: #eef4f6;
     & > .inner {
         margin-left: 32px;
        h3{
@@ -10,8 +11,16 @@
         padding-left: 0;
       }
     }
+    &:before {
+        font-family: FontAwesome;
+        padding: 10px;
+    }
     &.warn {
       border-color: #f9af71 !important;
+      background-color: #ffedde;
+      &:before {
+        content: "\f071";
+      }
     }
     &.success , &.info, &.tip , &.warn, &.fail{
       position: relative;
@@ -27,8 +36,22 @@
     }
     &.success {
       border-color: #9ebf6d;
+      background-color: #f2f7ea;
+      &:before {
+        content: "\f058";
+      }
     }
     &.info, &.tip{
       border-color: #5bc0de;
+      &:before {
+        content: "\f05a";
+      }
+    }
+    &.fail {
+      background-color: #feecef;
+      &:before {
+            content: "\f05e";
+            color: #ea6a7e;
+        }
     }
   }
