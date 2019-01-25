@@ -27,7 +27,7 @@
       border: 0;
       border-left: 5px solid;
       padding: 1em;
-      &:before, &:hover:before {
+      &:before {
         font-size: 24px;
         margin-left: -14px;
         top: 6px;
@@ -49,9 +49,9 @@
     }
     &.fail {
       background-color: #feecef;
+      border-color: #ea6a7e;
       &:before {
             content: "\f05e";
-            color: #ea6a7e;
         }
     }
   }
