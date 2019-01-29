@@ -2,6 +2,9 @@
 .status{
     margin: 24px 0 24px 0 !important;
     background-color: #eef4f6;
+    *:first-child {
+        display: inline;
+    }
     & > .inner {
         margin-left: 32px;
        h3{
