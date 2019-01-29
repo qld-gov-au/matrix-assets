@@ -76,23 +76,15 @@ Later create a ticket with developers to add it in the repo @@*/
   padding: 0;
 }
 
-@media (max-width: 768px) {
-  #qg-franchise-landing [class^="col-md"], .qg-index [class^="col-md"] {
-    padding-right: 0;
-    padding-left: 0;
-  }
-}
 
-@media (min-width: 992px) {
-  #qg-franchise-landing [class^="col-md"], .qg-index [class^="col-md"] {
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-}
 #qg-franchise-landing .row .col-md-6 {
   display:flex;
 }
-
+@media (min-width: 992px) {
+  #qg-franchise-landing [class^="col-"], .qg-index [class^="col-"] {
+    padding-right: 0;
+  }
+}
 #qg-franchise-landing .qg-service-finder h2, #qg-franchise-landing .qg-feature-box h2{
   font-size: 30px;
   font-weight: normal;
