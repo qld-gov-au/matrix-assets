@@ -40,7 +40,6 @@
 @import "./?a=139:css/qg-main/content-types/_search-results.scss";
 @import "./?a=139:css/qg-main/content-types/_pagination.scss";
 @import "./?a=139:css/qg-main/content-types/_status.scss";
-
 // -------------------------------------
 //   modules
 // -------------------------------------
@@ -55,7 +54,6 @@
 // -------------------------------------
 //   print
 // -------------------------------------
-@import "./?a=139:css/qg-main/_print.scss";
 
 
 
@@ -341,4 +339,9 @@ Later create a ticket with developers to add it in the repo @@*/
 .sortable-table .dataTables_paginate .next:after {
   content:"\f138";
   padding-left: .3em;
+}
+
+
+.leaflet-popup-content h4{
+  font-size: 0.7rem !important;
 }
