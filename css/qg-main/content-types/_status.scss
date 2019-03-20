@@ -36,6 +36,11 @@
         top: 6px;
         color: #000;
       }
+      &:hover {
+        &:before {
+          padding-right: 10px;
+        }
+      }
     }
     &.success {
       border-color: #9ebf6d;
