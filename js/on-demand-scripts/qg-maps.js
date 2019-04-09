@@ -96,13 +96,11 @@ function initMap() {
     });
 
     //trigger View full screen
-   setTimeout(function () {
-       $( '.butterfly' ).butterfly({
-           contentDefaultWidth: '90%',
-           contentDefaultHeight: '90%',
-           reuseFragment: true,
-       });
-   },0)
+    $( '.butterfly' ).butterfly({
+        contentDefaultWidth: '90%',
+        contentDefaultHeight: '90%',
+        reuseFragment: true,
+    });
 
 }
 initMap();
