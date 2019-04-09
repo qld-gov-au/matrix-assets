@@ -4,7 +4,7 @@
 	var keys = {
 		"defGoogle" : {
 			"uat" : "AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE",
-			"prod" : "AIzaSyAqkq7IK18bsh-TUMmNR-x9v9PsptT3LMY"
+			"prod" : "AIzaSyANZv-2WcXRzkBqtgEcLTZq7zVy-9eNWgw"
 		},
 		"defGoogleRecaptcha" : {
 			"uat" : "6LeNGSwUAAAAAD6o-P5UTM0FNpKjYB71Kh70F-Ud",
@@ -61,23 +61,23 @@
 		}]
 	};
 
-	let googleApiKey;
+	var googleApiKey;
 	window.qg.googleKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogle.uat : keys.defGoogle.prod;
 	window.qg.googleRecaptchaApiKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogleRecaptcha.uat : keys.defGoogleRecaptcha.prod;
-	let findFranchiseName = function () {
-		let path = window.location.pathname.replace(/\/$/, '');
-		let pathArr = path.split('/').filter(function (e) {
+	var findFranchiseName = function () {
+		var path = window.location.pathname.replace(/\/$/, '');
+		var pathArr = path.split('/').filter(function (e) {
 			return e;
 		});
 		return pathArr[0].toLowerCase();
 	};
-	let franchise = findFranchiseName();
+	var franchise = findFranchiseName();
 	if (franchise) {
-		keys.franchises.forEach(function (franchise) {
-			if (franchise === franchise.name) {
+		keys.franchises.forEach(function (e) {
+			if (franchise === e.name) {
 				window.qg.franchise = {
-					name: franchise.name,
-					apiKey: franchise.apiKey,
+					name: e.name,
+					apiKey: e.apiKey,
 				};
 			}
 		});
@@ -85,7 +85,7 @@
 	googleApiKey = window.qg.franchise && window.qg.franchise.apiKey ? window.qg.franchise.apiKey : window.qg.googleKey;
     function lazyScript( url ) {
         $( 'head' ).append( '<script type="text/javascript" src="' + url + '"></script>' );
-    };
+    }
     //load Google APi
 	qg.loadGoogle = function (callback) {
 		if($('#googleapi').length<=0) {
@@ -96,7 +96,7 @@
 			s.src = u;
 			document.getElementsByTagName( 'head' )[0].appendChild( s );
 			s.onreadystatechange= function () { //trigger for IE
-				if (this.readyState === 'complete') {
+				if (this.readyState === 'compvare') {
 					lazyScript(callback);
 				}
 			};
@@ -107,7 +107,7 @@
 		else { //if script is already created but either loading or loaded
 			if(document.readyState === 'loading') {
 				document.onreadystatechange= function () {
-					if (this.readyState === 'complete') {
+					if (this.readyState === 'compvare') {
 						lazyScript(callback);
 					}
 				};
