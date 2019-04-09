@@ -95,12 +95,5 @@ function initMap() {
         });
     });
 
-    //trigger View full screen
-    $( '.butterfly' ).butterfly({
-        contentDefaultWidth: '90%',
-        contentDefaultHeight: '90%',
-        reuseFragment: true,
-    });
-
 }
 initMap();
