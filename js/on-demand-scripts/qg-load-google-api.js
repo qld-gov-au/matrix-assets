@@ -96,7 +96,7 @@
 			s.src = u;
 			document.getElementsByTagName( 'head' )[0].appendChild( s );
 			s.onreadystatechange= function () { //trigger for IE
-				if (this.readyState === 'compvare') {
+				if (this.readyState === 'complete') {
 					lazyScript(callback);
 				}
 			};
@@ -107,7 +107,7 @@
 		else { //if script is already created but either loading or loaded
 			if(document.readyState === 'loading') {
 				document.onreadystatechange= function () {
-					if (this.readyState === 'compvare') {
+					if (this.readyState === 'complete') {
 						lazyScript(callback);
 					}
 				};
