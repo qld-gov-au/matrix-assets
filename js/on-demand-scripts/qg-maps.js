@@ -46,6 +46,7 @@ function initMap() {
 
         //marker html generator
         var addMarkerLink = function( item ) {
+            console.log('Inside add marker link function v1');
             var template = '',wrapper = '';
             var markerUrl = window.mapsMarker.replace(/item\[[\s\S]+?\]/g, function (r) {return eval(r);}) || '<a href="'+ (window.location.origin + window.location.pathname.replace(/(_nocache|_recache|_admin)/,'')).replace(/\/$/,'') + '/view/?title=' + encodeURI(item['Title']) + '&id=' + encodeURI(item['_id']) + '">' + item['Title'] + '</a>';
             template = '<li>' + markerUrl + '</li>';
