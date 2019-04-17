@@ -47,11 +47,12 @@ function initMap() {
         //marker html generator
         var addMarkerLink = function( item ) {
             var template = '',wrapper = '';
-            var markerUrl = window.mapsMarker.replace(/item\[[\s\S]+?\]/g, function (r) {return eval(r);}) || '<a href="'+ (window.location.origin + window.location.pathname.replace(/(_nocache|_recache|_admin)/,'')).replace(/\/$/,'') + '/view/?title=' + encodeURI(item['Title']) + '&id=' + encodeURI(item['_id']) + '">' + item['Title'] + '</a>';
+            var markerUrl = window.mapsMarker.replace(/item\[[\s\S]+?\]/g, function (r) {return eval(r);}) || '<a href="'+ (window.location.origin + window.location.pathname.replace(/(_nocache|_recache|_admin)/,'')).replace(/\/$/,'') + '/view/?title=' + encodeURI(item['Title']) + '">' + item['Title'] + '</a>';
             template = '<li>' + markerUrl + '</li>';
             wrapper = $( '<ul class="map-popup"></ul>' );
             return wrapper.append(template);
-        }
+        };
+
 
         markerClusterer.clearMarkers(); //clearing existing markers
 
