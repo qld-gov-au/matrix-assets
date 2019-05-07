@@ -80,3 +80,5 @@ function generateStaticMapImg(ele) {
 
         return 'https://maps.googleapis.com/maps/api/staticmap?size=373x' + height + '&maptype=roadmap&markers=' + lat +'%2C'+ lon +'&key=' + googleApiKey + '&sensor=false&zoom=' + zoom;
 }
+
+console.log('v1');
