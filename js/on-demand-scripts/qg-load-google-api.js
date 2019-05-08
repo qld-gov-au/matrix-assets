@@ -62,8 +62,7 @@
 	};
 
 	var googleApiKey;
-	window.qg.googleKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogle.uat : keys.defGoogle.prod;
-	window.qg.googleRecaptchaApiKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogleRecaptcha.uat : keys.defGoogleRecaptcha.prod;
+
 	var findFranchiseName = function () {
 		var path = window.location.pathname.replace(/\/$/, '');
 		var pathArr = path.split('/').filter(function (e) {
@@ -75,14 +74,12 @@
 	if (franchise) {
 		keys.franchises.forEach(function (e) {
 			if (franchise === e.name) {
-				window.qg.franchise = {
-					name: e.name,
-					apiKey: e.apiKey,
-				};
+				if (franchise === e.name) {
+					googleApiKey = e.apiKey;
+				}
 			}
 		});
 	}
-	googleApiKey = window.qg.franchise && window.qg.franchise.apiKey ? window.qg.franchise.apiKey : window.qg.googleKey;
     function lazyScript( url ) {
         $( 'head' ).append( '<script type="text/javascript" src="' + url + '"></script>' );
     }
@@ -119,3 +116,5 @@
 
 	}
 }( qg, jQuery ));
+
+console.log('v4');
