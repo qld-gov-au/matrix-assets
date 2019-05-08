@@ -61,6 +61,7 @@ var keys = {
         "apiKey": "AIzaSyCe7FYHy28So2Uio_OEQje0o0Pr23s7gt0"
     }]
 };
+
 var googleApiKey;
 window.qg.googleKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogle.uat : keys.defGoogle.prod;
 window.qg.googleRecaptchaApiKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogleRecaptcha.uat : keys.defGoogleRecaptcha.prod;
@@ -71,6 +72,19 @@ var findFranchiseName = function () {
     });
     return pathArr[0].toLowerCase();
 };
+var franchise = findFranchiseName();
+if (franchise) {
+    keys.franchises.forEach(function (e) {
+        if (franchise === e.name) {
+            window.qg.franchise = {
+                name: e.name,
+                apiKey: e.apiKey,
+            };
+        }
+    });
+}
+googleApiKey = window.qg.franchise && window.qg.franchise.apiKey ? window.qg.franchise.apiKey : window.qg.googleKey;
+
 function generateStaticMapImg(ele) {
     var lat = ele.attr('data-lat') || -27.4673,
         lon = ele.attr('data-long') || 153.0233,
