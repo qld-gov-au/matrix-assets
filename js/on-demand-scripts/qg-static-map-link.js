@@ -2,6 +2,7 @@
 This function generates the map title image. Pass the image element like below
 <img src="" data-lat="-24.863789" data-long="152.354064 data-zoom="11" data-height="375">
 */
+var googleApiKey;
 var keys = {
     "defGoogle" : {
         "uat" : "AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE",
@@ -62,9 +63,6 @@ var keys = {
     }]
 };
 
-var googleApiKey;
-window.qg.googleKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogle.uat : keys.defGoogle.prod;
-window.qg.googleRecaptchaApiKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogleRecaptcha.uat : keys.defGoogleRecaptcha.prod;
 var findFranchiseName = function () {
     var path = window.location.pathname.replace(/\/$/, '');
     var pathArr = path.split('/').filter(function (e) {
@@ -76,23 +74,18 @@ var franchise = findFranchiseName();
 if (franchise) {
     keys.franchises.forEach(function (e) {
         if (franchise === e.name) {
-            window.qg.franchise = {
-                name: e.name,
-                apiKey: e.apiKey,
-            };
+            googleApiKey = e.apiKey;
         }
     });
 }
-googleApiKey = window.qg.franchise && window.qg.franchise.apiKey ? window.qg.franchise.apiKey : window.qg.googleKey;
 
 function generateStaticMapImg(ele) {
     var lat = ele.attr('data-lat') || -27.4673,
         lon = ele.attr('data-long') || 153.0233,
         zoom = ele.attr('data-zoom') || 17,
-        height = ele.attr('data-height') || 189,
-        googleApiKey = window.qg.franchise && window.qg.franchise.apiKey ? window.qg.franchise.apiKey : window.qg.googleKey;
+        height = ele.attr('data-height') || 189;
 
         return 'https://maps.googleapis.com/maps/api/staticmap?size=373x' + height + '&maptype=roadmap&markers=' + lat +'%2C'+ lon +'&key=' + googleApiKey + '&sensor=false&zoom=' + zoom;
 }
 
-console.log('v3');
+console.log('v4');
