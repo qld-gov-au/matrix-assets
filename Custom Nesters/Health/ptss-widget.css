@@ -1,0 +1,57 @@
+.qg-ptss-widget{
+    background-color: #F6F6F6 !important;
+    border-bottom: 1px solid #F1F0F0 !important;
+}
+
+.modal-box{
+    width: 80%;
+}
+
+.ptss-widget .choices{
+     display: flex;
+ }
+.choices button {
+    margin-top: 0 !important;
+    margin-right: 10px;
+
+}
+.choices button:last-child {
+
+    margin-right: 0;
+
+ }
+.ques-section{
+    font-size: 1em;
+    margin-top: 20px;
+}
+.ques-section .intro{
+    margin-bottom: 20px !important;
+}
+.ques-section .approval .btn {
+    color: #000 !important;
+}
+.ques-section h3 {
+    margin-bottom: 34px;
+    font-size: 1.4em;
+    color: #000 !important;
+}
+.step-indicator{
+    margin-top: 30px;
+    margin-bottom: 5px;
+}
+ .progress {
+     height: 9px;
+ }
+.progress-bar {
+    background-color: #88d400;
+}
+.bg-image{
+    height: 215px;
+    margin-right: -25px;
+    margin-left: -25px;
+    position: relative;
+    box-sizing: border-box;
+    padding: 1px;
+    color: #fff;
+    background: url('/__data/assets/image/0022/34384/eligible-for-PTSS.png') no-repeat center/cover;
+}

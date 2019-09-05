@@ -1,0 +1,26 @@
+#qg-primary-content .search-results .item a {
+    text-decoration: none;
+    font-weight: normal;
+}
+#qg-primary-content .search-results .item p strong{
+    font-size: 1.6rem;
+    font-weight: normal;
+}
+#qg-primary-content .search-results .item {
+    list-style: none;
+}
+#qg-primary-content .search-results {
+    padding: 0;
+}
+#qg-primary-content .resultset-title {
+    font-weight: 400;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid #ccc;
+    padding: .768rem 0 .576rem;
+    display: block;
+    font-size: 120%;
+    margin: 1.92rem 0 1.936rem;
+}
+.dl-horizontal dt {
+    text-align: left;
+}

@@ -1,0 +1,8 @@
+@media (max-width: 600px) {
+    table.tbl-maintenance-form  {
+        white-space: nowrap;
+        width:100%;
+        display: block;
+        overflow-x: auto;
+    }
+}

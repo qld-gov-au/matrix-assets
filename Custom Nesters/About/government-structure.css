@@ -1,0 +1,87 @@
+ul { margin-left: 1em; }
+li { line-height: 150% }
+	.wrapper {
+		display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-justify-content: flex-start;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
+    -webkit-align-content: space-around;
+    -ms-flex-line-pack: distribute;
+    align-content: space-around;
+    -webkit-align-items: flex-start;
+    -ms-flex-align: start;
+    align-items: flex-start;
+	}
+.ministers {
+	-webkit-order: 0;
+    -ms-flex-order: 0;
+    order: 0;
+    -webkit-flex: 0 1 auto;
+    -ms-flex: 0 1 auto;
+    flex: 0 1 auto;
+    -webkit-align-self: auto;
+    -ms-flex-item-align: auto;
+    align-self: auto;
+	width: 48%;
+	box-sizing: border-box;
+	background: url(http://cabinet.qld.gov.au/assets/minister-bg.png) repeat-x;
+	border-top: 1px solid #e6e6e6;
+	margin-right: 1%;
+	padding: 1em;
+}
+.ministers h3 {margin-top: 0; font-size:120%;font-weight:bold;}
+.ministers p {
+	font-size: 85%;
+	clear: both;
+}
+.ministers ul {
+	font-size: 85%;
+	margin-left: 0;
+	*margin-left: .8em;
+	padding-left: 0;
+	list-style: none;
+}
+.ministers ul li {
+	margin-left: 0;
+	margin-bottom: .5em;
+}
+.web, .keypeople, .phone, .org, .email, .minister
+ {
+	padding-left: 25px;
+	background-repeat: no-repeat;
+	padding-bottom: 5px;
+}
+* html body .web, * html body .keypeople, * html body .phone, * html body .org, * html body .email, * html body .minister  {
+	padding-left: 20px;
+	padding-bottom: 0px;
+}
+.web	{ background-image: url(/__data/assets/image/0011/40070/icon-website.jpg); }
+.keypeople  { background-image: url(/__data/assets/image/0014/40073/icon-key-people.jpg); }
+.phone  { background-image: url(/__data/assets/image/0012/40071/icon-phone.jpg); }
+.org { background-image: url(/__data/assets/image/0015/40074/icon-htm.jpg); }
+.minister  { background-image: url(/__data/assets/image/0013/40072/icon-minister.jpg); }
+.no_liststyle {
+	list-style: none;
+	margin-left: 20px;
+	padding: 0px;
+}
+.no-liststyle li ul { list-style: none; }
+.instruction-info {
+	background: #eef4f6 none repeat scroll 0 0;
+	padding: .8em 2em;
+}
+.instruction-info h2 {font-size: 100%;}
+@media (min-width: 320px) and (max-width: 980px) 
+{
+	.ministers {
+		width: 92% !important;
+	}
+}	
