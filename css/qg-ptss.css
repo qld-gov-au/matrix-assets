@@ -7,6 +7,7 @@
     box-sizing: border-box;
     padding: 1px;
     color: #fff;
+    background: #666666;
     background: linear-gradient( rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('/__data/assets/image/0017/4805/header-background.jpg') no-repeat center/cover;
 }
 
