@@ -38,7 +38,7 @@ function initMap() {
         });
 
         var markerClusterer = new MarkerClusterer( map, null, {
-                imagePath: './?a=139:images/maps/m',
+                imagePath: './?a=139:images/test/m',
                 imageSizes: [ 53, 56, 66, 78, 90 ],
                 imageExtension: 'png',
                 gridSize: gridSize
