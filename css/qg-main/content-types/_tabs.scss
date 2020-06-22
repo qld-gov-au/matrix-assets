@@ -5,9 +5,6 @@
   display:         flex;
   flex-wrap: wrap;
 }
-
-
-
 #qg-tabbed-area{
   .qg-tabs {
     display: none;
@@ -16,10 +13,6 @@
   input[id^="tab"] {
     display: none;
   }
-
- .widget-title{
-   margin-bottom: 20px;
- }
 
   label {
     margin-right: 1.2em;
