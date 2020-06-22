@@ -37,8 +37,7 @@
 
 
   &.alerts-theme{
-    #tab1:checked + label,
-    #tab2:checked + label{
+    input[id^="tab"]:checked + label{
       color: #fff;
       background: #000000;
     }
@@ -55,4 +54,15 @@
     }
   }
 
+}
+
+// Small devices (landscape phones, 576px and up)
+@media (max-width: 576px) {
+  #qg-tabbed-area{
+    &.alerts-theme {
+      label {
+        width: 100%;
+      }
+    }
+  }
 }
