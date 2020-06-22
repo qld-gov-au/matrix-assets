@@ -31,8 +31,7 @@
   }
 
   input[id^="tab"]:checked ~ [id^="tab-"]{
-    color: #fff;
-    background: #000000;
+    display: block;
   }
 
 
