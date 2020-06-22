@@ -30,9 +30,9 @@
     cursor: pointer;
   }
 
-  #tab1:checked ~ #tab-1,
-  #tab2:checked ~ #tab-2{
-    display: block;
+  input[id^="tab"]:checked + label{
+    color: #fff;
+    background: #000000;
   }
 
 
