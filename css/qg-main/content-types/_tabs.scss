@@ -29,14 +29,14 @@
     color: #888;
     cursor: pointer;
   }
-
+  .fb_iframe_widget {
+    z-index: 99;
+  }
   #tab1:checked ~ #tab-1,
   #tab2:checked ~ #tab-2,
   #tab3:checked ~ #tab-3{
     display: block;
   }
-
-
   &.alerts-theme{
     input[id^="tab"]:checked + label{
       color: #fff;
@@ -65,5 +65,11 @@
         width: 100%;
       }
     }
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+  #qg-tabbed-area{
+    width: 900px;
   }
 }
