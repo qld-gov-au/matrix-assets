@@ -13,7 +13,7 @@
     display: none;
   }
 
-  input {
+  input[id^="tab-"] {
     display: none;
   }
 
@@ -30,7 +30,9 @@
     cursor: pointer;
   }
 
-  input[id^="tab"]:checked ~ [id^="tab-"]{
+  #tab1:checked ~ #tab-1,
+  #tab2:checked ~ #tab-2,
+  #tab3:checked ~ #tab-3{
     display: block;
   }
 
