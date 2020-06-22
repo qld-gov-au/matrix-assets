@@ -30,7 +30,7 @@
     cursor: pointer;
   }
 
-  input[id^="tab"]:checked + label{
+  input[id^="tab"]:checked ~ [id^="tab-"]{
     color: #fff;
     background: #000000;
   }
