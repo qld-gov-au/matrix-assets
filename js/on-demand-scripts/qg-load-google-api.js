@@ -79,6 +79,7 @@
 					name: e.name,
 					apiKey: e.apiKey,
 				};
+				console.log(window.qg.franchise);
 			}
 		});
 	}
