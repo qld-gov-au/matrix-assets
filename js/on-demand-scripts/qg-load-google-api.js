@@ -1,11 +1,9 @@
 (function( qg, $ ) {
     'use strict';
     // lazy load a script
-	var firstFolderInPath = location.pathname.split('/')[1];
 	var keys = {
 		"defGoogle" : {
 			"uat" : "AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE",
-			"docs" : "AIzaSyBE95_qL90MT9loY1roLnHJ3uaBYbleYeM",
 			"prod" : "AIzaSyANZv-2WcXRzkBqtgEcLTZq7zVy-9eNWgw"
 		},
 		"defGoogleRecaptcha" : {
@@ -32,7 +30,7 @@
 			"apiKey": "AIzaSyD1xT_2Dh2EZ7Iy6SLodeH8CJzbXlp6vgE"
 		}, {
 			"name": "environment",
-			"apiKey": "AIzaSyAnhCGWlLkKEh-NarRtO9crqwPa5DqaWZU"
+			"apiKey": "AIzaSyAZJjfwIKDPlQs-S3id-CGp8U_S4U7idFI"
 		}, {
 			"name": "families",
 			"apiKey": "AIzaSyBucRn0YhJhQ-ELSS-MM7JvYb19-I1bqqI"
@@ -56,7 +54,7 @@
 			"apiKey": "AIzaSyA3PDnd30Twv3Zr3JKqiAUYNO1983ZDBe0"
 		},{
 			"name": "transport",
-			"apiKey": "AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE"
+			"apiKey": "AIzaSyARzyCPigCt9cW1F6ua0_U3NVLdRbxwLyg"
 		},{
 			"name": "youth",
 			"apiKey": "AIzaSyCe7FYHy28So2Uio_OEQje0o0Pr23s7gt0"
@@ -64,26 +62,27 @@
 	};
 
 	var googleApiKey;
-	var isProd = function () {
-		return window.location.hostname.search(/dev|test|localhost|github|\buat\b/) === -1;
+	window.qg.googleKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogle.uat : keys.defGoogle.prod;
+	window.qg.googleRecaptchaApiKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogleRecaptcha.uat : keys.defGoogleRecaptcha.prod;
+	var findFranchiseName = function () {
+		var path = window.location.pathname.replace(/\/$/, '');
+		var pathArr = path.split('/').filter(function (e) {
+			return e;
+		});
+		return pathArr[0].toLowerCase();
 	};
-
-	// check if the hostname contains a specific word and assign the key accordingly
-	if (window.location.hostname.search(/\bgithub\b/) !== -1) {
-		googleApiKey = keys.defGoogle.docs;
-	} else if (!isProd()) {
-		googleApiKey = keys.defGoogle.test;
-	} else {
-		googleApiKey = keys.defGoogle.prod;
-	}
-	if (firstFolderInPath) {
+	var franchise = findFranchiseName();
+	if (franchise) {
 		keys.franchises.forEach(function (e) {
-			if (firstFolderInPath === e.name) {
-				googleApiKey = e.apiKey;
-				console.log('googleApiKey in use from matrix assets', googleApiKey);
+			if (franchise === e.name) {
+				window.qg.franchise = {
+					name: e.name,
+					apiKey: e.apiKey,
+				};
 			}
 		});
 	}
+	googleApiKey = window.qg.franchise && window.qg.franchise.apiKey ? window.qg.franchise.apiKey : window.qg.googleKey;
     function lazyScript( url ) {
         $( 'head' ).append( '<script type="text/javascript" src="' + url + '"></script>' );
     }
