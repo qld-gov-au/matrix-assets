@@ -14,9 +14,9 @@
     var $container = $('.qg-cards__equal-height');
     var gridType = function (){
         let gridType;
-        if ($container.find('col-lg-4')){
+        if ($container.find('.col-lg-4').length > 0){
             gridType = 3;
-        } else if ($container.find('col-lg-6')){
+        } else if ($container.find('.col-lg-6').length > 0){
             gridType = 2;
         }
         return gridType;
