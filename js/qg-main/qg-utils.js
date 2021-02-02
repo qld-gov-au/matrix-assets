@@ -26,7 +26,7 @@
     };
     function setHeight() {
         if ($container.length > 0) {
-            var loopCount = cardCount() / gridType();
+            var loopCount = Math.ceil(cardCount() / gridType());
             $('.qg-cards.qg-cards__equal-height').each(function () {
                 // Cache the highest
                 // Select and loop the elements you want to equalise
