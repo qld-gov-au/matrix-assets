@@ -10,13 +10,13 @@
         }
     }
     colPush();
-    // this function equals the height of the cards in a group, if it finds a class '.qg-cards__equal-height'.
+    // This function equal height of cards in a group, if it finds a class '.qg-cards__equal-height and row classes i.e row-1 , row-2 etc'.
     var $container = $('.qg-cards__equal-height');
     var gridType = function (){
         let gridType;
-        if ($container.find('col-lg-4')){
+        if ($container.find('.col-lg-4').length > 0){
             gridType = 3;
-        } else if ($container.find('col-lg-6')){
+        } else if ($container.find('.col-lg-6').length > 0){
             gridType = 2;
         }
         return gridType;
@@ -26,7 +26,7 @@
     };
     function setHeight() {
         if ($container.length > 0) {
-            var loopCount = cardCount() / gridType();
+            var loopCount = Math.ceil(cardCount() / gridType());
             $('.qg-cards.qg-cards__equal-height').each(function () {
                 // Cache the highest
                 // Select and loop the elements you want to equalise
