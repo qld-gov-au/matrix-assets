@@ -4,7 +4,7 @@
     // Workaround to push columns - some pages on Matrix have a 3 col layout but there is no third columns
     // example - https://www.qld.gov.au/about/events-awards-honours/awards/reconciliation-awards/2015-award-winners
     function colPush(){
-        let $qg = $('#qg-three-col');
+        var $qg = $('#qg-three-col');
         if ($qg.find('#qg-section-nav').length <= 0) {
             $qg.addClass('no-secondary-nav');
         }
@@ -13,13 +13,13 @@
     // This function equal height of cards in a group, if it finds a class '.qg-cards__equal-height and row classes i.e row-1 , row-2 etc'.
     var $container = $('.qg-cards__equal-height');
     var gridType = function (){
-        let gridType;
+        let fgridType;
         if ($container.find('.col-lg-4').length > 0){
-            gridType = 3;
+            fgridType = 3;
         } else if ($container.find('.col-lg-6').length > 0){
-            gridType = 2;
+            fgridType = 2;
         }
-        return gridType;
+        return fgridType;
     };
     var cardCount = function(){
         return $container.find('.qg-card').length;
