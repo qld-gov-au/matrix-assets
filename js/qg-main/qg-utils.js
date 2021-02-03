@@ -11,13 +11,14 @@
     }
     colPush();
     // This function equal height of cards in a group, if it finds a class '.qg-cards__equal-height and row classes i.e row-1 , row-2 etc'.
+    // Equal height function only works with the Boostrap grid of 2 to 3 columns.
     var $container = $('.qg-cards__equal-height');
     var gridType = function (){
         var fgridType;
-        if ($container.find('.col-lg-4').length > 0){
-            fgridType = 3;
-        } else if ($container.find('.col-lg-6').length > 0){
+        if ($container.find('.col-lg-6').length > 0){
             fgridType = 2;
+        } else {
+            fgridType = 3;
         }
         return fgridType;
     };
