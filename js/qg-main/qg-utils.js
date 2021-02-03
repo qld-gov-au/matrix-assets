@@ -31,7 +31,7 @@
             $('.qg-cards.qg-cards__equal-height').each(function () {
                 // Cache the highest
                 // Select and loop the elements you want to equalise
-                for (var i = 0; i < loopCount; i++){
+                for (var i = 0; i <= loopCount; i++){
                     var highestBox = 0;
                     $(this)
                         .find('.qg-cards__row-' + i + '')
