@@ -86,35 +86,17 @@
         keys.franchises.forEach(function (e) {
             if (firstFolderPath === e.name) {
                 googleApiKey = e.apiKey;
+                console.log(e.apiKey, e.name)
             }
         });
     }
-    function generateStaticMapImg (ele) {
-        let lat = ele.attr('data-lat') || -27.4673;
-        let lon = ele.attr('data-long') || 153.0233;
-        let zoom = ele.attr('data-zoom') || 17;
-        let height = ele.attr('data-height') || 189;
-        return 'https://maps.googleapis.com/maps/api/staticmap?size=373x' + height + '&maptype=roadmap&markers=' + lat + '%2C' + lon + '&key=' + googleApiKey + '&sensor=false&zoom=' + zoom;
-    }
-    var $mapImg = $('.qg-static-map');
-    if ($mapImg.length > 0) {
-        var htmlInsert = $('<div>');
-        $mapImg.each(function () {
-            let $this = $(this);
-            $this.find('img').attr('src', generateStaticMapImg($this.find('img')));
-            htmlInsert.append($this);
-        });
-        $('aside').prepend(htmlInsert);
-        $('a.qg-static-map').wrap("<div class='qg-aside st-map-static'>");
-        $('.st-map-static').eq(0).prepend("<h2><i class='fa fa-compass' aria-hidden='true'></i>Maps</h2>");
-    }
-
     function lazyScript( url ) {
         $( 'head' ).append( '<script type="text/javascript" src="' + url + '"></script>' );
     }
     //load Google APi
 	qg.loadGoogle = function (callback) {
 		if($('#googleapi').length<=0) {
+			console.log('google api loaded on Matrix file');
 			var s = document.createElement('script'),
 				u = 'https://maps.googleapis.com/maps/api/js?key='+ googleApiKey +'&region=AU&libraries=places';
 			s.type = 'text/javascript';
