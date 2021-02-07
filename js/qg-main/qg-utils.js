@@ -10,16 +10,17 @@
         }
     }
     colPush();
-    // this function equals the height of the cards in a group, if it finds a class '.qg-cards__equal-height'.
+    // This function equal height of cards in a group, if it finds a class '.qg-cards__equal-height and row classes i.e row-1 , row-2 etc'.
+    // Equal height function only works with the Boostrap grid of 2 to 3 columns.
     var $container = $('.qg-cards__equal-height');
     var gridType = function (){
-        let gridType;
-        if ($container.find('.col-lg-4').length > 0){
-            gridType = 3;
-        } else if ($container.find('.col-lg-6').length > 0){
-            gridType = 2;
+        var fgridType;
+        if ($container.find('.col-lg-6').length > 0){
+            fgridType = 2;
+        } else {
+            fgridType = 3;
         }
-        return gridType;
+        return fgridType;
     };
     var cardCount = function(){
         return $container.find('.qg-card').length;
@@ -30,7 +31,7 @@
             $('.qg-cards.qg-cards__equal-height').each(function () {
                 // Cache the highest
                 // Select and loop the elements you want to equalise
-                for (let i = 0; i <= loopCount; i++){
+                for (var i = 1; i <= loopCount; i++){
                     var highestBox = 0;
                     $(this)
                         .find('.qg-cards__row-' + i + '')
