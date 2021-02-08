@@ -4,9 +4,9 @@
     // Workaround to push columns - some pages on Matrix have a 3 col layout but there is no third columns
     // example - https://www.qld.gov.au/about/events-awards-honours/awards/reconciliation-awards/2015-award-winners
     function colPush(){
-        var $qg = $('#qg-three-col');
-        if ($qg.find('#qg-section-nav').length <= 0) {
-            $qg.addClass('no-secondary-nav');
+        var $qgThreeCol = $('#qg-three-col');
+        if ($qgThreeCol.find('#qg-section-nav').length <= 0) {
+            $qgThreeCol.addClass('no-secondary-nav');
         }
     }
     colPush();
@@ -31,7 +31,7 @@
             $('.qg-cards.qg-cards__equal-height').each(function () {
                 // Cache the highest
                 // Select and loop the elements you want to equalise
-                for (var i = 0; i <= loopCount; i++){
+                for (var i = 1; i <= loopCount; i++){
                     var highestBox = 0;
                     $(this)
                         .find('.qg-cards__row-' + i + '')

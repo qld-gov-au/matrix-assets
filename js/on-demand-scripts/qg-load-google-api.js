@@ -3,7 +3,9 @@
     // lazy load a script
 	var keys = {
 		"defGoogle" : {
+            "test" : "AIzaSyA1uwIi2C0x9VbCqoVK4nxcID4CVqF3uhQ",
 			"uat" : "AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE",
+            "docs" : "AIzaSyBE95_qL90MT9loY1roLnHJ3uaBYbleYeM",
 			"prod" : "AIzaSyANZv-2WcXRzkBqtgEcLTZq7zVy-9eNWgw"
 		},
 		"defGoogleRecaptcha" : {
@@ -62,27 +64,31 @@
 	};
 
 	var googleApiKey;
-	window.qg.googleKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogle.uat : keys.defGoogle.prod;
-	window.qg.googleRecaptchaApiKey = window.location.hostname.search(/\bdev\b|\btest\b|\blocalhost\b|\buat\b/) !== -1 ? keys.defGoogleRecaptcha.uat : keys.defGoogleRecaptcha.prod;
-	var findFranchiseName = function () {
-		var path = window.location.pathname.replace(/\/$/, '');
-		var pathArr = path.split('/').filter(function (e) {
-			return e;
-		});
-		return pathArr[0].toLowerCase();
-	};
-	var franchise = findFranchiseName();
-	if (franchise) {
-		keys.franchises.forEach(function (e) {
-			if (franchise === e.name) {
-				window.qg.franchise = {
-					name: e.name,
-					apiKey: e.apiKey,
-				};
-			}
-		});
-	}
-	googleApiKey = window.qg.franchise && window.qg.franchise.apiKey ? window.qg.franchise.apiKey : window.qg.googleKey;
+    var firstFolderPath = location.pathname.split('/')[1];
+    var isProd = function () {
+        return window.location.hostname.search(/dev|test|localhost|github/) === -1;
+    };
+    var isUat= function () {
+        return window.location.hostname.search(/\buat\b/) === -1;
+    };
+    // check if the hostname contains a specific word and assign the key accordingly
+    if (window.location.hostname.search(/\bgithub\b/) !== -1) {
+        googleApiKey = keys.defGoogle.docs;
+    } else if (isUat()) {
+        googleApiKey = keys.defGoogle.uat;
+    } else if (!isProd()) {
+        googleApiKey = keys.defGoogle.test;
+    } else {
+        googleApiKey = keys.defGoogle.prod;
+    }
+    // check if first folder path exist and match to see if this is a valid franchise name or not
+    if (firstFolderPath) {
+        keys.franchises.forEach(function (e) {
+            if (firstFolderPath === e.name) {
+                googleApiKey = e.apiKey;
+            }
+        });
+    }
     function lazyScript( url ) {
         $( 'head' ).append( '<script type="text/javascript" src="' + url + '"></script>' );
     }
