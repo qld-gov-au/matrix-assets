@@ -86,7 +86,6 @@
         keys.franchises.forEach(function (e) {
             if (firstFolderPath === e.name) {
                 googleApiKey = e.apiKey;
-                console.log(e.apiKey, e.name)
             }
         });
     }
@@ -96,7 +95,6 @@
     //load Google APi
 	qg.loadGoogle = function (callback) {
 		if($('#googleapi').length<=0) {
-			console.log('google api loaded on Matrix file');
 			var s = document.createElement('script'),
 				u = 'https://maps.googleapis.com/maps/api/js?key='+ googleApiKey +'&region=AU&libraries=places';
 			s.type = 'text/javascript';
