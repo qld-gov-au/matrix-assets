@@ -1,5 +1,4 @@
 (function( qg, $ ) {
-	console.log('inside load google api.js file');
     'use strict';
     // lazy load a script
 	var keys = {
