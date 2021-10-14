@@ -267,8 +267,9 @@ Later create a ticket with developers to add it in the repo @@*/
   border: none;
   display: block;
   box-shadow: none;
-  width: 100% !important;
-  max-width: 100% !important;
+  width: 100%;
+  height: auto;
+  max-width: 100%;
 }
 
 /*print styles for forms*/
