@@ -2,7 +2,7 @@
   .qg-aside{
     background-color: #e7f5fe;
     padding: 0.5em 3.6em 1.7em 3.6em;
-    img:not('.open-data'):not('.qg-actual-size') {
+    img:not(.open-data):not(.qg-actual-size) {
       max-width: 100%;
       width: 100%;
       height: auto;
