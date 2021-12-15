@@ -56,8 +56,8 @@
             setHeight();
         }
     });
-    // Temporary hashtrigger function to fix a bug related with opening a accordion panel
-    // *NOTE* Remove this script at the time time of v4.0.11 release because it is already included in v4.0.11 release branch.
+    // Temporary hashtrigger function to fix a bug related to opening an accordion panel
+    // *NOTE* Remove this script with the v4.0.11 release because it already includes this script.
     var accordionPatchFix = {
         config: {
             $accordion: $('.qg-accordion'),
