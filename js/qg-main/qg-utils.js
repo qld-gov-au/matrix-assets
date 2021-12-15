@@ -65,7 +65,7 @@
             $accHeading: $('.acc-heading'),
         },
         init: function (){
-            console.log('accordion patch fix');
+            console.log('accordion patch fix v2');
             this.hashTrigger();
         },
         filterSpecialChar: function (value){
@@ -95,6 +95,7 @@
             }
         },
     };
-
-    accordionPatchFix.init();
+    $(document).ready(function(){
+        accordionPatchFix.init();
+    });
 })(jQuery);
