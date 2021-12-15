@@ -56,4 +56,44 @@
             setHeight();
         }
     });
+    // Temporary hashtrigger function to fix a bug related with opening a accordion panel
+    // *NOTE* Remove this script at the time time of v4.0.11 release because it is already included in v4.0.11 release branch.
+    var accordionPatchFix = {
+        config: {
+            $accordion: $('.qg-accordion'),
+            $accordion_v2: $('.qg-accordion-v2'),
+            $accHeading: $('.acc-heading'),
+        },
+        init: function (){
+            this.hashTrigger();
+        },
+        filterSpecialChar: function (value){
+            return decodeURI(value.toLowerCase().replace(/[^a-zA-Z0-9/]/g, ''));
+        },
+        hashTrigger: function (){
+            let self = this;
+            let hashValTrimmed = this.filterSpecialChar(window.location.hash);
+            let hashValueIdMatch = window.location.hash.replace('#', '');
+            if (hashValTrimmed.length > 0) {
+                // supports ID match
+                self.config.$accordion.find('.collapsing-section').each(function (index, titleEl){
+                    if ($(this).attr('id') === hashValueIdMatch){
+                        $(this).parent('article').find(self.config.$accHeading).trigger('click');
+                    }
+                });
+
+                // supports title match
+                // check if any panel already open that worked with ID matching
+                if ($('.qg-accordion--open').length <= 0){
+                    self.config.$accordion.find('.title').each(function (index, titleEl){
+                        if (self.filterSpecialChar($(titleEl).text()) === hashValTrimmed){
+                            $(this).parents(self.config.$accHeading).trigger('click');
+                        }
+                    });
+                }
+            }
+        },
+    };
+
+    accordionPatchFix.init();
 })(jQuery);
