@@ -72,9 +72,9 @@
             return decodeURI(value.toLowerCase().replace(/[^a-zA-Z0-9/]/g, ''));
         },
         hashTrigger: function (){
-            let self = this;
-            let hashValTrimmed = this.filterSpecialChar(self.config.urlHash);
-            let hashValueIdMatch = self.config.urlHash.replace('#', '');
+            var self = this;
+            var hashValTrimmed = this.filterSpecialChar(self.config.urlHash);
+            var hashValueIdMatch = self.config.urlHash.replace('#', '');
             if (hashValTrimmed.length > 0) {
                 // supports ID match
                 self.config.$accordion.find('.collapsing-section').each(function (index, titleEl){
