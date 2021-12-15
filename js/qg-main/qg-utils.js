@@ -65,7 +65,6 @@
             $accHeading: $('.acc-heading'),
         },
         init: function (){
-            console.log('accordion patch fix v2');
             this.hashTrigger();
         },
         filterSpecialChar: function (value){
