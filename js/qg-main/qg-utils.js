@@ -63,6 +63,7 @@
             $accordion: $('.qg-accordion'),
             $accordion_v2: $('.qg-accordion-v2'),
             $accHeading: $('.acc-heading'),
+            urlHash: window.location.hash
         },
         init: function (){
             this.hashTrigger();
@@ -72,8 +73,8 @@
         },
         hashTrigger: function (){
             let self = this;
-            let hashValTrimmed = this.filterSpecialChar(window.location.hash);
-            let hashValueIdMatch = window.location.hash.replace('#', '');
+            let hashValTrimmed = this.filterSpecialChar(self.config.urlHash);
+            let hashValueIdMatch = self.config.urlHash.replace('#', '');
             if (hashValTrimmed.length > 0) {
                 // supports ID match
                 self.config.$accordion.find('.collapsing-section').each(function (index, titleEl){
@@ -95,6 +96,8 @@
         },
     };
     $(document).ready(function(){
-        accordionPatchFix.init();
+        if(accordionPatchFix.config.urlHash){
+            accordionPatchFix.init();
+        }
     });
 })(jQuery);
