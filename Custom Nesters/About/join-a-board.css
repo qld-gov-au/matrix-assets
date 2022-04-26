@@ -1,0 +1,90 @@
+#qg-search-form #feature-search-submit {height: 100%; border-radius: 0 2px 2px 0 !important;}
+#qg-search-form input {border-color: #90083d !important;}
+#qg-banner-blurb .blurb {background: transparent; width: 100%; margin-bottom: 40px;}
+#qg-banner-blurb .blurb h1 {line-height:.95;color: #fff;font-family: 'lato';font-weight: 700;font-size: 60px;text-shadow: 1px 1px 7px rgba(126, 36, 6,.9);}
+#qg-banner-blurb .blurb h1 .txt-sm {font-size: 27px;}
+#qg-banner-blurb .blurb h1 .txt-outline {display: block;margin-left: 123px; color:#c66a83; 
+    text-shadow: #fff 1px 0px 0px, #fff 0.540302px 0.841471px 0px, #fff -0.416147px 0.909297px 0px, #fff -0.989992px 0.14112px 0px, #fff -0.653644px -0.756802px 0px, #fff 0.283662px -0.958924px 0px, #fff 0.96017px -0.279415px 0;
+}
+
+.aggregation-index #qg-banner-blurb {display: flex; align-items: flex-end; justify-content: flex-start;}
+
+#join-a-board {position:relative;}
+#join-a-board::before {content:""; display:block; height:2px; width:100%; position:absolute; top:1.5em; background:#fff; transform: translateX(calc(-100% + 103px));}
+
+h2 {color: #000; font-size:2.3em;}
+#qg-share h2{color: #fff;}
+.btn {border-radius: 2px !important;}
+.btn.btn-primary:active,
+.btn.btn-primary:visited,
+.btn.btn-primary:link,
+.btn.btn-primary {background: #b70a4d; border:none; color:#fff !important; font-weight:bold;}
+.btn.btn-primary:hover{background: #90083d; border:none; color:#fff !important;}
+.btn.btn-default:link,
+.btn.btn-default:active,
+.btn.btn-default:visited,
+.btn.btn-default {background: #333839;border:none;}
+.btn.btn-default:hover {background:#222;}
+section.qg-cards .qg-card .content {background:#5c5552 !important}
+.aggregation-index #qg-one-col.wide #qg-primary-content {
+    width: 100%;
+    margin-top: 0 !important;
+}
+.intro {
+    display: block;
+    margin-left: -25px;
+    margin-right: -25px;
+    padding: 3em 2em;
+    background: #f0f1f1;
+    position: relative;
+}
+.button-group {
+    margin-left: -25px;
+    margin-right: -25px;
+    margin-bottom: 3em;
+    background: #e1e1e1;
+    padding:1.4em 1em;
+    font-size: 1.1em;
+}
+
+.headshot {width:380px; margin-right:90px; margin-top:-4em}
+.headshot .img {overflow:hidden; border-radius: 50%; margin-bottom:.5em;}
+.headshot .caption {font-size:.6em; text-align:center;margin-left: -10px; margin-right: -10px;}
+.quote {font-weight:bold;}
+.quote p {position:relative;}
+.quote span.marks {font-family: Trebuchet MS; font-size:60px; color:#b70a4d;position:absolute; line-height:1px; height:1px;}
+.quote span.marks.marks-left:first-child {top: 3px; left: -50px;}
+.quote span.marks.marks-right:last-child {bottom: -20px; padding-left:15px;}
+
+.btn-inline a.btn{display: inline-block; margin: 0 .5em; font-size: 1em; font-weight:400;}
+.mt-5 {margin-top:2em;}
+.mb-5 {margin-bottom:2em;}
+.qg-cards .qg-card {padding-left:10px; padding-right:10px;}
+.qg-card .details {background: #5c5552; padding-top:0 !important; color:#fff;padding-left:1.5em !important; padding-right:1.5em !important}
+.qg-cards .qg-card .content {background: #5e5e5e !important}
+.qg-card .details p {margin-bottom: 1.3em;}
+.qg-card .details h3 {position: relative; color:#fff; background: #b70a4d; margin:-1em 0 1em -1.5em !important; padding: .5em 1.5em !important;font-size: 1em;font-weight: 600;}
+#qg-primary-content .qg-cards .qg-card a.btn,
+.qg-cards .qg-card a.btn:link,
+.qg-cards .qg-card a.btn:visited,
+.qg-cards .qg-card a.btn:active {background:#e1e1e1 !important; color:#000 !important;}
+#qg-primary-content .qg-cards .qg-card .content .btn.btn-learn-more:hover {background:rgba(255, 255, 255, 1) !important}
+.max-content-width {max-width: 975px; margin:0 auto; display: block;}
+.font-size-lg {font-size: 1.2em; font-weight: 400;}
+.qg-card .content::before {content: ""; display:block; width:100%; height: 3.5px; background: #b70a4d; opacity: .74; position: absolute; left:0; top: 0;}
+
+@media screen and (max-width: 768px) {
+    .intro {padding: 1em 2em;}
+    .intro .max-content-width {flex-direction: column;}
+    .intro .headshot {width: 130px; margin: 0 auto;}
+    #qg-banner-blurb {background-size: cover !important;}
+    #qg-banner-blurb .blurb {padding:0; margin:0; }
+    #qg-banner-blurb .blurb h1 {line-height:1.1;font-size: 45px !important;}
+    #qg-banner-blurb .blurb h1 .txt-sm {font-size: 15px;}
+    #qg-banner-blurb .blurb h1 .txt-outline {margin-left: 40px;}
+    .font-size-lg {font-size: inherit; font-weight: inherit;}
+    #join-a-board::before {display: none;}
+    #join-a-board {padding:0 1.5rem 1rem 1.5rem;}
+    .button-group a.btn {margin-bottom: 1em;}
+    .quote span.marks.marks-left:first-child {left:-33px;}
+}
