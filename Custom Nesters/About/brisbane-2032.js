@@ -53,13 +53,11 @@ $(document).ready(function() {
     var target = $('#form');
     $('#business-updates').on('click', function(){
         $('.nav a[href="#nav-business"]').tab('show');
-        //$('#nav-news').removeClass( "active show" );
         $('html, body').animate({ scrollTop: target.offset().top - (100)  }, 500);
     });
     $('#news-updates').on('click', function(){
 
         $('.nav a[href="#nav-news"]').tab('show');   
-        //$('#nav-business').removeClass( "active show" );
         $('html, body').animate({ scrollTop: target.offset().top - (100)  }, 500);
     });
 
