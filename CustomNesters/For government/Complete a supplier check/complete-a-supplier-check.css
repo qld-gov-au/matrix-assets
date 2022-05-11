@@ -1,0 +1,26 @@
+#ethical-supplier-lookup input {
+  display: block;
+  min-width: 50%;
+}
+#ethical-supplier-lookup button {
+  margin-top: 1rem;
+}
+#alert-container {
+  margin-top: 1rem;
+}
+#esr-loading .spinner {
+  border: 16px solid #007eb0;
+  border-top: 16px solid transparent;
+  border-radius: 50%;
+  width: 3rem;
+  height: 3rem;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
