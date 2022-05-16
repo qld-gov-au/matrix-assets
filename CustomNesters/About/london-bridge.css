@@ -124,15 +124,25 @@ p {
   line-height: 1.4;
 }
 .img {
-  position: relative;
+    position: relative;
 }
-.img::after {
-  content: url("data:image/svg+xml; utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='white'><path d='M0 0h24v24H0z' fill='none'/><path d='M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z'/></svg>");
-  position: absolute;
-  left: 5px;
-  bottom: 5px;
-  filter: drop-shadow(1px 1px 5px #000000);
-  line-height: 1em;
+.img .credit {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0,0,0,.8);
+    font-size: .6rem;
+    padding: 0.5em;
+    text-align: left;
+}
+.img-multi::after {
+    content: url("data:image/svg+xml; utf8,<svg xmlns='http://www.w3.org/2000/svg' height='24px' viewBox='0 0 24 24' width='24px' fill='white'><path d='M0 0h24v24H0z' fill='none'/><path d='M22 16V4c0-1.1-.9-2-2-2H8c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2zm-11-4l2.03 2.71L16 11l4 5H8l3-4zM2 6v14c0 1.1.9 2 2 2h14v-2H4V6H2z'/></svg>");
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    filter: drop-shadow(1px 1px 5px #000000);
+    line-height:1em;
 }
 /* Formio */
 #qg-primary-content #online-form #formio label {
