@@ -1,4 +1,4 @@
-#qg-banner-blurb {background:url('./?a=179040') no-repeat !important; background-size: cover !important; margin-bottom:-3.5em;border-radius: 0 0 0 240px;}
+#qg-banner-blurb {background:url('https://www.qld.gov.au/?a=179040') no-repeat !important; background-size: cover !important; margin-bottom:-3.5em;border-radius: 0 0 0 240px;}
 #qg-banner-blurb .blurb {background: transparent; width: 100%; margin-bottom: 40px; min-height:410px !important; background-position-y: 63% !important;margin:0 !important;display:flex;align-items: center;}
 .intro {
     display: block;
