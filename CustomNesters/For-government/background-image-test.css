@@ -1,23 +1,23 @@
-.background-image-test-full {
+.background-image-test {
   height: 20rem;
   width: 100%;
+}
+.background-image-test.background-image-test-full {
   background-image: url('www.forgov.qld.gov.au/__data/assets/image/0029/184439/update2.png');
 }
 
-.background-image-test-relative-full {
-  height: 20rem;
-  width: 100%;
+.background-image-test.background-image-test-relative-full {
   background-image: url('/__data/assets/image/0029/184439/update2.png');
 }
 
-.background-image-test-asset {
-  height: 20rem;
-  width: 100%;
+.background-image-test.background-image-test-asset {
   background-image: url('www.forgov.qld.gov.au/?a=184439');
 }
 
-.background-image-test-relative-asset {
-  height: 20rem;
-  width: 100%;
+.background-image-test.background-image-test-relative-asset {
+  background-image: url('/?a=184439');
+}
+
+.background-image-test.background-image-test-relative-asset-dot {
   background-image: url('./?a=184439');
 }
