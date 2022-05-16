@@ -21,3 +21,8 @@
 .background-image-test.background-image-test-relative-asset-dot {
   background-image: url('./?a=184439');
 }
+
+.background-image-test p {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(5px) brightness(2);
+}
