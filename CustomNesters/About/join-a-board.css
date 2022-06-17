@@ -1,16 +1,24 @@
+<style>
+/* custom branding */
+/*#qg-banner-blurb {min-height: 340px}*/
+/*#qg-banner-blurb::after {content:""; display:block; width:100%; height:100%;position: absolute;left: 0;top: 0;background:url(./?a=99818);}*/
+
 #qg-search-form #feature-search-submit {height: 100%; border-radius: 0 2px 2px 0 !important;}
 #qg-search-form input {border-color: #90083d !important;}
-#qg-banner-blurb .blurb {background: transparent; width: 100%; margin-bottom: 40px;}
+
+#qg-banner-blurb {display: flex; align-items:center; background-position: center center !important; background-size: cover !important;}
+#qg-banner-blurb .blurb {background: transparent; width: 100%;}
 #qg-banner-blurb .blurb h1 {line-height:.95;color: #fff;font-family: 'lato';font-weight: 700;font-size: 60px;text-shadow: 1px 1px 7px rgba(126, 36, 6,.9);}
 #qg-banner-blurb .blurb h1 .txt-sm {font-size: 27px;}
 #qg-banner-blurb .blurb h1 .txt-outline {display: block;margin-left: 123px; color:#c66a83; 
     text-shadow: #fff 1px 0px 0px, #fff 0.540302px 0.841471px 0px, #fff -0.416147px 0.909297px 0px, #fff -0.989992px 0.14112px 0px, #fff -0.653644px -0.756802px 0px, #fff 0.283662px -0.958924px 0px, #fff 0.96017px -0.279415px 0;
 }
-
-.aggregation-index #qg-banner-blurb {display: flex; align-items: flex-end; justify-content: flex-start;}
+#join-a-board #desktop {max-width: 592px; margin-bottom: -51px; margin-left: -42px;}
+#join-a-board #mobile {max-width:330px;}
+/*.aggregation-index #qg-banner-blurb {display: flex; align-items: flex-end; justify-content: flex-start;}*/
 
 #join-a-board {position:relative;}
-#join-a-board::before {content:""; display:block; height:2px; width:100%; position:absolute; top:1.5em; background:#fff; transform: translateX(calc(-100% + 103px));}
+/*#join-a-board::before {content:""; display:block; height:2px; width:100%; position:absolute; top:1.5em; background:#fff; transform: translateX(calc(-100% + 103px));}*/
 
 h2 {color: #000; font-size:2.3em;}
 #qg-share h2{color: #fff;}
@@ -72,8 +80,11 @@ section.qg-cards .qg-card .content {background:#5c5552 !important}
 .max-content-width {max-width: 975px; margin:0 auto; display: block;}
 .font-size-lg {font-size: 1.2em; font-weight: 400;}
 .qg-card .content::before {content: ""; display:block; width:100%; height: 3.5px; background: #b70a4d; opacity: .74; position: absolute; left:0; top: 0;}
-
+@media screen and (max-width: 1450px) {
+    #join-a-board #desktop {max-width: 550px; margin-bottom: 0; margin-left: 0;}
+}
 @media screen and (max-width: 768px) {
+    #qg-primary-content {padding-left:0; padding-right:0}
     .intro {padding: 1em 2em;}
     .intro .max-content-width {flex-direction: column;}
     .intro .headshot {width: 130px; margin: 0 auto;}
@@ -88,3 +99,7 @@ section.qg-cards .qg-card .content {background:#5c5552 !important}
     .button-group a.btn {margin-bottom: 1em;}
     .quote span.marks.marks-left:first-child {left:-33px;}
 }
+@media screen and (max-width: 450px) {
+    #join-a-board #mobile {max-width: 210px;}
+}
+</style>
