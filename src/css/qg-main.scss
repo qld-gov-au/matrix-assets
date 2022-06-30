@@ -1,55 +1,55 @@
 // -------------------------------------
 //    mixins
 // -------------------------------------
-@import "./?a=139:css/qg-main/mixins/_bootstrap-breakpoints.scss";
+@import "./qg-main/mixins/_bootstrap-breakpoints.scss";
 
 // -------------------------------------
 //   base partials
 // -------------------------------------
-@import "./?a=139:css/qg-main/_variables.scss";
-@import "./?a=139:css/qg-main/core/_typography.scss";
+@import "./qg-main/_variables.scss";
+@import "./qg-main/core/_typography.scss";
 
 // -------------------------------------
 //   template components
 // -------------------------------------
-@import "./?a=139:css/qg-main/asides/_content_aside.scss";
+// @import "./qg-main/asides/_content_aside.scss";
 
 
-@import "./?a=139:css/qg-main/core/_images.scss";
-@import "./?a=139:css/qg-main/core/_index-links.scss";
-@import "./?a=139:css/qg-main/core/_links.scss";
-@import "./?a=139:css/qg-main/core/_tables.scss";
-@import "./?a=139:css/qg-main/tables/_data-table.scss";
+@import "./qg-main/core/_images.scss";
+@import "./qg-main/core/_index-links.scss";
+@import "./qg-main/core/_links.scss";
+// @import "./qg-main/core/_tables.scss";
+// @import "./qg-main/tables/_data-table.scss";
 
 // -------------------------------------
 //   page models
 // -------------------------------------
-@import "./?a=139:css/qg-main/pagemodels/_aggregation.scss";
+// @import "./qg-main/pagemodels/_aggregation.scss";
 
 
 // -------------------------------------
 //   content templates
 // -------------------------------------
-@import "./?a=139:css/qg-main/content-types/_cards.scss";
-@import "./?a=139:css/qg-main/content-types/_cross_selling_links.scss";
-@import "./?a=139:css/qg-main/content-types/_cut-in-images.scss";
-@import "./?a=139:css/qg-main/content-types/_cut-in-images-swe2.scss";
-@import "./?a=139:css/qg-main/content-types/_tabs.scss";
-@import "./?a=139:css/qg-main/content-types/_checklist.scss";
-@import "./?a=139:css/qg-main/content-types/_stand-first.scss";
-@import "./?a=139:css/qg-main/content-types/_search-results.scss";
-@import "./?a=139:css/qg-main/content-types/_pagination.scss";
-@import "./?a=139:css/qg-main/content-types/_status.scss";
+// @import "./qg-main/content-types/_cards.scss";
+@import "./qg-main/content-types/_cross_selling_links.scss";
+// @import "./qg-main/content-types/_cut-in-images.scss";
+// @import "./qg-main/content-types/_cut-in-images-swe2.scss";
+@import "./qg-main/content-types/_tabs.scss";
+@import "./qg-main/content-types/_checklist.scss";
+@import "./qg-main/content-types/_stand-first.scss";
+// @import "./qg-main/content-types/_search-results.scss";
+@import "./qg-main/content-types/_pagination.scss";
+@import "./qg-main/content-types/_status.scss";
 // -------------------------------------
 //   modules
 // -------------------------------------
-@import "./?a=139:css/qg-main/modules/_qg-image-gallery.scss";
-@import "./?a=228:css/qg-main/modules/_qg-nuance-virtual-assistant.scss";
+@import "./qg-main/modules/_qg-image-gallery.scss";
+@import "./qg-main/modules/_qg-nuance-virtual-assistant.scss";
 
 // -------------------------------------
 //   Franchise specific (TODO to be loaded using loader)
 // -------------------------------------
-/*@import "./?a=139:css/qg-main/_qg-ptss.scss";
+/*@import "./qg-main/_qg-ptss.scss";
 */
 // -------------------------------------
 //   print
@@ -265,7 +265,8 @@ Later create a ticket with developers to add it in the repo @@*/
   border: none;
   display: block;
   box-shadow: none;
-  width: 100% !important;
+  width: 100%;
+  height: auto;
 }
 
 /*print styles for forms*/
