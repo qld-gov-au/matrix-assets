@@ -99,6 +99,11 @@ jobs:
         shell: bash
         run: echo "${{ steps.extract_branch.outputs.branch }}"
 
+      - name: setup Publish
+        run: |
+          set -x
+          cp -r ./binary-repo/* ./dist
+
       - name: Publish
         uses: qld-gov-au/gha-publish-to-git@master
         with:
