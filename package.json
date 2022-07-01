@@ -1,7 +1,7 @@
 {
   "type": "module",
   "scripts": {
-    "lint": "eslint --ext .js .json .",
+    "lint": "eslint --fix --ext .js,.json .",
     "compress": "gulp",
     "bundle": "parcel build src/index.js --target main",
     "build": "npm run compress && npm run bundle"
