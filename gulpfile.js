@@ -17,27 +17,27 @@ const clean = () => {
 
 const copy = () => {
   return src('src/**')
-  .pipe(dest('dist'));
+  .pipe(dest('dist/src'));
 }
 
 const compressScript = () => {
   return src('src/**/*.js')
   .pipe(rename({suffix: '.min'}))
   .pipe(uglify())
-  .pipe(dest('dist'));
+  .pipe(dest('dist/src'));
 }
 
 const buildStyles = () => {
   return gulp.src('src/**/*.scss')
     .pipe(sass.sync().on('error', sass.logError))
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/src'));
 };
 
 const minifyCSS = () => {
-  return gulp.src('dist/**/*.css')
+  return gulp.src('dist/src/**/*.css')
     .pipe(rename({suffix: '.min'}))
     .pipe(cleanCSS())
-    .pipe(gulp.dest('dist'));
+    .pipe(gulp.dest('dist/src'));
 };
 
 const build = series(clean, copy, compressScript, buildStyles, minifyCSS);
