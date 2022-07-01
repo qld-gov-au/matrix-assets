@@ -1,5 +1,5 @@
 {
-  "extends": ["plugin:prettier/recommended"],
+  "extends": ["plugin:json/recommended", "plugin:prettier/recommended"],
   "rules": {
     "prettier/prettier": ["error"],
     "no-console": ["warn", { "allow": ["warn", "error", "info", "debug"] }]
