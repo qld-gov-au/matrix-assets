@@ -3,7 +3,7 @@
   "scripts": {
     "lint": "eslint --fix --ext .js,.json .",
     "compress": "gulp",
-    "bundle": "parcel build src/index.js --target main",
+    "bundle": "parcel build",
     "build": "npm run compress && npm run bundle"
   },
   "devDependencies": {
@@ -22,6 +22,10 @@
     "parcel-resolver-ignore": "^2.1.2",
     "sass": "^1.53.0"
   },
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "engines": {
+    "node": ">= 16"
+  },
   "alias": {
     "jquery": {
       "global": "jQuery"
@@ -30,5 +34,15 @@
   "parcelIgnore": [
     "/__data/assets/git_bridge/*.*"
   ],
-  "main": "dist/build/main.min.js"
+  "targets": {
+    "main":false,
+    "default" : {
+      "source": "src/index.js",
+      "distDir" : "dist/bundle/qg-main"
+    },
+    "franchise-housing": {
+      "source": "src/Franchise/Housing/index.js",
+      "distDir" : "dist/bundle/franchise/housing"
+    }
+  }
 }
