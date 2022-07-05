@@ -16,37 +16,40 @@
         link.removeClass('lightbox');
       } // Detect in-page content modals
   
+      if(!$('a.help').attr('class')) {
+        $('a.lightbox[href^="#"]').each(function (e) {
+          $(this).addClass('content-modal');
+        }); // Detect images modals
+      }
   
-      $('a.lightbox[href^="#"]').each(function (e) {
-        $(this).addClass('content-modal');
-      }); // Detect images modals
-  
-      $('a.lightbox[href$=".png"],a.lightbox[href$=".jpg"],a.lightbox[href$=".gif"]').each(function (e) {
-        $(this).addClass('image-modal');
-      }); // Use bootstrap modals for anything with the 'lightbox' class
-  
-      $('a.lightbox').each(function (e) {
-        // Handle ajax modals
-        if (!$(this).hasClass('image-modal') && !$(this).hasClass('content-modal')) {
-          $(this).addClass('ajax-modal');
-          var ajaxUrl = $(this).attr('href');
-  
-          if (ajaxUrl.indexOf('?') !== -1) {
-            ajaxUrl += '&SQ_ASSET_CONTENTS&SQ_PAINT_LAYOUT_NAME=modal';
-          } else {
-            ajaxUrl += '?SQ_ASSET_CONTENTS&SQ_PAINT_LAYOUT_NAME=modal';
+      if(!$('a.help').attr('class')) {
+        $('a.lightbox[href$=".png"],a.lightbox[href$=".jpg"],a.lightbox[href$=".gif"]').each(function (e) {
+          $(this).addClass('image-modal');
+        }); // Use bootstrap modals for anything with the 'lightbox' class
+      }
+      if(!$('a.help').attr('class')) {
+        $('a.lightbox').each(function (e) {
+          // Handle ajax modals
+          if (!$(this).hasClass('image-modal') && !$(this).hasClass('content-modal')) {
+            $(this).addClass('ajax-modal');
+            var ajaxUrl = $(this).attr('href');
+    
+            if (ajaxUrl.indexOf('?') !== -1) {
+              ajaxUrl += '&SQ_ASSET_CONTENTS&SQ_PAINT_LAYOUT_NAME=modal';
+            } else {
+              ajaxUrl += '?SQ_ASSET_CONTENTS&SQ_PAINT_LAYOUT_NAME=modal';
+            }
+    
+            $(this).attr('href', ajaxUrl);
           }
-  
-          $(this).attr('href', ajaxUrl);
-        }
-  
-        this.addEventListener('click', function (e) {
-          e.preventDefault();
-        }); // Initiate modal
-  
-        lightboxToModal($(this));
-      }); // On modal open
-  
+    
+          this.addEventListener('click', function (e) {
+            e.preventDefault();
+          }); // Initiate modal
+    
+          lightboxToModal($(this));
+        }); // On modal open
+      }
       $('#gov-modal').on('show.bs.modal', function (event) {
         var button = $(event.relatedTarget);
         var modal = $(this);
