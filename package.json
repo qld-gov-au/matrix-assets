@@ -1,4 +1,11 @@
 {
+  "name": "matrix-assets",
+  "version": "1.0.0",
+  "description": "",
+  "authors": {
+    "name": "Smart Service Queensland, Queensland Government",
+    "email": "qol.development@smartservice.qld.gov.au"
+  },
   "type": "module",
   "scripts": {
     "lint": "eslint --fix --ext .js,.json .",
