@@ -42,14 +42,13 @@
     "/__data/assets/git_bridge/*.*"
   ],
   "targets": {
-    "main":false,
-    "default" : {
-      "source": "src/index.js",
-      "distDir" : "dist/build/qg-main"
+    "main" : {
+      "source": "src/index.js"
     },
     "franchise-housing": {
-      "source": "src/Franchise/Housing/index.js",
-      "distDir" : "dist/build/franchise/housing"
+      "source": "src/Franchise/Housing/index.js"
     }
-  }
+  },
+  "main": "dist/build/qg-main.js",
+  "franchise-housing": "dist/build/franchise-housing.js"
 }
