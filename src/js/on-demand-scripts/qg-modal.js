@@ -15,40 +15,46 @@
       link.removeClass("lightbox");
     } // Detect in-page content modals
 
-    $('a.lightbox[href^="#"]').each(function (e) {
-      $(this).addClass("content-modal");
-    }); // Detect images modals
+    $('a.lightbox[href^="#"]')
+      .not(".help")
+      .each(function (e) {
+        $(this).addClass("content-modal");
+      }); // Detect images modals
 
     $(
       'a.lightbox[href$=".png"],a.lightbox[href$=".jpg"],a.lightbox[href$=".gif"]'
-    ).each(function (e) {
-      $(this).addClass("image-modal");
-    }); // Use bootstrap modals for anything with the 'lightbox' class
+    )
+      .not(".help")
+      .each(function (e) {
+        $(this).addClass("image-modal");
+      }); // Use bootstrap modals for anything with the 'lightbox' class
 
-    $("a.lightbox").each(function (e) {
-      // Handle ajax modals
-      if (
-        !$(this).hasClass("image-modal") &&
-        !$(this).hasClass("content-modal")
-      ) {
-        $(this).addClass("ajax-modal");
-        var ajaxUrl = $(this).attr("href");
+    $("a.lightbox")
+      .not(".help")
+      .each(function (e) {
+        // Handle ajax modals
+        if (
+          !$(this).hasClass("image-modal") &&
+          !$(this).hasClass("content-modal")
+        ) {
+          $(this).addClass("ajax-modal");
+          var ajaxUrl = $(this).attr("href");
 
-        if (ajaxUrl.indexOf("?") !== -1) {
-          ajaxUrl += "&SQ_ASSET_CONTENTS&SQ_PAINT_LAYOUT_NAME=modal";
-        } else {
-          ajaxUrl += "?SQ_ASSET_CONTENTS&SQ_PAINT_LAYOUT_NAME=modal";
+          if (ajaxUrl.indexOf("?") !== -1) {
+            ajaxUrl += "&SQ_ASSET_CONTENTS&SQ_PAINT_LAYOUT_NAME=modal";
+          } else {
+            ajaxUrl += "?SQ_ASSET_CONTENTS&SQ_PAINT_LAYOUT_NAME=modal";
+          }
+
+          $(this).attr("href", ajaxUrl);
         }
 
-        $(this).attr("href", ajaxUrl);
-      }
+        this.addEventListener("click", function (e) {
+          e.preventDefault();
+        }); // Initiate modal
 
-      this.addEventListener("click", function (e) {
-        e.preventDefault();
-      }); // Initiate modal
-
-      lightboxToModal($(this));
-    }); // On modal open
+        lightboxToModal($(this));
+      }); // On modal open
 
     $("#gov-modal")
       .on("show.bs.modal", function (event) {
@@ -57,7 +63,7 @@
         var url = button.data("href");
         var title;
         var close =
-          '<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>'; // Get modal title for in-page modal
+          '<button type="button" class="button close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>'; // Get modal title for in-page modal
 
         function modalTitle(content) {
           modal
@@ -132,7 +138,7 @@
                   .before(
                     '<div class="modal-header"><h2 class="modal-title mt-0" id="gov-modal--title">' +
                       button.data("modalHeader") +
-                      '</h2><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
+                      '</h2><button type="button" class="button close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>'
                   );
               }
             }
@@ -142,7 +148,7 @@
             modal
               .find(".modal-content")
               .html(
-                '<div class="modal-header"><h2 class="mt-0">Content not available</h2><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>'
+                '<div class="modal-header"><h2 class="mt-0">Content not available</h2><button type="button" class="button close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">×</span></button></div>'
               );
           },
           // Prevent previous modal content appearing.
