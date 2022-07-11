@@ -1,0 +1,54 @@
+{
+  "name": "matrix-assets",
+  "version": "1.0.0",
+  "description": "",
+  "authors": {
+    "name": "Smart Service Queensland, Queensland Government",
+    "email": "qol.development@smartservice.qld.gov.au"
+  },
+  "type": "module",
+  "scripts": {
+    "lint": "eslint --fix --ext .js,.json .",
+    "compress": "gulp",
+    "bundle": "parcel build",
+    "build": "npm run compress && npm run bundle"
+  },
+  "devDependencies": {
+    "@parcel/transformer-sass": "^2.6.2",
+    "del": "^6.1.1",
+    "eslint": "^8.18.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-json": "^3.1.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "gulp": "^4.0.2",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-rename": "^2.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-uglify": "^3.0.2",
+    "parcel": "^2.6.2",
+    "parcel-resolver-ignore": "^2.1.2",
+    "sass": "^1.53.0"
+  },
+  "browserslist": "> 0.5%, last 2 versions, not dead, iOS >= 12",
+  "engines": {
+    "node": ">= 16"
+  },
+  "alias": {
+    "jquery": {
+      "global": "jQuery"
+    }
+  },
+  "parcelIgnore": [
+    "/__data/assets/git_bridge/*.*"
+  ],
+  "targets": {
+    "main" : {
+      "source": "src/index.js"
+    },
+    "franchise-housing": {
+      "source": "src/Franchise/Housing/index.js"
+    }
+  },
+  "main": "dist/build/qg-main.js",
+  "franchise-housing": "dist/build/franchise-housing.js"
+}
