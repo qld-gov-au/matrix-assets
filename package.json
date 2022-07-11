@@ -29,7 +29,7 @@
     "parcel-resolver-ignore": "^2.1.2",
     "sass": "^1.53.0"
   },
-  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "browserslist": "> 0.5%, last 2 versions, not dead, iOS >= 12",
   "engines": {
     "node": ">= 16"
   },
