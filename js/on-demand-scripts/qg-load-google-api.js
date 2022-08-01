@@ -1,11 +1,15 @@
+// The code in this section is redundant between SWE and Matrix.
+// 	After investigation, it appears that the reason is that the Maps component is a Content template in Matrix, which loads files based on conditions, and that needs to be evaluated before SWE loads.
+// 	In order to fix this problem, it would be best to make Maps component as a SPA completely in SWE, so that it would not be dependent on Matrix assets.
+
 (function( qg, $ ) {
     'use strict';
     // lazy load a script
 	var keys = {
 		"defGoogle" : {
-            "test" : "AIzaSyA1uwIi2C0x9VbCqoVK4nxcID4CVqF3uhQ",
+      "test" : "AIzaSyA1uwIi2C0x9VbCqoVK4nxcID4CVqF3uhQ",
 			"uat" : "AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE",
-            "docs" : "AIzaSyBE95_qL90MT9loY1roLnHJ3uaBYbleYeM",
+			"docs" : "AIzaSyBE95_qL90MT9loY1roLnHJ3uaBYbleYeM",
 			"prod" : "AIzaSyANZv-2WcXRzkBqtgEcLTZq7zVy-9eNWgw"
 		},
 		"defGoogleRecaptcha" : {
