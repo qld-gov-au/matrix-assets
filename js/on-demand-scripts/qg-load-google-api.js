@@ -90,6 +90,7 @@
             }
         });
     }
+	console.log(googleApiKey, 'googleApiKey from MATRIX');
     function lazyScript( url ) {
         $( 'head' ).append( '<script type="text/javascript" src="' + url + '"></script>' );
     }
