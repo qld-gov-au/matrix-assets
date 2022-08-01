@@ -1,6 +1,7 @@
 (function( qg, $ ) {
     'use strict';
     // lazy load a script
+	console.log('matrix assets');
 	var keys = {
 		"defGoogle" : {
             "test" : "AIzaSyA1uwIi2C0x9VbCqoVK4nxcID4CVqF3uhQ",
