@@ -67,7 +67,7 @@
 		}]
 	};
 
-	var googleApiKey;
+		var googleApiKey;
     var firstFolderPath = location.pathname.split('/')[1];
     var isProd = function () {
         return window.location.hostname.search(/dev|test|localhost|github/) === -1;
