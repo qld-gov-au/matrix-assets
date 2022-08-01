@@ -95,6 +95,7 @@
     //load Google APi
 	qg.loadGoogle = function (callback) {
 		if($('#googleapi').length<=0) {
+			console.log('google maps lib loaded');
 			var s = document.createElement('script'),
 				u = 'https://maps.googleapis.com/maps/api/js?key='+ googleApiKey +'&region=AU&libraries=places';
 			s.type = 'text/javascript';
