@@ -1,6 +1,6 @@
-// The code in this section is redundant between SWE and Matrix.
+//  Code in this section is duplicated between SWE and Matrix assets.
 // 	After investigation, it appears that the reason is that the Maps component is a Content template in Matrix, which loads files based on conditions, and that needs to be evaluated before SWE loads.
-// 	In order to fix this problem, it would be best to make Maps component as a SPA completely in SWE, so that it would not be dependent on Matrix assets.
+// 	In order to fix this problem, it would be best to make Maps component as a SPA completely in SWE, so that it would not be dependent on Matrix assets and content templates.
 
 (function( qg, $ ) {
     'use strict';
