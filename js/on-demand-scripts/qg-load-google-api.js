@@ -1,65 +1,69 @@
+//  Code in this section is duplicated between SWE and Matrix assets.
+// 	The reason seems to be that the Maps component is a Content template in Matrix, which loads files based on conditions, and needs to be evaluated prior to loading SWE.
+// 	To fix this issue, the Maps component should be implemented as a SPA in SWE, where it will be independent of Matrix assets.
+
 (function( qg, $ ) {
     'use strict';
     // lazy load a script
 	var keys = {
-		"defGoogle" : {
-            "test" : "AIzaSyA1uwIi2C0x9VbCqoVK4nxcID4CVqF3uhQ",
-			"uat" : "AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE",
-            "docs" : "AIzaSyBE95_qL90MT9loY1roLnHJ3uaBYbleYeM",
-			"prod" : "AIzaSyANZv-2WcXRzkBqtgEcLTZq7zVy-9eNWgw"
+		'defGoogle': {
+			'test': 'AIzaSyA1uwIi2C0x9VbCqoVK4nxcID4CVqF3uhQ',
+			'uat': 'AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE',
+			'docs': 'AIzaSyBE95_qL90MT9loY1roLnHJ3uaBYbleYeM',
+			'prod': 'AIzaSyANZv-2WcXRzkBqtgEcLTZq7zVy-9eNWgw'
 		},
-		"defGoogleRecaptcha" : {
-			"uat" : "6LeNGSwUAAAAAD6o-P5UTM0FNpKjYB71Kh70F-Ud",
-			"prod" : "6LcoIywUAAAAAN-1rq22G-bP3yxl1bBq_5nHJ6s9"
+		'defGoogleRecaptcha': {
+			'uat': '6LeNGSwUAAAAAD6o-P5UTM0FNpKjYB71Kh70F-Ud',
+			'prod': '6LcoIywUAAAAAN-1rq22G-bP3yxl1bBq_5nHJ6s9'
 		},
-		"franchises": [{
-			"name": "about",
-			"apiKey": "AIzaSyBi-T3vrvcYwouFPqPI5IgLoQxl2hz6Ogs"
+		'franchises': [{
+			'name': 'about',
+			'apiKey': 'AIzaSyBi-T3vrvcYwouFPqPI5IgLoQxl2hz6Ogs'
 		}, {
-			"name": "atsi",
-			"apiKey": "AIzaSyB2mTTDd1CcLEYrLHJJHlzX60vQ68snyko"
+			'name': 'atsi',
+			'apiKey': 'AIzaSyB2mTTDd1CcLEYrLHJJHlzX60vQ68snyko'
 		}, {
-			"name": "community",
-			"apiKey": "AIzaSyCJwNeGu0XT1lvhg-2cm7S27BQo9k7Jd9E"
+			'name': 'community',
+			'apiKey': 'AIzaSyCJwNeGu0XT1lvhg-2cm7S27BQo9k7Jd9E'
 		}, {
-			"name": "disability",
-			"apiKey": "AIzaSyC-KQFfBhoGle7kJJhY1Pf_GvR_qC5jzN4"
-		},{
-			"name": "education",
-			"apiKey": "AIzaSyDeeYKKOyQCYkpVWXRLLxyNjfy2dhyWVls"
+			'name': 'disability',
+			'apiKey': 'AIzaSyC-KQFfBhoGle7kJJhY1Pf_GvR_qC5jzN4'
 		}, {
-			"name": "emergency",
-			"apiKey": "AIzaSyD1xT_2Dh2EZ7Iy6SLodeH8CJzbXlp6vgE"
+			'name': 'education',
+			'apiKey': 'AIzaSyDeeYKKOyQCYkpVWXRLLxyNjfy2dhyWVls'
 		}, {
-			"name": "environment",
-			"apiKey": "AIzaSyAZJjfwIKDPlQs-S3id-CGp8U_S4U7idFI"
+			'name': 'emergency',
+			'apiKey': 'AIzaSyD1xT_2Dh2EZ7Iy6SLodeH8CJzbXlp6vgE'
 		}, {
-			"name": "families",
-			"apiKey": "AIzaSyBucRn0YhJhQ-ELSS-MM7JvYb19-I1bqqI"
+			'name': 'environment',
+			'apiKey': 'AIzaSyAZJjfwIKDPlQs-S3id-CGp8U_S4U7idFI'
 		}, {
-			"name": "health",
-			"apiKey": "AIzaSyD_Xzvr6nBm5PlpANw2UZ2df3-U5eeOlvY"
+			'name': 'families',
+			'apiKey': 'AIzaSyBucRn0YhJhQ-ELSS-MM7JvYb19-I1bqqI'
 		}, {
-			"name": "housing",
-			"apiKey": "AIzaSyCgMKJlbP1SRIf3xCMFDbBImNkF_BCubvk"
-		},{
-			"name": "jobs",
-			"apiKey": "AIzaSyBXmI1DZvPFVQ_h-E1TNsPNdlNuqDd7MVo"
-		},{
-			"name": "law",
-			"apiKey": "AIzaSyBeij584IMIZqpftyhMCt_lZ_hBK_h8hMc"
-		},{
-			"name": "recreation",
-			"apiKey": "AIzaSyDJmfdqYI3eyV8-ivwPWVIIHxBzqo5_v2I"
-		},{
-			"name": "seniors",
-			"apiKey": "AIzaSyA3PDnd30Twv3Zr3JKqiAUYNO1983ZDBe0"
-		},{
-			"name": "transport",
-			"apiKey": "AIzaSyARzyCPigCt9cW1F6ua0_U3NVLdRbxwLyg"
-		},{
-			"name": "youth",
-			"apiKey": "AIzaSyCe7FYHy28So2Uio_OEQje0o0Pr23s7gt0"
+			'name': 'health',
+			'apiKey': 'AIzaSyD_Xzvr6nBm5PlpANw2UZ2df3-U5eeOlvY'
+		}, {
+			'name': 'housing',
+			'apiKey': 'AIzaSyCgMKJlbP1SRIf3xCMFDbBImNkF_BCubvk'
+		}, {
+			'name': 'jobs',
+			'apiKey': 'AIzaSyBXmI1DZvPFVQ_h-E1TNsPNdlNuqDd7MVo'
+		}, {
+			'name': 'law',
+			'apiKey': 'AIzaSyBeij584IMIZqpftyhMCt_lZ_hBK_h8hMc'
+		}, {
+			'name': 'recreation',
+			'apiKey': 'AIzaSyDJmfdqYI3eyV8-ivwPWVIIHxBzqo5_v2I'
+		}, {
+			'name': 'seniors',
+			'apiKey': 'AIzaSyA3PDnd30Twv3Zr3JKqiAUYNO1983ZDBe0'
+		}, {
+			'name': 'transport',
+			'apiKey': 'AIzaSyARzyCPigCt9cW1F6ua0_U3NVLdRbxwLyg'
+		}, {
+			'name': 'youth',
+			'apiKey': 'AIzaSyCe7FYHy28So2Uio_OEQje0o0Pr23s7gt0'
 		}]
 	};
 
@@ -69,7 +73,7 @@
         return window.location.hostname.search(/dev|test|localhost|github/) === -1;
     };
     var isUat= function () {
-        return window.location.hostname.search(/\buat\b/) === -1;
+        return window.location.hostname.search(/\buat\b/) !== -1;
     };
     // check if the hostname contains a specific word and assign the key accordingly
     if (window.location.hostname.search(/\bgithub\b/) !== -1) {
