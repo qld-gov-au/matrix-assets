@@ -1,4 +1,4 @@
-//  Code in this section is duplicated between SWE and Matrix assets.
+//  It appears that the logic in this section is duplicated between SWE and Matrix assets.
 // 	The reason seems to be that the Maps component is a Content template in Matrix, which loads files based on conditions, and needs to be evaluated prior to loading SWE.
 // 	To fix this issue, the Maps component should be implemented as a SPA in SWE, where it will be independent of Matrix assets.
 
