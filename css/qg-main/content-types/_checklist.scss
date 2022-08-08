@@ -1,10 +1,9 @@
-ol.checklist, ol.qg-checklist,
-ul.checklist,ul.qg-checklist, .qg-checklist ul, .qg-checklist ol {
+ol.qg-checklist, ul.qg-checklist, .qg-checklist ul, .qg-checklist ol {
 	padding: .5em 0 1.5em;
 	margin-top: .5em;
 	overflow: hidden;
 }
-.checklist li , .qg-checklist li {
+.qg-checklist li {
 	background-image: url(/__data/assets/git_bridge/0013/139/images/content-types/checklist-tick.png);
 	background-repeat: no-repeat;
 	padding-bottom: 10px;
@@ -13,7 +12,7 @@ ul.checklist,ul.qg-checklist, .qg-checklist ul, .qg-checklist ol {
 } 
 
 @media print {
-	.checklist li:before, .qg-checklist li:before {
+	.qg-checklist li:before {
 		border: 2px solid $qg-grey-light;
 		border-radius: 2px;
 		content: " ";
