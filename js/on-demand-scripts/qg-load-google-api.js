@@ -1,3 +1,7 @@
+//  It appears that the logic in this section is duplicated between SWE and Matrix assets.
+// 	The reason seems to be that the Maps component is a Content template in Matrix, which loads files based on conditions, and needs to be evaluated prior to loading SWE.
+// 	To fix this issue, the Maps component should be implemented as a SPA in SWE, where it will be independent of Matrix assets.
+
 (function( qg, $ ) {
     'use strict';
     // lazy load a script
@@ -69,7 +73,7 @@
         return window.location.hostname.search(/dev|test|localhost|github/) === -1;
     };
     var isUat= function () {
-        return window.location.hostname.search(/\buat\b/) === -1;
+        return window.location.hostname.search(/\buat\b/) !== -1;
     };
     // check if the hostname contains a specific word and assign the key accordingly
     if (window.location.hostname.search(/\bgithub\b/) !== -1) {
