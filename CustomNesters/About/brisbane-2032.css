@@ -1,8 +1,14 @@
-#qg-banner-blurb {background:url('https://www.qld.gov.au/?a=179040') no-repeat !important; background-size: cover !important; margin-bottom:-3.5em;border-radius: 0 0 0 240px;}
+#featureCarousel,
+.intro,
+.site-index {
+    box-shadow: 2px 0px 10px rgba(204,204,204,.5);
+}
+#qg-banner-blurb {background:url('./?a=179040') no-repeat !important; background-size: cover !important; margin-bottom:-3.5em;border-radius: 0 0 0 240px;}
 #qg-banner-blurb .blurb {background: transparent; width: 100%; margin-bottom: 40px; min-height:410px !important; background-position-y: 63% !important;margin:0 !important;display:flex;align-items: center;}
 .intro {
     display: block;
-    padding: 3em calc(4em + 25px) 3em 4em;
+    padding: 2.5em 4em;
+    margin-bottom: 1.5em;
     background: #f0f1f1;
     position: relative;
     border-radius: 6px;
@@ -32,7 +38,6 @@ body .credit a:focus,
 body .copyright a:hover,
 body .credit a:hover{color: #fff !important;}
 
-
 .qg-banner-blurb_wrapper h1 {
     background: #fffffff2;
     padding: 1rem 1.5rem !important;
@@ -47,7 +52,7 @@ h1 {
     display: inline-block;
     background: #fff;
     font-size: 3.5em;
-    padding: .1em .3em;
+    padding: .3em .3em 0 .3em;
     border-radius: 8px 8px 0 0;
 }
 h2 {color: #444; font-size:1.8em; margin-top:2.5em;}
@@ -58,22 +63,136 @@ section.qg-cards .qg-card .content {background:#40424a !important}
     margin-top: 0 !important;
 }
 
-
 .mt-5 {margin-top:2em;}
 .mb-5 {margin-bottom:2em;}
 
- legend .alert, 
- label .alert {
+legend .alert, 
+label .alert {
     color: #f85c50 !important;
 }
 
-.timeline {position:relative;} 
-.timeline::before {content:""; display:block; height:1px; border-top: 2px dotted #333; width:100%; position:absolute; top:15px; left:0;}
-.timeline-event { position:relative; padding:1.5em;} 
-.timeline-event::before { 
-    content:""; border-radius:50%; width:16px; height:16px;
-    display:block; background:#ff695e; position:absolute; left:50%; top:0; margin-left:-12px;border: 8px solid #fff;box-sizing: content-box;} 
-.timeline-event h3 {font-size:1.3em; line-height:1.4;} 
+.tiles h3 {
+    font-size:1.31rem;
+    position: relative;
+    margin-top: 0.8em;
+    display: inline-block !important;
+}
+
+.tiles h3 span {
+    position: relative;
+    display: inline !important;
+    background: #fff;
+    z-index: 1;
+    padding-right: 0.5em;
+}
+
+.tile h3::after {
+    content: "";
+    display: block;
+    border-bottom: 4px solid #443e80;
+    position: absolute;
+    left: 0;
+    bottom: 4px;
+    width: 100%;
+    z-index: 0;
+    border-radius: 3px;
+}
+
+.tiles {
+    margin-top: 7rem;
+    margin-left: -0.5em;
+    margin-right: -0.5em;
+}
+
+.tiles .tile {
+    padding:1.5em;
+    border: 1px solid #dddddd;
+    border-bottom: 4px solid #dddddd;
+    box-shadow: 2px 0px 12px rgba(204,204,204,.5);
+    margin: .5em;
+}
+
+.tiles .tile .btn-secondary {
+    display:block;
+    margin-top:auto;
+    background-color: transparent !important;
+    color: #3d3779 !important;
+    border-color: #3d3779 !important;
+}
+
+.tiles .tile .btn-secondary:hover,
+.tiles .tile .btn-secondary:focus {
+    background-color: #3d3779 !important;
+    color: #fff !important;
+}
+
+#featureCarousel {
+    margin-bottom: -6em;
+    margin-top: 1.5em;
+    font-size: 1rem !important;
+}
+
+.carousel-inner {
+    border-radius: 8px;
+    border-bottom: 4px solid #ddd;
+    background: #443e80;
+    overflow: hidden;
+    color: #fff;
+}
+.carousel-item .btn-secondary {  
+    background: transparent;
+    border: 2px solid #fff;
+    margin-top: 0.5em;
+}
+
+.carousel-item .btn-secondary:hover,
+.carousel-item .btn-secondary:focus {
+    background: #000 !important;
+    color: #fff !important;
+    border: 2px solid #fff;
+}
+
+.carousel-item h2 {color:#fff !important;}
+.carousel-item .img {
+    background-size: cover !important;
+    background-position: 50% !important;
+    min-height: 280px;
+}
+.carousel-control-next-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M2.75 0l-1.5 1.5L3.75 4l-2.5 2.5L2.75 8l4-4-4-4z'/%3E%3C/svg%3E");
+}
+.carousel-control-prev-icon {
+    background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='%23fff' width='8' height='8' viewBox='0 0 8 8'%3E%3Cpath d='M5.25 0l-4 4 4 4 1.5-1.5L4.25 4l2.5-2.5L5.25 0z'/%3E%3C/svg%3E");
+}
+
+.carousel-control-next, .carousel-control-prev {width:5%;}
+.carousel-control-pause {position:absolute; top:5px; right:5px; z-index:1;}
+.carousel-indicators {margin-bottom:0; bottom:-1em;}
+.carousel-indicators li {
+    opacity: 1;
+    border: 1px solid #443e80;
+    background:#fff;
+    border-radius: 50%;
+    width: 6px;
+    height: 6px;
+}
+.carousel-indicators li.active {
+    background:#443e80;
+}
+
+.carousel-indicators li {margin-right: 7px;}
+
+svg.text-outline {
+  font: bold 1.5rem Lato;
+  padding-left: 1em;
+}
+
+svg.text-outline text{
+  fill: #fff;
+  stroke: #595493;
+  stroke-width: 1px;
+  stroke-linejoin: round;
+}
 
 .font-size-lg a {
     color: #13578b !important;
@@ -82,33 +201,27 @@ section.qg-cards .qg-card .content {background:#40424a !important}
     color: #13578b !important;
 }
 .max-content-width {max-width: 925px; margin: 2em auto; display: block; position: relative;}
-.dotted-line {
-    position: relative;
+
+.story {
+    padding: 1.5em;
+    border-radius: 4px;
+    background: #fff;
 }
-.dotted-line::before {
-    position: absolute;
-    content: "";
-    height: 1px;
-    display: block;
-    border-bottom: 4px dotted #545454;
-    top: 4em;
-    left: 50%;
-    width: 100%;
-    z-index: -1;
+.story h3 {
+    font-size:1.4rem;
 }
 
-.connector::before {
-    content: "";
-    
-    width: 1px;
-    border-left:4px dotted #ddd;
-    height: calc(100% + 2em);
-    /*background: #ddd;*/
-    display: block;
-    position: absolute;
-    left: -32px;
-    top: 0;
+.story .img,
+.tile .img{
+    margin-left: -1.5em;
+    margin-right: -1.5em;
+    margin-top: -1.5em;
+    overflow: hidden;
+    border-radius: 4px 4px 0 0;
 }
+
+.slick-dots li button:before {font-size:9px;}
+
 .font-size-lg {font-size: 1.2em; font-weight: 500;}
 #videoModal .close {position: absolute;right: -5px;top: -8px;opacity: 1;color: #cb2020;}
 a.modal-video .img {position: relative; border: 1px solid #fff;}
@@ -151,31 +264,15 @@ a.modal-video .img .play-btn {
 }
 
 @media screen and (min-width: 967px) {
-    .intro {padding: 3em 4em;}
+    .intro {padding:1.5em 2.5em}
     #qg-banner-blurb .blurb {
         padding-left:140px;
     }
 }
 
-@media screen and (max-width: 1086px) {
-    .connector::before {display:none;}
-}
-@media screen and (max-width: 992px) {
-    .dotted-line::before {display:none;}
-    #register-interest div[class^="col-md"]:first-child .intro {
-        border-bottom:none !important;
-        border-radius: 6px 6px 0 0;
-    }
-    #register-interest div[class^="col-md"]:nth-child(2) .intro {
-        border-top:none !important;
-        padding-top:0;
-        border-radius: 0 0 6px 6px;
-    }
-}
-
 @media screen and (max-width: 768px) {
     h1 {font-size:3em;}
-    
+    .carousel-item .img {min-height: 214px;}
     #qg-primary-content {padding:0;}
     .intro {padding: 2em;}
     .intro .max-content-width {flex-direction: column;}
@@ -185,29 +282,4 @@ a.modal-video .img .play-btn {
     #qg-banner-blurb .blurb h1 .txt-sm {font-size: 15px;}
     #qg-banner-blurb .blurb h1 .txt-outline {margin-left: 40px;}
     .font-size-lg {font-size: inherit; font-weight: inherit;}
-    #join-a-board::before {display: none;}
-    #join-a-board {padding:0 1.5rem 1rem 1.5rem;}
-    .button-group a.btn {margin-bottom: 1em;}
-    .quote span.marks.marks-left:first-child {left:-33px;}
-    
-    .timeline::before {
-        height: 100%;
-        border-left: 2px dotted #333;
-        top: 0;
-        left: 24px;
-        width: 1px;
-    }
-    .timeline-event::before {
-        left: 20px;
-        top: 0;
-        margin-left: -12px;
-    }
-    .timeline-event {
-        text-align: left;
-        padding-left: 5em;
-        padding-top: 0;
-    }
-    .timeline-event h3 {
-        margin-top:0;
-    }
 }
