@@ -1,0 +1,5 @@
+#condolenceModal .modal-footer,
+#condolenceModal .modal-header {border: none}
+#condolenceModal .modal-content {background: #000; color: #fff; font-size:1.2em; line-height:1.5;}
+#condolenceModal button.close {color: #fff; text-shadow: none}
+#condolenceModal button.close:hover {opacity:1;}
