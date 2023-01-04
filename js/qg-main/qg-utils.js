@@ -42,7 +42,7 @@
                             }
                         });
                     // Set the height of all those children to whichever was highest
-                    $(this).find('.qg-cards__row-' + i + '').height(highestBox);
+                    $(this).find('.qg-cards__row-' + i + '').css('min-height', highestBox);
                 }
             });
         }
