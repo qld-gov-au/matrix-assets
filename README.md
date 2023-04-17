@@ -14,10 +14,10 @@ Builds assets used by qld.gov.au Squiz Matrix CMS and connects to matrix via git
 - To develop, checkout your branch from staging branch
 - Make your changes and raise a pull request against staging
 - After peer review, merge changes into staging
-- Pull your changes into Matrix via Git bridge (/qld.gov.au/Configuration - qld.gov.au/Design Assets/Integration Points/matrix-assets-staging) (#228)
+- Pull your changes into Matrix via Git bridge (/qld.gov.au/Configuration - qld.gov.au/Design Assets/Integration Points/Matrix-assets) (#95448)
 - Login as staging-tester and test your changes
 - Raise a change management request with release notes and testing steps
-- Post approval, merge staging into master and pull master into Matrix via Git bridge (/qld.gov.au/Configuration - qld.gov.au/Design Assets/Integration Points/matrix-assets) (#139)
+- Post approval, merge staging into master and pull master into Matrix via Git bridge (/qld.gov.au/Configuration - qld.gov.au/Design Assets/Integration Points/Matrix-assets) (#95448)
 - Test changes as public user
 ### SCSS Development
 - If new scss file has been created, import the same in SCSS Design file
