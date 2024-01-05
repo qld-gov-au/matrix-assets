@@ -3,9 +3,8 @@
     // lazy load a script
 	var keys = {
 		"defGoogle" : {
-            "test" : "AIzaSyA1uwIi2C0x9VbCqoVK4nxcID4CVqF3uhQ",
-			"uat" : "AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE",
-            "docs" : "AIzaSyBE95_qL90MT9loY1roLnHJ3uaBYbleYeM",
+            "test" : "AIzaSyCKuaFIFo7YYZXHZ5zaiEZdJx0UBoyfuAE",
+			"docs" : "AIzaSyBE95_qL90MT9loY1roLnHJ3uaBYbleYeM",
 			"prod" : "AIzaSyANZv-2WcXRzkBqtgEcLTZq7zVy-9eNWgw"
 		},
 		"defGoogleRecaptcha" : {
@@ -66,16 +65,11 @@
 	var googleApiKey;
     var firstFolderPath = location.pathname.split('/')[1];
     var isProd = function () {
-        return window.location.hostname.search(/dev|test|localhost|github/) === -1;
-    };
-    var isUat= function () {
-        return window.location.hostname.search(/\buat\b/) === -1;
+        return window.location.hostname.search(/dev|test|localhost|github|\buat\b/) === -1;
     };
     // check if the hostname contains a specific word and assign the key accordingly
     if (window.location.hostname.search(/\bgithub\b/) !== -1) {
         googleApiKey = keys.defGoogle.docs;
-    } else if (isUat()) {
-        googleApiKey = keys.defGoogle.uat;
     } else if (!isProd()) {
         googleApiKey = keys.defGoogle.test;
     } else {
