@@ -26,13 +26,14 @@ function initMap() {
     document.getElementsByTagName('head')[0].appendChild(s);
 
     $.getScript('./?a=13345', function(){ //calling markerclusterer.js from Matrix plugins
-        var searchLat = window.location.search.match(/latitude=([\d.-]*?)(&|$)/),
-            searchLong = window.location.search.match(/longitude=([\d.-]*?)(&|$)/); //detect location search
+        let searchLat = window.location.search.match(/latitude=([\d.-]*?)(&|$)/);
+        let searchLong = window.location.search.match(/longitude=([\d.-]*?)(&|$)/); //detect location search
 
-
-        var mapEle = document.getElementById('qg-search-results-map-container'),
-            controlsPosition = mapEle.getAttribute('data-controlsPosition'),
-            markers = {}, center, zoom;
+        let mapEle = document.getElementById('qg-search-results-map-container');
+        let controlsPosition = mapEle.getAttribute('data-controlsPosition');
+        let markers = {};
+        let center
+        let zoom;
 
         if(searchLat && searchLat[1].length > 0) {
             center = [searchLat[1], searchLong[1]];
