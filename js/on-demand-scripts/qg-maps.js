@@ -31,7 +31,8 @@ function initMap() {
 
 
         var mapEle = document.getElementById('qg-search-results-map-container'),
-        markers = {}, center, zoom;
+            controlsPosition = mapEle.getAttribute('data-controlsPosition'),
+            markers = {}, center, zoom;
 
         if(searchLat && searchLat[1].length > 0) {
             center = [searchLat[1], searchLong[1]];
@@ -45,7 +46,8 @@ function initMap() {
                 maxZoom: 18,
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             });
-        let map = L.map('qg-search-results-map-container', {center: center, zoom: zoom, layers: [tiles]});
+        let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: [tiles], zoomControl: false });
+        L.control.zoom({ position: 'bottomright' }).addTo(map);
         L.control
             .scale({
                 imperial: false,
