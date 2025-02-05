@@ -7,6 +7,7 @@ In Matrix the data and container are generated in CKAN Querying REST asset.
 var info;
 
 function initMap() {
+    console.log("Hello, world!");
     $.getScript('./?a=13345', function(){ //calling markerclusterer.js from Matrix plugins
         var searchLat = window.location.search.match(/latitude=([\d.-]*?)(&|$)/),
             searchLong = window.location.search.match(/longitude=([\d.-]*?)(&|$)/); //detect location search
