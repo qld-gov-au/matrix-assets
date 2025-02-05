@@ -7,7 +7,18 @@ In Matrix the data and container are generated in CKAN Querying REST asset.
 var info;
 
 function initMap() {
-    console.log("Hello, world!");
+    let l = document.createElement('link');
+    l.type = 'text/css';
+    l.rel = 'stylesheet';
+    l.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
+    l.crossorigin = '';
+    document.getElementsByTagName('head')[0].appendChild(l);
+    let s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
+    s.crossorigin = '';
+    document.getElementsByTagName('head')[0].appendChild(s);
+
     $.getScript('./?a=13345', function(){ //calling markerclusterer.js from Matrix plugins
         var searchLat = window.location.search.match(/latitude=([\d.-]*?)(&|$)/),
             searchLong = window.location.search.match(/longitude=([\d.-]*?)(&|$)/); //detect location search
@@ -26,6 +37,13 @@ function initMap() {
             zoom = 5;
         }
 
+        let tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                maxZoom: 18,
+                attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            });
+        var map = L.map('qg-search-results-map-container', {center: center, zoom: zoom, layers: [tiles]});
+
+        /*
         var map = new google.maps.Map(mapEle, {
           center: new google.maps.LatLng( parseFloat(center[0]),parseFloat(center[1]) ),
           mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -94,6 +112,7 @@ function initMap() {
 
             markerClusterer.addMarker( marker );
         });
+         */
     });
 }
 initMap();
