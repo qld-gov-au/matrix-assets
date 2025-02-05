@@ -47,7 +47,7 @@ function initMap() {
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             });
         let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: [tiles], zoomControl: false });
-        L.control.zoom({ position: 'bottomright' }).addTo(map);
+        L.control.zoom({ position: controlsPosition }).addTo(map);
         L.control
             .scale({
                 imperial: false,
