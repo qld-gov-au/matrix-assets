@@ -12,11 +12,17 @@ function initMap() {
     l.rel = 'stylesheet';
     l.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
     l.crossorigin = '';
+    document.getElementsByTagName('head')[0].appendChild(l.cloneNode());
+    l.href = 'https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css';
+    document.getElementsByTagName('head')[0].appendChild(l.cloneNode());
+    l.href = 'https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css';
     document.getElementsByTagName('head')[0].appendChild(l);
     let s = document.createElement('script');
     s.type = 'text/javascript';
     s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
     s.crossorigin = '';
+    document.getElementsByTagName('head')[0].appendChild(s.cloneNode());
+    s.src = 'https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js';
     document.getElementsByTagName('head')[0].appendChild(s);
 
     $.getScript('./?a=13345', function(){ //calling markerclusterer.js from Matrix plugins
@@ -41,7 +47,28 @@ function initMap() {
                 maxZoom: 18,
                 attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
             });
-        var map = L.map('qg-search-results-map-container', {center: center, zoom: zoom, layers: [tiles]});
+        let map = L.map('qg-search-results-map-container', {center: center, zoom: zoom, layers: [tiles]});
+        L.control
+            .scale({
+                imperial: false,
+                metric: true,
+            })
+            .addTo(map);
+
+        let markerClusters = L.markerClusterGroup();
+        $.each(mapsData, function (key, item) {
+            var latlong = item.Latitude + ',' + item.Longitude;
+            // put it on the map?
+            if (!item.Latitude) {
+                return;
+            }
+            if (!markers[latlong]) {
+                // track it
+                markers[latlong] = L.marker(new L.LatLng(item.Latitude, item.Longitude));
+                markerClusters.addLayer(markers[latlong]);
+            }
+        });
+        map.addLayer(markerClusters);
 
         /*
         var map = new google.maps.Map(mapEle, {
