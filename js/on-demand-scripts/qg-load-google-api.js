@@ -89,24 +89,12 @@
     //load Google APi
 	qg.loadGoogle = function (callback) {
 		if($('#googleapi').length<=0) {
-			let l = document.createElement('link');
-			l.type = 'text/css';
-			l.rel = 'stylesheet';
-			l.href = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.css';
-			l.crossorigin = '';
-			document.getElementsByTagName('head')[0].appendChild(l.cloneNode());
-			l.href = 'https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css';
-			document.getElementsByTagName('head')[0].appendChild(l.cloneNode());
-			l.href = 'https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css';
-			document.getElementsByTagName('head')[0].appendChild(l);
-			let s = document.createElement('script');
+			var s = document.createElement('script'),
+				u = 'https://maps.googleapis.com/maps/api/js?key='+ googleApiKey +'&region=AU&libraries=places';
 			s.type = 'text/javascript';
-			s.src = 'https://unpkg.com/leaflet@1.9.4/dist/leaflet.js';
-			s.crossorigin = '';
-			document.getElementsByTagName('head')[0].appendChild(s.cloneNode());
-			s.src = 'https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js';
-			document.getElementsByTagName('head')[0].appendChild(s);
-
+			s.id = 'googleapi';
+			s.src = u;
+			document.getElementsByTagName( 'head' )[0].appendChild( s );
 			s.onreadystatechange= function () { //trigger for IE
 				if (this.readyState === 'complete') {
 					lazyScript(callback);
