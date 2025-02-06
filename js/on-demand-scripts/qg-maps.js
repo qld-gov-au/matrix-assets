@@ -56,7 +56,11 @@ function initMap() {
             })
             .addTo(map);
 
-        let markerClusters = L.markerClusterGroup();
+        let markerClusters = L.markerClusterGroup({
+            showCoverageOnHover: false,
+            animateAddingMarkers: true,
+            maxClusterRadius: 40,
+        });
         $.each(mapsData, function (key, item) {
             var latlong = item.Latitude + ',' + item.Longitude;
             // put it on the map?
