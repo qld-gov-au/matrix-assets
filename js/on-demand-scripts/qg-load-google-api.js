@@ -88,21 +88,38 @@
     }
     //load Google APi
 	qg.loadGoogle = function (callback) {
-		if($('#googleapi').length<=0) {
-			var s = document.createElement('script'),
-				u = 'https://maps.googleapis.com/maps/api/js?key='+ googleApiKey +'&region=AU&libraries=places';
-			s.type = 'text/javascript';
-			s.id = 'googleapi';
-			s.src = u;
-			document.getElementsByTagName( 'head' )[0].appendChild( s );
-			s.onreadystatechange= function () { //trigger for IE
-				if (this.readyState === 'complete') {
-					lazyScript(callback);
+		if($('script[src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"]').length <= 0) {
+			async function loadApi(url, isCss) {
+				let node = document.createElement(isCss ? "link" : "script");
+				if (isCss) {
+					node.rel = "stylesheet";
+					node.href = url;
+				} else {
+					node.src = url;
 				}
-			};
-			s.onload = function () {
-				lazyScript(callback);
-			};
+				node.type = isCss ? "text/css" : "text/javascript";
+				node.crossorigin = "";
+
+				return new Promise((resolve, reject) => {
+					node.addEventListener('load', resolve);
+					node.addEventListener('error', reject);
+
+					document.head.appendChild(node);
+				});
+			}
+
+			$.when(
+				loadApi("https://unpkg.com/leaflet@1.9.4/dist/leaflet.css", true),
+				loadApi("https://unpkg.com/leaflet@1.9.4/dist/leaflet.js", false),
+			).done(() => {
+				$.when(
+					loadApi("https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css", true),
+					loadApi("https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css", true),
+					loadApi("https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js", false),
+				).done(() => {
+					lazyScript(callback);
+				});
+			});
 		}
 		else { //if script is already created but either loading or loaded
 			if(document.readyState === 'loading') {
