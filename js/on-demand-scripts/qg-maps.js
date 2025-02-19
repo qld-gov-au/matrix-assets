@@ -24,11 +24,17 @@ function initMap() {
         zoom = 5;
     }
 
-    let tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    let baseLayers = {
+        'QLD Globe Pastel': L.tileLayer('https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldBase_Pastel/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 18,
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a>'
-        });
-    let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: [tiles], zoomControl: false });
+            attribution: 'Tiles courtesy of the <a href="https://qldglobe.information.qld.gov.au/">State of Queensland (Department of Resources)'
+        }),
+        'QLD Globe Colour': L.tileLayer('https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldBase_Colour/MapServer/tile/{z}/{y}/{x}', {
+            maxZoom: 18,
+            attribution: 'Tiles courtesy of the <a href="https://qldglobe.information.qld.gov.au/">State of Queensland (Department of Resources)'
+        }),
+    };
+    let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: [baseLayers['QLD Globe Pastel']], zoomControl: false });
     L.control.zoom({ position: 'bottomright' }).addTo(map);
     L.control
         .scale({
@@ -36,6 +42,7 @@ function initMap() {
             metric: true,
         })
         .addTo(map);
+    L.control.layers(baseLayers).addTo(map);
 
     let markerClusters = L.markerClusterGroup({
         showCoverageOnHover: false,
