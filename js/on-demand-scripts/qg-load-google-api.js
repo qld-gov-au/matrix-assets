@@ -5,7 +5,7 @@
         $( 'head' ).append( '<script type="text/javascript" src="' + url + '"></script>' );
     }
 
-	export const createScripts = (scripts, i, mainResolve) => {
+	const createScripts = (scripts, i, mainResolve) => {
 		if (i > scripts.length - 1) {
 			mainResolve();
 			return;
@@ -34,7 +34,6 @@
 
     //load Google APi
 	qg.loadGoogle = function (callback) {
-		let url = document.currentScript.src;
 		let scripts = [
 			{ type: "link", href: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css", rel: "stylesheet" },
 			{ type: "script", src: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js", async: false },
