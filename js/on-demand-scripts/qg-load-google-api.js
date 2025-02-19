@@ -34,12 +34,13 @@
 
     //load Google APi
 	qg.loadGoogle = function (callback) {
+		// Squiz Matrix ID 95448 is to the Git Bridge for this repository
 		let scripts = [
-			{ type: "link", href: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css", rel: "stylesheet" },
-			{ type: "script", src: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.js", async: false },
-			{ type: "link", href: "https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css", rel: "stylesheet" },
-			{ type: "link", href: "https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css", rel: "stylesheet" },
-			{ type: "script", src: "https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js", async: false },
+			{ type: "link", href: "/?a=95448:js/vendor/leaflet/1.9.4/leaflet.css", rel: "stylesheet" },
+			{ type: "script", src: "/?a=95448:js/vendor/leaflet/1.9.4/leaflet.js", async: false },
+			{ type: "link", href: "/?a=95448:js/vendor/leaflet.markerclusterer/1.4.1/MarkerCluster.css", rel: "stylesheet" },
+			{ type: "link", href: "/?a=95448:js/vendor/leaflet.markerclusterer/1.4.1/MarkerCluster.Default.css", rel: "stylesheet" },
+			{ type: "script", src: "/?a=95448:js/vendor/leaflet.markerclusterer/1.4.1/leaflet.markercluster.js", async: false },
 		];
 
 		createScripts(scripts, 0, () => {
