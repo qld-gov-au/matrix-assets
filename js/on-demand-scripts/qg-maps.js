@@ -43,6 +43,7 @@ function initMap() {
         })
         .addTo(map);
     L.control.layers(baseLayers).addTo(map);
+    L.Marker.prototype.options.icon.imagePath = "/?a=95448:js/vendor/leaflet/images/marker-icon.png";
 
     let markerClusters = L.markerClusterGroup({
         showCoverageOnHover: false,
