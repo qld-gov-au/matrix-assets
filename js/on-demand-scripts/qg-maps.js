@@ -43,11 +43,6 @@ function initMap() {
         })
         .addTo(map);
     L.control.layers(baseLayers).addTo(map);
-    L.Icon.Default.mergeOptions({
-        iconUrl: "?a=95448:js/vendor/leaflet/1.9.4/images/marker-icon.png",
-        iconRetinaUrl: "?a=95448:js/vendor/leaflet/1.9.4/images/marker-icon-2x.png",
-        shadowUrl: "?a=95448:js/vendor/leaflet/1.9.4/images/marker-shadow.png",
-    })
 
     let markerClusters = L.markerClusterGroup({
         showCoverageOnHover: false,
@@ -62,7 +57,7 @@ function initMap() {
         }
         if (!markers[latlong]) {
             // add marker to map
-            markers[latlong] = L.marker(new L.LatLng(item.Latitude, item.Longitude));
+            markers[latlong] = L.marker(new L.LatLng(item.Latitude, item.Longitude), { icon: icon });
             markers[latlong].bindPopup(window.mapsMarker.replace(/item\[[\s\S]+?\]/g, function (r) {return eval(r);}) || '<a href="'+ (window.location.origin + window.location.pathname.replace(/(_nocache|_recache|_admin)/,'')).replace(/\/$/,'') + '/view/?title=' + encodeURI(item['Title']) + '&id=' + encodeURI(item['_id']) + '">' + item['Title'] + '</a>');
             markerClusters.addLayer(markers[latlong]);
         }
