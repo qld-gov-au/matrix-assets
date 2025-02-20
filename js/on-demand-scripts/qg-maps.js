@@ -57,7 +57,7 @@ function initMap() {
         }
         if (!markers[latlong]) {
             // add marker to map
-            markers[latlong] = L.marker(new L.LatLng(item.Latitude, item.Longitude), { icon: icon });
+            markers[latlong] = L.marker(new L.LatLng(item.Latitude, item.Longitude));
             markers[latlong].bindPopup(window.mapsMarker.replace(/item\[[\s\S]+?\]/g, function (r) {return eval(r);}) || '<a href="'+ (window.location.origin + window.location.pathname.replace(/(_nocache|_recache|_admin)/,'')).replace(/\/$/,'') + '/view/?title=' + encodeURI(item['Title']) + '&id=' + encodeURI(item['_id']) + '">' + item['Title'] + '</a>');
             markerClusters.addLayer(markers[latlong]);
         }
