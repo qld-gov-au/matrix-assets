@@ -44,10 +44,10 @@ function initMap() {
         .addTo(map);
     L.control.layers(baseLayers).addTo(map);
     L.Icon.Default.mergeOptions({
-        iconUrl: "?a=95448:js/vendor/leaflet/images/marker-icon.png",
-        iconRetinaUrl: "?a=95448:js/vendor/leaflet/images/marker-icon-2x.png",
-        shadowUrl: "?a=95448:js/vendor/leaflet/images/marker-shadow.png",
-    });
+        iconUrl: "?a=95448:js/vendor/leaflet/1.9.4/images/marker-icon.png",
+        iconRetinaUrl: "?a=95448:js/vendor/leaflet/1.9.4/images/marker-icon-2x.png",
+        shadowUrl: "?a=95448:js/vendor/leaflet/1.9.4/images/marker-shadow.png",
+    })
 
     let markerClusters = L.markerClusterGroup({
         showCoverageOnHover: false,
