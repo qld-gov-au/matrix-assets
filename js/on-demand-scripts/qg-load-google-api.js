@@ -36,11 +36,11 @@
 	qg.loadGoogle = function (callback) {
 		// Squiz Matrix ID 95448 is to the Git Bridge for this repository
 		let scripts = [
-			{ type: "link", href: "/?a=95448:js/vendor/leaflet/1.9.4/leaflet.css", rel: "stylesheet" },
-			{ type: "script", src: "/?a=95448:js/vendor/leaflet/1.9.4/leaflet.js", async: false },
-			{ type: "link", href: "/?a=95448:js/vendor/leaflet.markerclusterer/1.4.1/MarkerCluster.css", rel: "stylesheet" },
-			{ type: "link", href: "/?a=95448:js/vendor/leaflet.markerclusterer/1.4.1/MarkerCluster.Default.css", rel: "stylesheet" },
-			{ type: "script", src: "/?a=95448:js/vendor/leaflet.markerclusterer/1.4.1/leaflet.markercluster.js", async: false },
+			{ type: "link", href: "/__data/assets/git_bridge/0030/95448/js/vendor/leaflet/1.9.4/leaflet.css", rel: "stylesheet" },
+			{ type: "script", src: "/__data/assets/git_bridge/0030/95448/js/vendor/leaflet/1.9.4/leaflet.js", async: false },
+			{ type: "link", href: "/__data/assets/git_bridge/0030/95448/js/vendor/leaflet.markerclusterer/1.4.1/MarkerCluster.css", rel: "stylesheet" },
+			{ type: "link", href: "/__data/assets/git_bridge/0030/95448/js/vendor/leaflet.markerclusterer/1.4.1/MarkerCluster.Default.css", rel: "stylesheet" },
+			{ type: "script", src: "/__data/assets/git_bridge/0030/95448/js/vendor/leaflet.markerclusterer/1.4.1/leaflet.markercluster.js", async: false },
 		];
 
 		createScripts(scripts, 0, () => {
