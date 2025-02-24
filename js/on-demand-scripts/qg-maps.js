@@ -35,7 +35,18 @@ function initMap() {
         }),
     };
     let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: [baseLayers['QLD Globe Pastel']], zoomControl: false });
-    L.control.zoom({ position: 'bottomright' }).addTo(map);
+
+    // Convert from Google Maps controls position to Leaflet controls positions, and prevent errors on unknown position string
+    // Leaflet has no equivalent to the centre right and centre left positions so this just sets them to whichever available spot is empty
+    if (controlsPosition === "RIGHT_BOTTOM") controlsPosition = "bottomright";
+    else if (controlsPosition === "RIGHT_CENTER") controlsPosition = "bottomright";
+    else if (controlsPosition === "RIGHT_TOP") controlsPosition = "topright";
+    else if (controlsPosition === "LEFT_BOTTOM") controlsPosition = "bottomleft";
+    else if (controlsPosition === "LEFT_CENTER") controlsPosition = "topleft";
+    else if (controlsPosition === "LEFT_TOP") controlsPosition = "topleft";
+    else if (!["bottomright", "topright", "bottomleft", "topleft"].includes(controlsPosition)) controlsPosition = "bottomright";
+
+    L.control.zoom({ position: controlsPosition }).addTo(map);
     L.control
         .scale({
             imperial: false,
