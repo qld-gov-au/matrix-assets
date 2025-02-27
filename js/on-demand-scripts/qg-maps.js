@@ -12,6 +12,7 @@ function initMap() {
 
     let mapEle = document.getElementById('qg-search-results-map-container');
     let controlsPosition = mapEle.getAttribute('data-controlsPosition');
+    let gridSize = mapEle.getAttribute('data-dataClusterGridSize');
     let markers = {};
     let center
     let zoom;
@@ -35,6 +36,12 @@ function initMap() {
         }),
     };
     let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: [baseLayers['QLD Globe Pastel']], zoomControl: false });
+    map.createPane('background');
+    map.getPane('background').style.zIndex = -100;
+    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+        attribution: '©OpenStreetMap',
+        pane: 'background'
+    }).addTo(map);
 
     // Convert from Google Maps controls position to Leaflet controls positions, and prevent errors on unknown position string
     // Leaflet has no equivalent to the centre right and centre left positions so this just sets them to whichever available spot is empty
@@ -58,7 +65,7 @@ function initMap() {
     let markerClusters = L.markerClusterGroup({
         showCoverageOnHover: false,
         animateAddingMarkers: true,
-        maxClusterRadius: 40,
+        maxClusterRadius: gridSize,
     });
     $.each(mapsData, function (key, item) {
         var latlong = item.Latitude + ',' + item.Longitude;
