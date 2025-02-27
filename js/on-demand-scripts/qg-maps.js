@@ -28,18 +28,18 @@ function initMap() {
     let baseLayers = {
         'QLD Globe Pastel': L.tileLayer('https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldBase_Pastel/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 18,
-            attribution: '©State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) 2025'
+            attribution: '&copy; State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) '.concat((new Date).getFullYear().toString()),
         }),
         'QLD Globe Colour': L.tileLayer('https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldBase_Colour/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 18,
-            attribution: '©State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) 2025'
+            attribution: '&copy; State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) '.concat((new Date).getFullYear().toString()),
         }),
     };
     let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: [baseLayers['QLD Globe Pastel']], zoomControl: false });
     map.createPane('background');
     map.getPane('background').style.zIndex = -100;
     L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '©OpenStreetMap',
+        attribution: '&copy; OpenStreetMap',
         pane: 'background'
     }).addTo(map);
     map.attributionControl.setPrefix('Leaflet');
@@ -50,7 +50,7 @@ function initMap() {
     else if (controlsPosition === "RIGHT_CENTER") controlsPosition = "bottomright";
     else if (controlsPosition === "RIGHT_TOP") controlsPosition = "topright";
     else if (controlsPosition === "LEFT_BOTTOM") controlsPosition = "bottomleft";
-    else if (controlsPosition === "LEFT_CENTER") controlsPosition = "topleft";
+    else if (controlsPosition === "LEFT_CENTER") controlsPosition = "bottomleft";
     else if (controlsPosition === "LEFT_TOP") controlsPosition = "topleft";
     else if (!["bottomright", "topright", "bottomleft", "topleft"].includes(controlsPosition)) controlsPosition = "bottomright";
 
@@ -59,6 +59,7 @@ function initMap() {
         .scale({
             imperial: false,
             metric: true,
+            position: "topleft",
         })
         .addTo(map);
     L.control.layers(baseLayers).addTo(map);
