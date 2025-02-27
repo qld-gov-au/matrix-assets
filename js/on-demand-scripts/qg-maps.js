@@ -28,11 +28,11 @@ function initMap() {
     let baseLayers = {
         'QLD Globe Pastel': L.tileLayer('https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldBase_Pastel/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 18,
-            attribution: 'Tiles courtesy of the <a href="https://qldglobe.information.qld.gov.au/">State of Queensland (Department of Resources)'
+            attribution: '©State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) 2025'
         }),
         'QLD Globe Colour': L.tileLayer('https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldBase_Colour/MapServer/tile/{z}/{y}/{x}', {
             maxZoom: 18,
-            attribution: 'Tiles courtesy of the <a href="https://qldglobe.information.qld.gov.au/">State of Queensland (Department of Resources)'
+            attribution: '©State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) 2025'
         }),
     };
     let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: [baseLayers['QLD Globe Pastel']], zoomControl: false });
@@ -42,6 +42,7 @@ function initMap() {
         attribution: '©OpenStreetMap',
         pane: 'background'
     }).addTo(map);
+    map.attributionControl.setPrefix('Leaflet');
 
     // Convert from Google Maps controls position to Leaflet controls positions, and prevent errors on unknown position string
     // Leaflet has no equivalent to the centre right and centre left positions so this just sets them to whichever available spot is empty
