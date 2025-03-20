@@ -25,22 +25,18 @@ function initMap() {
         zoom = 5;
     }
 
-    let baseLayers = {
-        'QLD Globe Pastel': L.tileLayer('https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldBase_Pastel/MapServer/tile/{z}/{y}/{x}', {
-            maxZoom: 18,
-            attribution: '&copy; State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) '.concat((new Date).getFullYear().toString()),
-        }),
-        'QLD Globe Colour': L.tileLayer('https://spatial-gis.information.qld.gov.au/arcgis/rest/services/Basemaps/QldBase_Colour/MapServer/tile/{z}/{y}/{x}', {
-            maxZoom: 18,
-            attribution: '&copy; State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) '.concat((new Date).getFullYear().toString()),
-        }),
-    };
-    let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: [baseLayers['QLD Globe Pastel']], zoomControl: false });
+    let frontLayer =  L.esri.Vector.vectorTileLayer('https://spatial.information.qld.gov.au/arcgis/rest/services/Hosted/Basemaps_QldBase_Pastel/VectorTileServer', {
+        minZoom: 4,
+        maxZoom: 21,
+        attribution: '©State of Queensland (Department of Natural Resources and Mines, Manufacturing, and Regional and Rural Development) 2025',
+    });
+    let map = L.map('qg-search-results-map-container', { center: center, zoom: zoom, layers: frontLayer, zoomControl: false });
     map.createPane('background');
     map.getPane('background').style.zIndex = -100;
-    L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
-        attribution: '&copy; OpenStreetMap',
-        pane: 'background'
+    L.tileLayer.fallback('https://services.ga.gov.au/gis/rest/services/NationalBaseMap_GreyScale/MapServer/WMTS/tile/1.0.0/NationalBaseMap_GreyScale/default/GoogleMapsCompatible/{z}/{y}/{x}.png', {
+        attribution: '©Commonwealth of Australia (Geoscience Australia)',
+        maxZoom: 16,
+        pane: 'background',
     }).addTo(map);
     map.attributionControl.setPrefix('Leaflet');
 
@@ -59,10 +55,9 @@ function initMap() {
         .scale({
             imperial: false,
             metric: true,
-            position: "topleft",
+            position: "topright",
         })
         .addTo(map);
-    L.control.layers(baseLayers).addTo(map);
 
     let markerClusters = L.markerClusterGroup({
         showCoverageOnHover: false,

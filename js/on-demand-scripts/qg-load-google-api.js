@@ -41,6 +41,9 @@
 			{ type: "link", href: "/__data/assets/git_bridge/0030/95448/js/vendor/leaflet.markerclusterer/1.4.1/MarkerCluster.css", rel: "stylesheet" },
 			{ type: "link", href: "/__data/assets/git_bridge/0030/95448/js/vendor/leaflet.markerclusterer/1.4.1/MarkerCluster.Default.css", rel: "stylesheet" },
 			{ type: "script", src: "/__data/assets/git_bridge/0030/95448/js/vendor/leaflet.markerclusterer/1.4.1/leaflet.markercluster.js", async: false },
+			{ type: "script", src: "/__data/assets/git_bridge/0030/95448/js/vendor/esri-leaflet/3.0.10/esri-leaflet.js", async: false },
+			{ type: "script", src: "/__data/assets/git_bridge/0030/95448/js/vendor/esri-leaflet-vector/4.1.0/esri-leaflet-vector.js", async: false },
+			{ type: "script", src: "/__data/assets/git_bridge/0030/95448/js/vendor/leaflet.tilelayer.fallback/1.0.4/leaflet.tilelayer.fallback.js", async: false },
 		];
 
 		createScripts(scripts, 0, () => {
