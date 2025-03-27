@@ -32,7 +32,7 @@
 		}
 	};
 
-    //load Google APi
+    // load Leaflet API
 	qg.loadGoogle = function (callback) {
 		// Squiz Matrix ID 95448 is to the Git Bridge for this repository
 		let scripts = [
